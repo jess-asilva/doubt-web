@@ -13,6 +13,40 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//Sobre o Doubt
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('index');
+})->name('about');
+
+//Login
+Route::get('/login', function () {
+    return view('users.login');
+})->name('login');
+
+Route::get('/signup', function () {
+    return view('users.signup');
+})->name('signup');
+
+Route::get('/user/{id}', function ($id_user) {
+    return view('home');
+})->name('home');
+
+Route::get('/internetFoum', function () {
+    return view('internetFoum');
+})->name('internetFoum');
+
+Route::get('/demonstrators', function () {
+    return view('demonstrators');
+})->name('demonstrators');
+
+Route::get('/students', function () {
+    return view('students');
+})->name('students');
+
+Route::get('/schedule', function () {
+    return view('schedule');
+})->name('schedule');
+
+Route::get('/doubts', function () {
+    return view('doubts');
+})->name('doubts');
