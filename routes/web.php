@@ -35,9 +35,9 @@ Route::get('/internetFoum', function () {
     return view('internetFoum');
 })->name('internetFoum');
 
-Route::get('/demonstrators', function () {
-    return view('demonstrators');
-})->name('demonstrators');
+Route::get('/monitors', function () {
+    return view('monitors');
+})->name('monitors');
 
 Route::get('/students', function () {
     return view('students');
