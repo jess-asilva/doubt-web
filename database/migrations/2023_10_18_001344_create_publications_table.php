@@ -12,12 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('publications', function (Blueprint $table) {
-            $table->id();
+            $table->id('id_publication');
             $table->unsignedBigInteger('id_publication_type');
             $table->longText('publication', 500);
             $table->timestamps();
 
-            $table->foreign('id_publicatin_type')->references('id_publicatin_type')->on('publicatin_types');
+            $table->foreign('id_publication_type')->references('id_publication_type')->on('publication_types');
         });
     }
 

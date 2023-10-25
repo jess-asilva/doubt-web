@@ -19,8 +19,6 @@ return new class extends Migration
             $table->string('e-mail', 100);
             $table->integer('password');
             $table->string('rm/ra', 11);
-            $table->timestamp('created_at')->nullable();
-            $table->timestamp('updated_at')->nullable();
             $table->timestamps();
 
             $table->foreign('id_type_user')->references('id_type_user')->on('type_of_users');
