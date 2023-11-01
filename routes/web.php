@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,10 +19,19 @@ use App\Http\Controllers\UserController;
 Route::get('/', [UserController::class, 'index'])->name('index');
 
 //Login
-Route::get('/login', [UserController::class, ''])->name('login');
+Route::get('/login', [LoginController::class, 'create'])->name('get.login');
+Route::post('/login', [LoginController::class, 'store'])->name('post.login');
 
 Route::get('/signup', [UserController::class, 'create'])->name('get.signup');
 Route::post('/signup', [UserController::class, 'store'])->name('post.signup');
+
+Route::get('/forgot_password', function () {
+    return view('users.forgotPassword');
+})->name('get.forgotPassword');
+
+Route::get('/createAccount', function () {
+    return view('users.createaccount');
+})->name('get.createAccount');
 
 Route::get('/user/{id}', function ($id_user) {
     return view('home');
