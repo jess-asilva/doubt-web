@@ -31,7 +31,8 @@ class UserController extends Controller
     {
         $user = User::create([
             'name' => $request->input('name'),
-            'Institution'
+            'Institution' => $request->input('instituicion'),
+            'email' => $request->input('email'),
         ]);
 
         return redirect('');
