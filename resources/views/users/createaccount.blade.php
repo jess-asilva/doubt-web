@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/createaccount.css">
     <title>Cadastre-se</title>
 </head>
+
 <body>
     <header class="purple-overlay">
         <img class="logo" src="img/LOGO-DOUBT-TCC.png" alt="Logo">
@@ -18,23 +20,23 @@
 
         <input type="text" name="usuario" placeholder="Usuário"><br>
         @error('usuario')
-            <div class="alert alert-danger">{{ $message }}</div>
+        <div class="alert alert-danger">{{ $message }}</div>
         @enderror
         <input type="email" name="email" placeholder="E-mail"><br>
         @error('email')
-            <div class="alert alert-danger">{{ $message }}</div>
+        <div class="alert alert-danger">{{ $message }}</div>
         @enderror
         <input type="text" name="ra/rm" placeholder="RA/RM"><br>
         @error('ra/rm')
-            <div class="alert alert-danger">{{ $message }}</div>
+        <div class="alert alert-danger">{{ $message }}</div>
         @enderror
         <input type="password" name="senha" placeholder="Senha"><br>
         @error('senha')
-            <div class="alert alert-danger">{{ $message }}</div>
+        <div class="alert alert-danger">{{ $message }}</div>
         @enderror
         <input type="password" name="confirmarSenha" placeholder="Confirmar senha"><br>
         @error('confirmarSenha')
-            <div class="alert alert-danger">{{ $message }}</div>
+        <div class="alert alert-danger">{{ $message }}</div>
         @enderror
 
         <input type="submit" value="CRIAR CONTA">
@@ -42,4 +44,5 @@
 
     </form>
 </body>
+
 </html>
