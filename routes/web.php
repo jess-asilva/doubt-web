@@ -29,6 +29,10 @@ Route::get('/forgotPassword', function () {
     return view('users.forgotPassword');
 })->name('get.forgotPassword');
 
+Route::get('/registerMonitor', function () {
+    return view('users.registerMonitor');
+})->name('get.registerMonitor');
+
 Route::get('/createAccount', function () {
     return view('users.createAccount');
 })->name('get.createAccount');
