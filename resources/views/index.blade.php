@@ -1,4 +1,4 @@
-<h1>Página inicial</h1>
+<h1>Página de Apresentação</h1>
 
 
-<p>Aqui ficará a página inicial</p>
+<p>Aqui ficará a página de propaganda e compra do Doubt</p>

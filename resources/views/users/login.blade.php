@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <title>Tela de Login</title>
-    <link rel="stylesheet" href="/styles/login.css">
+    <link rel="stylesheet" href="{{ asset('css/login.css') }}">
 </head>
 
 <body>
 
-   <!-- Essa parte do código é responsável por mostrar os erros fora do Formulário
+    <!-- Essa parte do código é responsável por mostrar os erros fora do Formulário
        @if ($errors->any())
             <div class="alert alert-danger">
                 <ul>
@@ -29,17 +30,18 @@
         <legend>LOGIN</legend>
         <input type="text" class="normal-input" name="name" placeholder="Usuário"><br>
         @error('name')
-            <div class="alert alert-danger">{{ $message }}</div>
+        <div class="alert alert-danger">{{ $message }}</div>
         @enderror
         <input type="password" class="normal-input" name="password" placeholder="Senha"><br>
         @error('password')
-            <div class="alert alert-danger">{{ $message }}</div>
-        @enderror     
+        <div class="alert alert-danger">{{ $message }}</div>
+        @enderror
 
-        <p><a href="{{ route('get.forgotPassword') }}" class="nao-sublinhado">Esqueceu a senha?</a></p>  
+        <p><a href="{{ route('get.forgotPassword') }}" class="nao-sublinhado">Esqueceu a senha?</a></p>
         <input type="submit" value="ENTRAR">
-         <p>ou <a href="{{ route('get.createAccount') }}" class="sublinhado">Cadastre-se</a></p>
+        <p>ou <a href="{{ route('get.createAccount') }}" class="sublinhado">Cadastre-se</a></p>
     </form>
-            
+
 </body>
+
 </html>
