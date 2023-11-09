@@ -27,13 +27,15 @@
         <div class="alert alert-danger">{{ $message }}</div>
         @enderror
        
-        <select name="Turma">  
-        <option value="volvo">3ºA</option>  
-        <option value="saab">3ºB</option>  
-        <option value="fiat">3ºC</option>  
-        <option value="audi">3ºD</option></select> 
+        <label for="Turma">Turma:</label>
+        <select name="Turma" id="Turma">  
+        <option value="3A">3ºA</option>  
+        <option value="3B">3ºB</option>  
+        <option value="3C">3ºC</option>  
+        <option value="3D">3ºD</option>
+        </select> 
 
-        <input type="submit" value="CADASTRAR">
+        <p><input type="submit" value="CADASTRAR"></p>
         
     </form>
 </body>
