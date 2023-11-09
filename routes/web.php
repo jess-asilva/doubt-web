@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AuthenticateController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,18 +16,19 @@ use App\Http\Controllers\AuthenticateController;
 |
 */
 
-//Sobre o Doubt - pagina inicial
+//Sobre o Doubt - pagina comercial - cadastro de interesse
 Route::get('/', [UserController::class, 'index'])->name('index');
 
-//Login
-Route::get('/login', [AuthenticateController::class, 'index'])->name('get.login');
-Route::post('/login', [AuthenticateController::class, 'login'])->name('post.login');
-
+//Cadastro
 Route::get('/createAccount', [UserController::class, 'create'])->name('get.createAccount');
 Route::post('/createAccount', [UserController::class, 'store'])->name('post.createAccount');
 
-Route::get('/signup', [UserController::class, 'create'])->name('get.signup');
-Route::post('/signup', [UserController::class, 'store'])->name('post.signup');
+//Login - autenticação
+Route::get('/login', [AuthenticateController::class, 'index'])->name('get.login');
+Route::post('/login', [AuthenticateController::class, 'authenticate'])->name('post.authenticate');
+
+//Página Inicial do usuário
+Route::get('/home', [HomeController::class, 'index'])->name('home')->middleware('auth');
 
 Route::get('/forgotPassword', function () {
     return view('users.forgotPassword');
@@ -35,10 +37,6 @@ Route::get('/forgotPassword', function () {
 Route::get('/registerMonitor', function () {
     return view('users.registerMonitor');
 })->name('get.registerMonitor');
-
-Route::get('/createAccount', function () {
-    return view('users.createAccount');
-})->name('get.createAccount');
 
 //Route::get('/user/{id}', function ($id_user) {
 //    return view('users.home');

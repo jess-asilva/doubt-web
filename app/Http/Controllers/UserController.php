@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Http\Requests\StoreUserRequest;
 use App\Http\Requests\UpdateUserRequest;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -25,20 +26,35 @@ class UserController extends Controller
     }
 
     /**
+     * public function store(StoreUserRequest $request)
+     *{
+     *    $user = User::create([
+     *       'name' => $request->input('users'),
+     *        'email' => $request->input('e-mail'),
+     *        'ra/rm' => $request->input('rm/ra'),
+     *    ]);
+
+     *    return redirect('');
+     *}
+     */
+
+    /**
      * Store a newly created resource in storage.
      */
     public function store(StoreUserRequest $request)
     {
-        $userdata = $request->validated();
+        $userData = $request->validated();
 
         $user = User::create([
-            'usuario' => $request->input('user'),
-            'email' => $request->input('e-mail'),
-            'ra/rm' => $request->input('rm/ra'),
-            'senha' => $request->input('password'),
+            'name' => $userData['user'],
+            'email' => $userData['email'],
+            'ra/rm' => $userData['rm/ra'],
+            'password' => Hash::make($userData['password']),
         ]);
 
-        return redirect('');
+        $user->save();
+
+        return redirect('/home');
     }
 
     /**

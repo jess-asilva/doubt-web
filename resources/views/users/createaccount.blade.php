@@ -18,8 +18,8 @@
         @csrf
         <legend>CADASTRE-SE</legend>
 
-        <input type="text" name="usuario" placeholder="Usuário" required autofocus><br>
-        @error('usuario')
+        <input type="text" name="name" placeholder="Nome" required autofocus><br>
+        @error('name')
         <div class="alert alert-danger">{{ $message }}</div>
         @enderror
         <input type="email" name="email" placeholder="E-mail" required><br>
@@ -30,12 +30,12 @@
         @error('ra/rm')
         <div class="alert alert-danger">{{ $message }}</div>
         @enderror
-        <input type="password" name="senha" placeholder="Senha" required><br>
-        @error('senha')
+        <input type="password" id="password" name="password" class="form-control" placeholder="Senha" required class="@error('password') is-invalid @enderror"><br>
+        @error('password')
         <div class="alert alert-danger">{{ $message }}</div>
         @enderror
-        <input type="password" name="confirmarSenha" placeholder="Confirmar senha" required><br>
-        @error('confirmarSenha')
+        <input type="password" id="password-confirm" name="confPassword" class="form-control" placeholder="Confirmar senha" required class="@error('confPasssword') is-invalid @enderror"><br>
+        @error('confPassword')
         <div class="alert alert-danger">{{ $message }}</div>
         @enderror
 

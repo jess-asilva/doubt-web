@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreUserRequest extends FormRequest
+class AuthenticateRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,11 +22,8 @@ class StoreUserRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'required|min:5|max:255',
-            'email' => 'required|email:rfc,dns|unique:users,email',
-            'ra/rm' => 'numeric|unique:users,ra/rm',
-            'password' => 'required|between: 3,15|confirmed',
-            'confPassword' => 'required',
+            'ra/rm' => 'required|numeric',
+            'password' => 'required',
         ];
     }
 
@@ -38,15 +35,9 @@ class StoreUserRequest extends FormRequest
     public function messages(): array
     {
         return [
-            'name.required' => 'Preencha o nome.',
-            'name.min' => 'O nome deve ter ao menos 5 letras.',
-            'email.required' => 'E-mail é obrigatório.',
-            'email.unique' => 'E-mail já cadastrado',
             'ra/rm.required' => 'RA/RM é obrigatório.',
-            'ra/rm.unique' => 'RA/RM já cadastrado',
             'password.required' => 'Digite sua senha.',
-            'password.between' => 'A senha deve ter entre 3 e 15 caracteres.',
-            'password.confirmed' => "As senhas devem ser iguais.",
+
         ];
     }
 }

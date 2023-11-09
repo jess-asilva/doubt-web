@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+use App\Http\Requests\AuthenticateRequest;
+
 use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
-
-use App\Http\Requests\StoreLoginRequest;
-use App\Http\Requests\UpdateLoginRequest;
 
 class AuthenticateController extends Controller
 {
@@ -19,12 +19,9 @@ class AuthenticateController extends Controller
         return View('users.login');
     }
 
-    public function login(Request $request): RedirectResponse
+    public function authenticate(AuthenticateRequest $request): RedirectResponse
     {
-        $credentials = $request->validate([
-            'user' => ['required', 'name'],
-            'password' => ['required'],
-        ]);
+        $credentials = $request->validate();
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
@@ -33,8 +30,8 @@ class AuthenticateController extends Controller
         }
 
         return back()->withErrors([
-            'user' => 'Usuário não encontrado',
-        ])->onlyInput('email');
+            'ra/rm' => 'Usuário ou senha inválido',
+        ])->onlyInput('ra/rm');
     }
 
     /**
