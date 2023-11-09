@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <title>Esqueceu a Senha</title>
-    <link rel="stylesheet" href="/styles/forgot_password.css">
+    <link rel="stylesheet" href="{{ asset('css/forgotPassword.css') }}">
 </head>
+
 <body>
     <header class="purple-overlay">
         <img class="logo" src="img/LOGO-DOUBT-TCC.png" alt="Logo">
@@ -13,10 +15,11 @@
     <form action="forgot_password" method="post">
         <legend>Esqueceu sua senha?</legend>
         <p>Para onde devemos enviar o link para redefinir sua senha?</p><br>
-       <input type="email" name="email" placeholder="E-mail"><br>
-       <p> <input type="submit" value="REDEFINIR SENHA" ></p>
+        <input type="email" name="email" placeholder="E-mail"><br>
+        <p> <input type="submit" value="REDEFINIR SENHA"></p>
         <a href="{{ route('get.login') }}" class="sublinhado">Voltar para o Login </a> <br>
 
     </form>
 </body>
+
 </html>
