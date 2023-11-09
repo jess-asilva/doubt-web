@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f5f5f5;
+     
+}
+
+.logo {
+    position: absolute;
+    top: 5px; 
+    left: 10px; 
+    width: 130px; 
+    height: auto;
+}
+
+form {
+    background-color: #3a238c;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px rgba(128, 0, 128, 0.6);
+    max-width: 80%;
+    width: 20%;
+    text-align: center;
+    padding: 1em;
+    margin-top: 100px;
+}
+
+legend {
+    color: #f27c38; 
+    font-size: 1.2em; 
+    font-weight: bold;
+    margin-bottom: 20px; 
+}
+
+input {
+    width: 80%;
+    padding: 8px;
+    margin: 0.5em 0; 
+    font-size: 0.8em;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-sizing: border-box;
+    align-items: center;
+    font-weight: bold;
+}
+
+select {
+    width: 50%;
+    padding: 4px;   
+    border-radius: 10px;
+    margin: 0.5em 0;  
+    
+}
+
+input[type="submit"] {
+    width: 150px;
+    height: 50px;
+    margin: 10px auto;
+
+    padding: 0 0;
+    background-color: #f29829;
+    color: #3a238c;
+    border: 3px solid #3a238c;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
