@@ -21,7 +21,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('users.signup');
+        return view('users.createAccount');
     }
 
     /**
@@ -29,10 +29,13 @@ class UserController extends Controller
      */
     public function store(StoreUserRequest $request)
     {
+        $userdata = $request->validated();
+
         $user = User::create([
-            'name' => $request->input('name'),
-            'Institution' => $request->input('instituicion'),
-            'email' => $request->input('email'),
+            'usuario' => $request->input('user'),
+            'email' => $request->input('e-mail'),
+            'ra/rm' => $request->input('rm/ra'),
+            'senha' => $request->input('password'),
         ]);
 
         return redirect('');

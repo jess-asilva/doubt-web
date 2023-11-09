@@ -22,10 +22,11 @@ class StoreUserRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'required|min:3|max:255',
-            'institution' => 'required|min:3|max:255',
-            'tel' => 'numeric',
-            'email' => 'required|email:rfc,dns',
+            'usuario' => 'required|min:3|max:255',
+            'email' => 'required|email:rfc,dns|unique users, e-mail',
+            'ra/rm' => 'numeric',
+            'senha' => 'required|min:3|max:255|confirmed',
+            'confirmarSenha' => 'required',
         ];
     }
 
@@ -39,7 +40,10 @@ class StoreUserRequest extends FormRequest
         return [
             'name.required' => 'Nome é obrigatório.',
             'name.min' => 'O nome deve ter ao menos 3 letras.',
-            'institution.required' => 'Instituição é obrigatório.',
+            'email.required' => 'E-mail é obrigatório.',
+            'ra/rm.required' => 'RA/RM é obrigatório.',
+            'senha.required' => 'Digite uma senha.',
+            'confirmarSenha.required' => 'Confirme a senha.',
         ];
     }
 }

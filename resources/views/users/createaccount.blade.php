@@ -14,27 +14,27 @@
 
         <h2>JUNTE-SE A MONITORIA!</h2>
     </header>
-    <form action="#" method="post">
+    <form action="{{ route('post.createAccount') }}" method="post">
         @csrf
         <legend>CADASTRE-SE</legend>
 
-        <input type="text" name="usuario" placeholder="Usuário"><br>
+        <input type="text" name="usuario" placeholder="Usuário" required autofocus><br>
         @error('usuario')
         <div class="alert alert-danger">{{ $message }}</div>
         @enderror
-        <input type="email" name="email" placeholder="E-mail"><br>
+        <input type="email" name="email" placeholder="E-mail" required><br>
         @error('email')
         <div class="alert alert-danger">{{ $message }}</div>
         @enderror
-        <input type="text" name="ra/rm" placeholder="RA/RM"><br>
+        <input type="text" name="ra/rm" placeholder="RA/RM" required><br>
         @error('ra/rm')
         <div class="alert alert-danger">{{ $message }}</div>
         @enderror
-        <input type="password" name="senha" placeholder="Senha"><br>
+        <input type="password" name="senha" placeholder="Senha" required><br>
         @error('senha')
         <div class="alert alert-danger">{{ $message }}</div>
         @enderror
-        <input type="password" name="confirmarSenha" placeholder="Confirmar senha"><br>
+        <input type="password" name="confirmarSenha" placeholder="Confirmar senha" required><br>
         @error('confirmarSenha')
         <div class="alert alert-danger">{{ $message }}</div>
         @enderror

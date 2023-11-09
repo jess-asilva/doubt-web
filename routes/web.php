@@ -22,6 +22,9 @@ Route::get('/', [UserController::class, 'index'])->name('index');
 Route::get('/login', [AuthenticateController::class, 'index'])->name('get.login');
 Route::post('/login', [AuthenticateController::class, 'login'])->name('post.login');
 
+Route::get('/createAccount', [UserController::class, 'create'])->name('get.createAccount');
+Route::post('/createAccount', [UserController::class, 'store'])->name('post.createAccount');
+
 Route::get('/signup', [UserController::class, 'create'])->name('get.signup');
 Route::post('/signup', [UserController::class, 'store'])->name('post.signup');
 
@@ -37,8 +40,12 @@ Route::get('/createAccount', function () {
     return view('users.createAccount');
 })->name('get.createAccount');
 
-Route::get('/user/{id}', function ($id_user) {
-    return view('home');
+//Route::get('/user/{id}', function ($id_user) {
+//    return view('users.home');
+//})->name('home');
+
+Route::get('/user/{id?}', function ($id_user = null) {
+    return view('users.home');
 })->name('home');
 
 Route::get('/internetFoum', function () {
