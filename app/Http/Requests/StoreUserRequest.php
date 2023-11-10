@@ -26,7 +26,7 @@ class StoreUserRequest extends FormRequest
             'email' => 'required|email:rfc,dns|unique:users,email',
             'ra/rm' => 'numeric|unique:users,ra/rm',
             'password' => 'required|between:3,15|confirmed',
-            'confPassword' => 'required',
+            'password_confirmation' => 'required|min:6',
         ];
     }
 

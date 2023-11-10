@@ -34,8 +34,8 @@
         @error('password')
         <div class="alert alert-danger">{{ $message }}</div>
         @enderror
-        <input type="password" id="password-confirm" name="confPassword" class="form-control" placeholder="Confirmar senha" required class="@error('confPasssword') is-invalid @enderror"><br>
-        @error('confPassword')
+        <input type="password" id="password_confirmation" name="password_confirmation" class="form-control" placeholder="Confirmar senha" required class="@error('password_confirmation') is-invalid @enderror"><br>
+        @error('password_confirmation')
         <div class="alert alert-danger">{{ $message }}</div>
         @enderror
 
