@@ -33,6 +33,10 @@ Route::get('/registerMonitor', function () {
     return view('users.registerMonitor');
 })->name('get.registerMonitor');
 
+Route::get('/aboutUs', function () {
+    return view('aboutUs');
+})->name('get.aboutUs');
+
 Route::get('/createAccount', function () {
     return view('users.createAccount');
 })->name('get.createAccount');
