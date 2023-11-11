@@ -14,11 +14,10 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id('id_user');
             $table->unsignedBigInteger('id_type_user');
-            $table->string('user', 15);
-            $table->string('name_user', 100);
-            $table->string('e-mail', 100);
-            $table->integer('password');
-            $table->string('rm/ra', 11);
+            $table->string('name', 100);
+            $table->string('email')->unique();
+            $table->string('password');
+            $table->string('ra/rm', 11);
             $table->timestamps();
 
             $table->foreign('id_type_user')->references('id_type_user')->on('type_of_users');

@@ -1,8 +1,11 @@
 {
-    "name": "laravel/laravel",
+    "name": "doubtweb/doubtweb",
     "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
-    "keywords": ["laravel", "framework"],
+    "description": "Web system to help schools and students achieving their goals.",
+    "keywords": [
+        "doubtweb",
+        "websystem"
+    ],
     "license": "MIT",
     "require": {
         "php": "^8.1",

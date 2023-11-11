@@ -25,11 +25,11 @@
 
         <h2>BEM-VINDO DE VOLTA!</h2>
     </header>
-    <form class="sessao_form" action="{{ route('post.login') }}" method="POST">
+    <form class="sessao_form" action="{{ route('post.authenticate') }}" method="POST">
         @csrf
         <legend>LOGIN</legend>
-        <input type="text" class="normal-input" name="name" placeholder="Usuário"><br>
-        @error('name')
+        <input type="text" class="normal-input" name="ra/rm" placeholder="RA/RM"><br>
+        @error('ra/rm')
         <div class="alert alert-danger">{{ $message }}</div>
         @enderror
         <input type="password" class="normal-input" name="password" placeholder="Senha"><br>

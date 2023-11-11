@@ -14,28 +14,28 @@
 
         <h2>JUNTE-SE A MONITORIA!</h2>
     </header>
-    <form action="#" method="post">
+    <form action="{{ route('post.createAccount') }}" method="post">
         @csrf
         <legend>CADASTRE-SE</legend>
 
-        <input type="text" name="usuario" placeholder="Usuário"><br>
-        @error('usuario')
+        <input type="text" name="name" placeholder="Nome" required autofocus><br>
+        @error('name')
         <div class="alert alert-danger">{{ $message }}</div>
         @enderror
-        <input type="email" name="email" placeholder="E-mail"><br>
+        <input type="email" name="email" placeholder="E-mail" required><br>
         @error('email')
         <div class="alert alert-danger">{{ $message }}</div>
         @enderror
-        <input type="text" name="ra/rm" placeholder="RA/RM"><br>
+        <input type="text" name="ra/rm" placeholder="RA/RM" required><br>
         @error('ra/rm')
         <div class="alert alert-danger">{{ $message }}</div>
         @enderror
-        <input type="password" name="senha" placeholder="Senha"><br>
-        @error('senha')
+        <input type="password" id="password" name="password" class="form-control" placeholder="Senha" required class="@error('password') is-invalid @enderror"><br>
+        @error('password')
         <div class="alert alert-danger">{{ $message }}</div>
         @enderror
-        <input type="password" name="confirmarSenha" placeholder="Confirmar senha"><br>
-        @error('confirmarSenha')
+        <input type="password" id="password_confirmation" name="password_confirmation" class="form-control" placeholder="Confirmar senha" required class="@error('password_confirmation') is-invalid @enderror"><br>
+        @error('password_confirmation')
         <div class="alert alert-danger">{{ $message }}</div>
         @enderror
 
