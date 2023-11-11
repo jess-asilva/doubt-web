@@ -21,7 +21,10 @@ class AuthenticateController extends Controller
 
     public function authenticate(AuthenticateRequest $request): RedirectResponse
     {
-        $credentials = $request->validate();
+        $credentials = $request->validate([
+            'ra/rm' => ['required'],
+            'password' => ['required'],
+        ]);
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
