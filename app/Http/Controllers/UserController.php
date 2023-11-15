@@ -50,6 +50,7 @@ class UserController extends Controller
             'email' => $userData['email'],
             'ra/rm' => $userData['ra/rm'],
             'password' => Hash::make($userData['password']),
+            'id_type_user' => 2,
         ]);
 
         $user->save();
