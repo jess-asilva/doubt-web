@@ -42,6 +42,14 @@ Route::get('/aboutUs', function () {
     return view('aboutUs');
 })->name('get.aboutUs');
 
+//Route::get('/user/{id}', function ($id_user) {
+//    return view('users.home');
+//})->name('home');
+
+Route::get('/user/{id?}', function ($id_user = null) {
+    return view('users.home');
+})->name('home');
+
 Route::get('/internetFoum', function () {
     return view('internetFoum');
 })->name('internetFoum');
