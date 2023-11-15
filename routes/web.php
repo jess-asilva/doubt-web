@@ -38,6 +38,10 @@ Route::get('/registerMonitor', function () {
     return view('users.registerMonitor');
 })->name('get.registerMonitor');
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> CriacaoLogin
 Route::get('/aboutUs', function () {
     return view('aboutUs');
 })->name('get.aboutUs');
@@ -45,9 +49,17 @@ Route::get('/aboutUs', function () {
 Route::get('/createAccount', function () {
     return view('users.createAccount');
 })->name('get.createAccount');
+<<<<<<< HEAD
 //Route::get('/user/{id}', function ($id_user) {
 //    return view('users.home');
 //})->name('home');
+=======
+
+//Route::get('/user/{id}', function ($id_user) {
+//    return view('users.home');
+//})->name('home');
+
+>>>>>>> CriacaoLogin
 
 Route::get('/user/{id?}', function ($id_user = null) {
     return view('users.home');

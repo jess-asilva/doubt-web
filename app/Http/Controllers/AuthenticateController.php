@@ -19,7 +19,7 @@ class AuthenticateController extends Controller
         return View('users.login');
     }
 
-    public function authenticate(AuthenticateRequest $request): RedirectResponse
+    public function authenticate(AuthenticateRequest $request) //RedirectResponse
     {
         $credentials = $request->validate([
             'ra/rm' => ['required'],
@@ -30,6 +30,8 @@ class AuthenticateController extends Controller
             $request->session()->regenerate();
 
             return redirect()->intended('home');
+
+           // return view('users.teste');
         }
 
         return back()->withErrors([
