@@ -38,9 +38,13 @@ Route::get('/registerMonitor', function () {
     return view('users.registerMonitor');
 })->name('get.registerMonitor');
 
-Route::get('/aboutUs', function () {
-    return view('aboutUs');
-})->name('get.aboutUs');
+Route::get('/user/{id?}', function ($id_user = null) {
+    return view('users.home');
+})->name('home');
+
+//Route::get('/aboutUs', function () {
+//    return view('aboutUs');
+//})->name('get.aboutUs');
 
 Route::get('/internetFoum', function () {
     return view('internetFoum');
