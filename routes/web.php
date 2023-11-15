@@ -38,23 +38,9 @@ Route::get('/registerMonitor', function () {
     return view('users.registerMonitor');
 })->name('get.registerMonitor');
 
-<<<<<<< HEAD
 Route::get('/aboutUs', function () {
     return view('aboutUs');
 })->name('get.aboutUs');
-
-Route::get('/createAccount', function () {
-    return view('users.createAccount');
-})->name('get.createAccount');
-=======
-//Route::get('/user/{id}', function ($id_user) {
-//    return view('users.home');
-//})->name('home');
->>>>>>> ValidacaoCadastro
-
-Route::get('/user/{id?}', function ($id_user = null) {
-    return view('users.home');
-})->name('home');
 
 Route::get('/internetFoum', function () {
     return view('internetFoum');
