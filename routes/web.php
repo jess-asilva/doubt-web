@@ -27,12 +27,24 @@ Route::post('/createAccount', [UserController::class, 'store'])->name('post.crea
 Route::get('/login', [AuthenticateController::class, 'index'])->name('get.login');
 Route::post('/login', [AuthenticateController::class, 'authenticate'])->name('post.authenticate');
 
-//Página Inicial do usuário
-Route::get('/home', [HomeController::class, 'index'])->name('home')->middleware('auth');
-
 Route::get('/forgotPassword', function () {
     return view('users.forgotPassword');
 })->name('get.forgotPassword');
+
+Route::get('/emailConfirmation', function () {
+    return view('users.emailConfirmation');
+})->name('get.emailConfirmation');
+
+Route::get('/logout', function () {
+    return view('logout');
+})->name('get.logout');
+
+//Página Inicial do usuário
+Route::get('/home', [HomeController::class, 'index'])->name('home')->middleware('auth');
+
+Route::get('/testeMenu', function () {
+    return view('users.testeMenu');
+})->name('testeMenu');
 
 Route::get('/registerMonitor', function () {
     return view('users.registerMonitor');
@@ -42,9 +54,9 @@ Route::get('/user/{id?}', function ($id_user = null) {
     return view('users.home');
 })->name('home');
 
-//Route::get('/aboutUs', function () {
-//    return view('aboutUs');
-//})->name('get.aboutUs');
+Route::get('/aboutUs', function () {
+    return view('aboutUs');
+})->name('get.aboutUs');
 
 //Route::get('/user/{id}', function ($id_user) {
 //    return view('users.home');
@@ -60,16 +72,16 @@ Route::get('/internetFoum', function () {
 
 Route::get('/monitors', function () {
     return view('monitors');
-})->name('monitors');
+})->name('get.monitors');
 
 Route::get('/students', function () {
     return view('students');
-})->name('students');
+})->name('get.students');
 
 Route::get('/schedule', function () {
     return view('schedule');
-})->name('schedule');
+})->name('get.schedule');
 
 Route::get('/doubts', function () {
     return view('doubts');
-})->name('doubts');
+})->name('get.doubts');
