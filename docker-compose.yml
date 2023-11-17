@@ -1,0 +1,33 @@
+version: '3.9'
+networks:
+    doubtweb:
+volumes:
+    dbdata:
+services:
+    db:
+        image: mysql:8
+        container_name: doubt-db
+        volumes:
+            - dbdata:/var/lib/mysql
+        env_file:
+            - ./.env
+        environment:
+            - MYSQL_ROOT_PASSWORD=root
+            - MYSQL_DATABASE=doubtweb
+            - TZ=GMT+3
+        ports:
+            - 3306:3306
+        networks:
+            - doubtweb
+    app:
+        build: .
+        image: doubt
+        container_name: doubt
+        env_file:
+            - ./.env
+        ports:
+            - 80:80
+        networks:
+            - doubtweb
+        depends_on:
+            - db
