@@ -4,6 +4,11 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AuthenticateController;
 use App\Http\Controllers\HomeController;
+use App\Mail\maingullDoubt;
+//use GuzzleHttp\Psr7\Request;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Http\Request;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -75,3 +80,34 @@ Route::get('/schedule', function () {
 Route::get('/doubts', function () {
     return view('doubts');
 })->name('doubts');
+
+//Rota que envia o token para o usuário
+Route::post('/mail', function (Request $email) {
+    //dd($email->all());
+    Mail::to($email)->send(new maingullDoubt);
+    return view('users.login');
+})->name('mail');
+
+
+/*Route::get('/mail', function () {
+    Mail::to('joaopaulodonato91@gmail.com')->send(new maingullDoubt);
+    return view('users.login');
+})->name('mail');
+
+
+Route::post('/mail', function (Request $email) {
+   echo $email;
+})->name('mail');
+
+*/
+/*Route::post('/mail', function (Request $email) {
+    $subject = 'Teste envio de e-mail';
+    $message = 'Segue sua nova senha';
+    $headers = 'From: doubt@teste.com' .  "r\n" . 
+        'Reply-to: doubt@teste.com';
+        
+    mail($email, $subject, $message, $headers);
+    return view('users.login');
+})->name('mail');
+//mail($to, $subject, $message, $headers);
+*/

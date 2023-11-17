@@ -49,6 +49,7 @@ class UserController extends Controller
             'name' => $userData['name'],
             'email' => $userData['email'],
             'ra/rm' => $userData['ra/rm'],
+            'id_type_user' => 3,
             'password' => Hash::make($userData['password']),
         ]);
 
