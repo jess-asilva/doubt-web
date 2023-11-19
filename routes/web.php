@@ -3,7 +3,13 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AuthenticateController;
+use App\Http\Controllers\contactDoubtController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\formDoubtController;
+use App\Mail\formDoubtMail;
+//use GuzzleHttp\Psr7\Request;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -85,3 +91,12 @@ Route::get('/schedule', function () {
 Route::get('/doubts', function () {
     return view('doubts');
 })->name('get.doubts');
+
+Route::post('/doubt', function () {
+    return view('doubts');
+})->name('get.doubts');
+
+//Rota que coleta as informações do formulário (Adquira o Doubt)
+Route::post('/doubts', [contactDoubtController::class, 'store'])->name('post.doubts');
+
+//Route::resource('/doubts', [contactDoubtController::class, 'store'])->name('post.doubts');

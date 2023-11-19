@@ -13,8 +13,8 @@
             <img class="header-img" src="../img/MicrosoftTeams-image.png" alt="">
         </div>
         <div class="header-button">
-            <a class="header-button-" href="">ENTRAR</a>
-            <a class="header-button-" href="">CADASTRAR-SE</a>
+            <a class="header-button-" href="{{ route('post.authenticate') }}">ENTRAR</a>
+            <a class="header-button-" href="{{ route('get.createAccount') }}">CADASTRAR-SE</a>
         </div>
     </nav>
 </header>
@@ -35,6 +35,7 @@
             <div class="section-column-second">
                 <img class="section-img" src="../img/Design sem nome(1).png
                     " alt="">
+                    
             </div>
         </div>
     </section>
@@ -79,26 +80,27 @@
     <section class="section-form">
         <div class="div-form">
             <div>
-                <form action="">
+                <form action="{{ route('post.doubts') }}" method="post">
+                @csrf
                     <h1 class="div-text-acquired">ADQUIRA O DOUBT:</h1>
                     <div class="row">
                         <div class="column">
                             <div class="input-group">
-                                <input type="text" placeholder="Nome">
+                                <input type="text" name="name" placeholder="Nome" required>
                             </div>
                             <div class="input-group">
-                                <input type="text" placeholder="Institution">
+                                <input type="text" name="institution" placeholder="Institution" required>
                             </div>
                             <div class="input-group">
-                                <input type="tel" placeholder="Número">
+                                <input type="tel" name="telPhone" placeholder="Número" required>
                             </div>
                             <div class="input-group">
-                                <input type="email" placeholder="Email">
+                                <input type="email" name="email" placeholder="Email" required>
                             </div>
                         </div>
                         <div class="column">
                             <div class="input-group">
-                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                                <textarea name="subject" id="" cols="30" rows="10" required></textarea>
                             </div>
                             <div>
                                 <input type="checkbox">
@@ -117,7 +119,7 @@
 <footer>
     <nav>
         <div class="footer-block">
-            <a class="footer-block-text" href="aboutus.html">Sobre nós</a>
+            <a class="footer-block-text" href="{{ route('get.aboutUs') }}">Sobre nós</a>
             <a class="footer-block-text" href="privacypolicy.html">Política de privacidade</a>
         </div>
         <div>
