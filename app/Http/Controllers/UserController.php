@@ -3,9 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+
 use App\Http\Requests\StoreUserRequest;
+use App\Http\Requests\UpdatePasswordRequest;
 use App\Http\Requests\UpdateUserRequest;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -71,7 +74,9 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        //
+        $user = User::findOrFail(Auth::id());
+
+        return view('home')->with('user', $user);
     }
 
     /**
@@ -79,7 +84,29 @@ class UserController extends Controller
      */
     public function update(UpdateUserRequest $request, User $user)
     {
-        //
+        $user = User::findOrFail(Auth::id());
+        $userData = $request->validated();
+
+        if (!Hash::check($userData['password'], $user->password)) {
+            return back()->withErrors([
+                'password' => 'Senha incorreta.',
+            ]);
+        }
+
+        $anotherUser = User::select('email')->where('email', $userData['email'])->where('id_user', "<>", Auth::id())->get();
+
+        if ($anotherUser->isNotEmpty()) {
+            return back()->withErrors([
+                'email' => 'E-mail já cadastrado.',
+            ])->onlyInput('name', 'email');
+        }
+
+        $user->name = $userData['name'];
+        $user->email = $userData['email'];
+
+        $user->save();
+
+        return redirect('/home');
     }
 
     /**
@@ -87,6 +114,42 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
-        //
+        User::destroy(Auth::id());
+
+        return redirect('/logout');
+    }
+
+    /**
+     * Show the form for editing password.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function editPassword()
+    {
+        return view('users.changePassword');
+    }
+
+    /**
+     * Update password.
+     *
+     * @param \App\Http\Requests\UpdatePasswordRequest $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function updatePassword(UpdatePasswordRequest $request)
+    {
+        $user = User::findOrFail(Auth::id());
+        $passwords = $request->validated();
+
+        if (!Hash::check($passwords['password'], $user->password)) {
+            return back()->withErrors([
+                'password' => 'Senha incorreta.',
+            ]);
+        }
+
+        $user->password = Hash::make($passwords['new_password']);
+
+        $user->save();
+
+        return redirect('/perfil');
     }
 }
