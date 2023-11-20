@@ -20,8 +20,8 @@ use App\Http\Controllers\HomeController;
 Route::get('/', [UserController::class, 'index'])->name('index');
 
 //Cadastro
-Route::get('/createAccount', [UserController::class, 'create'])->name('get.createAccount');
-Route::post('/createAccount', [UserController::class, 'store'])->name('post.createAccount');
+Route::get('/create-account', [UserController::class, 'create'])->name('get.createAccount');
+Route::post('/create-account', [UserController::class, 'store'])->name('post.createAccount');
 
 //Login - autenticação
 Route::get('/login', [AuthenticateController::class, 'index'])->name('get.login');
