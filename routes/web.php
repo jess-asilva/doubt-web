@@ -35,6 +35,9 @@ Route::get('/emailConfirmation', function () {
     return view('users.emailConfirmation');
 })->name('get.emailConfirmation');
 
+Route::get('user/changePassword', [UserController::class, 'editPassword'])->name('get.changePassword');
+Route::patch('user/changePassword', [UserController::class, 'updatePassword'])->name('patch.changePassword');
+
 Route::get('/logout', function () {
     return view('logout');
 })->name('get.logout');
