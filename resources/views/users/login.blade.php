@@ -37,9 +37,9 @@
         <div class="alert alert-danger">{{ $message }}</div>
         @enderror
 
-        <p><a href="{{ route('get.forgotPassword') }}" class="nao-sublinhado">Esqueceu a senha?</a></p>
+        <p><a href="{{ route('get.forgot-password') }}" class="nao-sublinhado">Esqueceu a senha?</a></p>
         <input type="submit" value="ENTRAR">
-        <p>ou <a href="{{ route('get.createAccount') }}" class="sublinhado">Cadastre-se</a></p>
+        <p>ou <a href="{{ route('get.create-account') }}" class="sublinhado">Cadastre-se</a></p>
     </form>
 
 </body>

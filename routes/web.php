@@ -26,23 +26,23 @@ use Illuminate\Http\Request;
 Route::get('/', [UserController::class, 'index'])->name('index');
 
 //Cadastro
-Route::get('/create-account', [UserController::class, 'create'])->name('get.createAccount');
-Route::post('/create-account', [UserController::class, 'store'])->name('post.createAccount');
+Route::get('/create-account', [UserController::class, 'create'])->name('get.create-account');
+Route::post('/create-account', [UserController::class, 'store'])->name('post.create-account');
 
 //Login - autenticação
 Route::get('/login', [AuthenticateController::class, 'index'])->name('get.login');
 Route::post('/login', [AuthenticateController::class, 'authenticate'])->name('post.authenticate');
 
-Route::get('/forgotPassword', function () {
-    return view('users.forgotPassword');
-})->name('get.forgotPassword');
+Route::get('/forgot-password', function () {
+    return view('users.forgot-password');
+})->name('get.forgot-password');
 
-Route::get('/emailConfirmation', function () {
-    return view('users.emailConfirmation');
-})->name('get.emailConfirmation');
+Route::get('/email-confirmation', function () {
+    return view('users.email-confirmation');
+})->name('get.email-confirmation');
 
-Route::get('user/changePassword', [UserController::class, 'editPassword'])->name('get.changePassword');
-Route::patch('user/changePassword', [UserController::class, 'updatePassword'])->name('patch.changePassword');
+Route::get('user/change-password', [UserController::class, 'editPassword'])->name('get.change-password');
+Route::patch('user/change-password', [UserController::class, 'updatePassword'])->name('patch.change-password');
 
 Route::get('/logout', function () {
     return view('logout');
@@ -51,21 +51,17 @@ Route::get('/logout', function () {
 //Página Inicial do usuário
 Route::get('/home', [HomeController::class, 'index'])->name('home')->middleware('auth');
 
-Route::get('/testeMenu', function () {
-    return view('users.testeMenu');
-})->name('testeMenu');
-
-Route::get('/registerMonitor', function () {
-    return view('users.registerMonitor');
-})->name('get.registerMonitor');
+Route::get('/register-monitor', function () {
+    return view('users.register-monitor');
+})->name('get.register-monitor');
 
 Route::get('/user/{id?}', function ($id_user = null) {
     return view('users.home');
 })->name('home');
 
-Route::get('/aboutUs', function () {
-    return view('aboutUs');
-})->name('get.aboutUs');
+Route::get('/about-us', function () {
+    return view('about-us');
+})->name('get.about-us');
 
 //Route::get('/user/{id}', function ($id_user) {
 //    return view('users.home');
@@ -75,9 +71,9 @@ Route::get('/user/{id?}', function ($id_user = null) {
     return view('users.home');
 })->name('home');
 
-Route::get('/internetFoum', function () {
-    return view('internetFoum');
-})->name('internetFoum');
+Route::get('/internet-foum', function () {
+    return view('internet-foum');
+})->name('internet-foum');
 
 Route::get('/monitors', function () {
     return view('monitors');

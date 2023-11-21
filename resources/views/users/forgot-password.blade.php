@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Esqueceu a Senha</title>
-    <link rel="stylesheet" href="{{ asset('css/forgotPassword.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/forgot-password.css') }}">
 </head>
 
 <body>
@@ -13,8 +13,8 @@
     </header>
     @csrf
     <!--<form action="forgot_password" method="post">-->
-    <form action="{{ route('mail') }}" method="post"> 
-    @csrf   
+    <form action="{{ route('mail') }}" method="post">
+        @csrf
         <legend>Esqueceu sua senha?</legend>
         <p>Para onde devemos enviar o link para redefinir sua senha?</p><br>
         <input type="email" name="email" placeholder="E-mail"><br>

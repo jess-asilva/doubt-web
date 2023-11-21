@@ -16,7 +16,7 @@
             </div>
             <div class="header-button">
                 <a class="header-button-" href="{{ route('post.authenticate') }}">ENTRAR</a>
-                <a class="header-button-" href="{{ route('get.createAccount') }}">CADASTRAR-SE</a>
+                <a class="header-button-" href="{{ route('get.create-account') }}">CADASTRAR-SE</a>
             </div>
         </nav>
     </header>
@@ -123,7 +123,7 @@
     <footer>
         <nav>
             <div class="footer-block">
-                <a class="footer-block-text" href="{{ route('get.aboutUs') }}">Sobre nós</a>
+                <a class="footer-block-text" href="{{ route('get.about-us') }}">Sobre nós</a>
                 <a class="footer-block-text" href="privacypolicy.html">Política de privacidade</a>
             </div>
             <div>

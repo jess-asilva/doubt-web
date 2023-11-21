@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ asset('css/createAccount.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/create-account.css') }}">
     <title>Altere sua senha</title>
 </head>
 
@@ -12,7 +12,7 @@
     <header class="purple-overlay">
         <img class="logo" src="img/LOGO-DOUBT-TCC.png" alt="Logo">
     </header>
-    <form action="{{ route('patch.changePassword') }}" method="POST">
+    <form action="{{ route('patch.change-password') }}" method="POST">
         @method('PATCH')
         @csrf
         <legend>ALTERAR SUA SENHA</legend>
@@ -22,13 +22,11 @@
         @error('password')
         <div class="alert alert-danger">{{ $message }}</div>
         @enderror
-        <input type="password" id="password" name="password" class="form-control" placeholder="NOVA SENHA" required
-            class="@error('password') is-invalid @enderror"><br>
+        <input type="password" id="password" name="password" class="form-control" placeholder="NOVA SENHA" required class="@error('password') is-invalid @enderror"><br>
         @error('password')
         <div class="alert alert-danger">{{ $message }}</div>
         @enderror
-        <input type="password" id="password_confirmation" name="password_confirmation" class="form-control"
-            placeholder="CONFIRMAR SENHA" required class="@error('password_confirmation') is-invalid @enderror"><br>
+        <input type="password" id="password_confirmation" name="password_confirmation" class="form-control" placeholder="CONFIRMAR SENHA" required class="@error('password_confirmation') is-invalid @enderror"><br>
         @error('password_confirmation')
         <div class="alert alert-danger">{{ $message }}</div>
         @enderror

@@ -14,7 +14,7 @@
 
         <h2>JUNTE-SE A MONITORIA!</h2>
     </header>
-    <form action="{{ route('post.createAccount') }}" method="post">
+    <form action="{{ route('post.create-account') }}" method="post">
         @csrf
         <legend>CADASTRE-SE</legend>
 

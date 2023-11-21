@@ -127,7 +127,7 @@ class UserController extends Controller
      */
     public function editPassword()
     {
-        return view('users.changePassword');
+        return view('users.change-password');
     }
 
     /**
@@ -151,6 +151,6 @@ class UserController extends Controller
 
         $user->save();
 
-        return redirect('/perfil');
+        return redirect('/home');
     }
 }

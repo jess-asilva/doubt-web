@@ -25,7 +25,7 @@ class HomeController extends Controller
      */
     public function create()
     {
-        return view('users.createAccount');
+        return view('users.create-account');
     }
 
     /**
