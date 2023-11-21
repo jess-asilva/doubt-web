@@ -3,12 +3,13 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AuthenticateController;
+use App\Http\Controllers\contactDoubtController;
 use App\Http\Controllers\HomeController;
-use App\Mail\maingullDoubt;
+use App\Http\Controllers\formDoubtController;
+use App\Mail\formDoubtMail;
 //use GuzzleHttp\Psr7\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
-
 
 /*
 |--------------------------------------------------------------------------
@@ -94,38 +95,11 @@ Route::get('/doubts', function () {
     return view('doubts');
 })->name('get.doubts');
 
-//Rota que envia o token para o usuário
-Route::post('/mail', function (Request $email) {
-    //dd($email->all());
-    Mail::to($email)->send(new maingullDoubt);
-    return view('users.login');
-})->name('mail');
+Route::post('/doubt', function () {
+    return view('doubts');
+})->name('get.doubts');
 
+//Rota que coleta as informações do formulário (Adquira o Doubt)
+Route::post('/doubts', [contactDoubtController::class, 'store'])->name('post.doubts');
 
-/*Route::get('/mail', function () {
-    Mail::to('joaopaulodonato91@gmail.com')->send(new maingullDoubt);
-    return view('users.login');
-})->name('mail');
-
-
-Route::post('/mail', function (Request $email) {
-   echo $email;
-})->name('mail');
-
-*/
-/*Route::post('/mail', function (Request $email) {
-    $subject = 'Teste envio de e-mail';
-    $message = 'Segue sua nova senha';
-    $headers = 'From: doubt@teste.com' .  "r\n" . 
-        'Reply-to: doubt@teste.com';
-        
-    mail($email, $subject, $message, $headers);
-    return view('users.login');
-})->name('mail');
-//mail($to, $subject, $message, $headers);
-*/
-
-//Rota home para teste das funcionalidades
-Route::get('/home1', function () {
-    return view('home1');
-})->name('home1');
+//Route::resource('/doubts', [contactDoubtController::class, 'store'])->name('post.doubts');
