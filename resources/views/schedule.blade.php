@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compartilhar imagem</title>
-    <link rel="stylesheet" href="css/calendario.css">
+    <link rel="stylesheet" href="css/schedule.css">
 </head>
 
 <body>
@@ -15,8 +15,7 @@
         </a>
         <img class="logo" src="img/LOGO-DOUBT-TCC.png">
     </header>
-
-
+    
     <div class="container">
         <h2>ADICIONAR CALENDÁRIO</h2>
         <form id="calendar-form">
@@ -26,11 +25,12 @@
             <div class="image-upload">
                 <label for="image">Imagem</label>
                 <input type="file" id="image" accept=".jpg, .jpeg, .png, .gif" required>
-
+                <img id="preview-image" src="#" alt="Preview" style="display:none; max-width: 100%;">
             </div>
             <button type="submit">Enviar</button>
         </form>
     </div>
+
     <div class="container">
         <h2>CALENDÁRIOS</h2>
         <ul id="calendar-list"></ul>
@@ -41,6 +41,26 @@
     </footer>
 
     <script src="js/addCalendario.js"></script>
+    <script>
+        document.getElementById('image').addEventListener('change', function () {
+            var previewImage = document.getElementById('preview-image');
+            var fileInput = document.getElementById('image');
+            var file = fileInput.files[0];
+
+            if (file) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    previewImage.src = e.target.result;
+                    previewImage.style.display = 'block';
+                };
+
+                reader.readAsDataURL(file);
+            } else {
+                previewImage.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 
 </html>
