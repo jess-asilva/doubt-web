@@ -124,3 +124,8 @@ Route::post('/mail', function (Request $email) {
 })->name('mail');
 //mail($to, $subject, $message, $headers);
 */
+
+//Rota home para teste das funcionalidades
+Route::get('/home1', function () {
+    return view('home1');
+})->name('home1');

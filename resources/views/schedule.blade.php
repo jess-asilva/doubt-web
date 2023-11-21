@@ -10,12 +10,12 @@
 
 <body>
     <header>
-        <a href="homeADM.html" onclick="history.back();">
+        <a href="{{ route('home') }}" onclick="history.back();">
             <img class="arrow-back" src="img/voltar.png">
         </a>
         <img class="logo" src="img/LOGO-DOUBT-TCC.png">
     </header>
-    
+
     <div class="container">
         <h2>ADICIONAR CALENDÁRIO</h2>
         <form id="calendar-form">
@@ -42,7 +42,7 @@
 
     <script src="js/addCalendario.js"></script>
     <script>
-        document.getElementById('image').addEventListener('change', function () {
+        document.getElementById('image').addEventListener('change', function() {
             var previewImage = document.getElementById('preview-image');
             var fileInput = document.getElementById('image');
             var file = fileInput.files[0];
@@ -50,7 +50,7 @@
             if (file) {
                 var reader = new FileReader();
 
-                reader.onload = function (e) {
+                reader.onload = function(e) {
                     previewImage.src = e.target.result;
                     previewImage.style.display = 'block';
                 };
