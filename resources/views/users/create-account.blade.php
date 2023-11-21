@@ -43,6 +43,7 @@
         <p>ou ir para <a href="{{ route('get.login') }}" class="sublinhado">Login</a></p>
 
     </form>
+
 </body>
 
 </html>

@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
 
+
 class AuthenticateController extends Controller
 {
     /**
@@ -33,6 +34,8 @@ class AuthenticateController extends Controller
 
            // return view('users.teste');
         }
+
+    
 
         return back()->withErrors([
             'ra/rm' => 'Usuário ou senha inválido',

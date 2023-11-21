@@ -12,7 +12,9 @@
         <img class="logo" src="img/LOGO-DOUBT-TCC.png" alt="Logo">
     </header>
     @csrf
-    <form action="forgot_password" method="post">
+    <!--<form action="forgot_password" method="post">-->
+    <form action="{{ route('mail') }}" method="post"> 
+    @csrf   
         <legend>Esqueceu sua senha?</legend>
         <p>Para onde devemos enviar o link para redefinir sua senha?</p><br>
         <input type="email" name="email" placeholder="E-mail"><br>
