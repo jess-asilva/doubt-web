@@ -16,12 +16,10 @@
         <img class="logo" src="img/LOGO-DOUBT-TCC.png">
     </header>
 
-    <div class="container">
-        <h2>ADICIONAR CALENDÁRIO</h2>
+    
+        <h2>ADICIONAR MONITORIA</h2>
         <form id="calendar-form">
             <input type="text" id="title" placeholder="Nome do curso" required>
-            <input type="text" id="turma" placeholder="Turma">
-            <textarea id="description" placeholder="Descrição"></textarea>
             <div class="image-upload">
                 <label for="image">Imagem</label>
                 <input type="file" id="image" accept=".jpg, .jpeg, .png, .gif" required>
@@ -29,10 +27,10 @@
             </div>
             <button type="submit">Enviar</button>
         </form>
-    </div>
+   
 
     <div class="container">
-        <h2>CALENDÁRIOS</h2>
+        <h2>MONITORIA SEMANAL</h2>
         <ul id="calendar-list"></ul>
     </div>
 
