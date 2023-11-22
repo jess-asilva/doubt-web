@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
     <title>Home</title>
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
     </style>
 
 </head>
@@ -19,43 +20,43 @@
 
     <aside class="sidebar">
         <header class="sidebar-header">
-            <img class="logo-img" src="img/fundo.png" alt="" />
+            <img class="logo-img" src="img/LOGO-DOUBT-TCC.png" alt="" />
         </header>
 
         <nav>
             <button onclick="">
                 <span>
-                    <span>FORÚM</span>
+                    <span class="mobile-text" name="forum"> <a href="{{ route('internetForum') }}">FORÚM</a></span>
                 </span>
             </button>
 
             <button onclick="">
                 <span>
-                    <span>CADASTRO</span>
+                    <span class="mobile-text"> <a href="{{ route('internetForum') }}">CADASTRO</a></span>
                 </span>
             </button>
 
             <button onclick="">
                 <span>
-                    <span>ENQUETES</span>
+                    <span class="mobile-text"> <a href="{{ route('internetForum') }}">ENQUETES</a></span>
                 </span>
             </button>
 
             <button onclick="">
                 <span>
-                    <span>ALUNOS</span>
+                    <span class="mobile-text"> <a href="{{ route('get.students') }}">ALUNOS</a></span>
                 </span>
             </button>
 
             <button onclick="">
                 <span>
-                    <span>MONITORES</span>
+                    <span> <a href="{{ route('get.monitors') }}">MONITORES</a></span>
                 </span>
             </button>
 
             <button onclick="redirecionarCalendario()">
                 <span>
-                    <span>CALENDÁRIOS</span>
+                    <span class="mobile-text"> <a href="{{ route('get.schedule') }}">CALENDÁRIOS</a></span>
                 </span>
             </button>
 
@@ -63,7 +64,7 @@
 
             <button onclick="redirecionar()">
                 <span>
-                    <span>SAIR</span>
+                    <span class="mobile-text"> <a href="{{ route('get.logout') }}">SAIR</a></span>
                 </span>
             </button>
         </nav>
@@ -84,7 +85,7 @@
 
         <button onclick="">
             <span>
-                <span class="mobile-text">Forúm</span>
+                <span class="mobile-text" name="forum">Forúm></a></span>
             </span>
         </button>
 
@@ -112,7 +113,7 @@
             </span>
         </button>
 
-        <button onclick="redirecionarCalendario()">
+        <button onclick="redirecionarCalendario('/schedule')">
             <span>
                 <span class="mobile-text">Calendários</span>
             </span>
@@ -146,12 +147,14 @@
 
                         <button class="btnFileForm">
                             <img src="img/gif.svg" alt="Adicionar um gif">
-                            <input type="file" id="gifUpload" name="gifUpload" accept="image/gif" style="display: none;">
+                            <input type="file" id="gifUpload" name="gifUpload" accept="image/gif"
+                                style="display: none;">
                         </button>
 
                         <button class="btnFileForm">
                             <img src="img/video.svg" alt="Adicionar um video">
-                            <input type="file" id="videoUpload" name="videoUpload" accept="video/*" style="display: none;">
+                            <input type="file" id="videoUpload" name="videoUpload" accept="video/*"
+                                style="display: none;">
                         </button>
                     </div>
 

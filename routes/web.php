@@ -75,9 +75,9 @@ Route::get('/user/{id?}', function ($id_user = null) {
     return view('users.home');
 })->name('home');
 
-Route::get('/internetFoum', function () {
-    return view('internetFoum');
-})->name('internetFoum');
+Route::get('/internetForum', function () {
+    return view('internetForum');
+})->name('internetForum');
 
 Route::get('/monitors', function () {
     return view('monitors');
@@ -98,6 +98,10 @@ Route::get('/doubts', function () {
 Route::post('/doubt', function () {
     return view('doubts');
 })->name('get.doubts');
+
+Route::get('/home1', function () {
+    return view('home1');
+})->name('home1');
 
 //Rota que coleta as informações do formulário (Adquira o Doubt)
 Route::post('/doubts', [contactDoubtController::class, 'store'])->name('post.doubts');

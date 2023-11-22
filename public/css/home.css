@@ -10,6 +10,10 @@ body {
     /*melhora a qualidade da fonte*/
 }
 
+a {
+    text-decoration: none;
+    color: #391959;
+}
 
 .sidebar {
     position: fixed;
