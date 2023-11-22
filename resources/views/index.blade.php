@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PROMOTION</title>
-    <link rel="stylesheet" href="../css/promotion.css">
+    <link rel="stylesheet" href="{{ asset('css/promotion.css') }}">
 </head>
 
 <body>
@@ -124,7 +124,7 @@
         <nav>
             <div class="footer-block">
                 <a class="footer-block-text" href="{{ route('get.aboutUs') }}">Sobre nós</a>
-                <a class="footer-block-text" href="privacypolicy.html">Política de privacidade</a>
+                <a class="footer-block-text" href="{{ route('privacyPolicy') }}">Política de privacidade</a>
             </div>
             <div>
                 <img class="header-img" src="../img/MicrosoftTeams-image.png" alt="">
