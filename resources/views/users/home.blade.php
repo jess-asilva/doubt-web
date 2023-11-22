@@ -26,13 +26,7 @@
         <nav>
             <button onclick="">
                 <span>
-                    <span class="mobile-text" name="forum"> <a href="{{ route('internetForum') }}">FORÚM</a></span>
-                </span>
-            </button>
-
-            <button onclick="">
-                <span>
-                    <span class="mobile-text"> <a href="{{ route('internetForum') }}">CADASTRO</a></span>
+                    <span class="mobile-text" name="forum"> <a href="{{ route('internetForum') }}">INÍCIO</a></span>
                 </span>
             </button>
 

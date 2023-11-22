@@ -12,7 +12,7 @@ body {
 
 a {
     text-decoration: none;
-    color: #391959;
+    color: #F29829;
 }
 
 .sidebar {
@@ -26,7 +26,7 @@ a {
     padding: 40px 10px 30px 30px;
     border-right: 1px solid #F29820;
     transition: all 0.35s;
-    background-color: #F29829;
+    background-color: #3A238C;
 
 }
 
@@ -104,55 +104,7 @@ a {
     }
 }
 
-.button-mobile {
-    display: none;
-    align-self: flex-start;
-    align-items: center;
-    margin: 16px;
-    background-color: transparent;
-    color: #000000;
-    border: 0;
-}
 
-.button-mobile span {
-    font-size: 22px;
-    margin-left: 8px;
-}
-
-.menu-mobile {
-    display: none;
-}
-
-.menu-mobile-active {
-    width: 100vw;
-    height: 100vh;
-    background-color: #F4F4F4;
-    z-index: 99;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.menu-mobile-active button {
-    background: transparent;
-    border: 0;
-    color: inherit;
-    margin-bottom: 16px;
-}
-
-.menu-mobile-active button>span {
-    display: inline-flex;
-    align-items: center;
-}
-
-.mobile-text {
-    font-size: 22px;
-}
 
 @media (max-width: 480px) {
     .sidebar {
@@ -169,30 +121,8 @@ a {
 }
 
 
-
-
-
-
-
-
-
-
-
-
 li {
     list-style: none;
-}
-
-header {
-    width: 100%;
-
-    background-color: black;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    box-shadow: 1px 0 3px rgba(0, 0, 0, 0.2);
 }
 
 .main {
