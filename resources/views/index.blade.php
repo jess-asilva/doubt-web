@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PROMOTION</title>
-    <link rel="stylesheet" href="../css/promotion.css">
+    <link rel="stylesheet" href="{{ asset('css/promotion.css') }}">
 </head>
 
 <body>
@@ -33,13 +33,11 @@
                             encontra tudo isso!</p>
                     </div>
                     <div>
-                        <a class="button-knowmore" href="">SAIBA MAIS</a>
+                        <button class="button-knowmore" onclick="scrollDown()">SAIBA MAIS</button>
                     </div>
                 </div>
                 <div class="section-column-second">
-                    <img class="section-img" src="../img/Design sem nome(1).png
-                    " alt="">
-
+                    <iframe class="iframe" src="https://www.youtube.com/embed/w_vi-JX9euQ?si=Dqvlr8dOZyEWCJCd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
             </div>
         </section>
@@ -81,8 +79,8 @@
                 <p class="div-text-">Aprimore a experiência estudantil de seus alunos!</p>
             </div>
         </div>
-        <section class="section-form">
-            <div class="div-form">
+        <section class="section-form" id="scrolling">
+            <div class="div-form" >
                 <div>
                     <form action="{{ route('post.doubts') }}" method="post">
                         @csrf
@@ -124,13 +122,22 @@
         <nav>
             <div class="footer-block">
                 <a class="footer-block-text" href="{{ route('get.aboutUs') }}">Sobre nós</a>
-                <a class="footer-block-text" href="privacypolicy.html">Política de privacidade</a>
+                <a class="footer-block-text" href="{{ route('privacyPolicy') }}">Política de privacidade</a>
             </div>
             <div>
                 <img class="header-img" src="../img/MicrosoftTeams-image.png" alt="">
             </div>
         </nav>
     </footer>
+    <script>
+        function scrollDown() {
+            const scrolling = document.getElementById('scrolling');
+            const destinationPosition = scrolling.offsetTop;
+            window.scrollTo({
+                top: destinationPosition,
+                behavior: 'smooth'
+            });
+        }
+    </script>
 </body>
-
 </html>

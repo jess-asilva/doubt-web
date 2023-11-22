@@ -27,7 +27,7 @@ nav{
 
 .header-img{
     width: auto;
-    height: 18vh;
+    height: 18vh;    
 }
 
 .header-button{
@@ -66,7 +66,8 @@ nav{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2.5rem;
+    gap: 1rem;
+    margin-top: 2rem;
 }
 
 .section-column-phrase{
@@ -110,9 +111,13 @@ nav{
     justify-content: center;
 }
 
-.section-img{
-    width: 80vh;
-    height: auto;
+
+.iframe{
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem; 
+    width: 80%;
+    height: 100%;
 }
 
 img{
@@ -124,6 +129,7 @@ img{
     display: flex;
     justify-content: center;
     margin: 5rem 0rem 1.3rem 0rem;
+    
 }
 
 .div-text-{
@@ -136,20 +142,25 @@ img{
 .div-description{
     display: flex;
     background-color: var(--color--logo--background);
-    align-items: center;
-    justify-content: center;
-    height: 15rem;
+    padding: 1rem;
+    height: auto;
+    flex-wrap: wrap;
 }
 
 .div-description-{
-    display: flex;
-    gap: 50px;
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+    gap: 1rem;
 }
 
 .div-description-row{
-    display: flex;
-    justify-content: center;
+    display: flex;   
+    margin: 1rem 0;
 }
+    
 
 
 .div-description-bubbles{
@@ -157,21 +168,17 @@ img{
     align-items: center;
     justify-content: left;
     background-color: white;
-    width: 23rem;
+    color: var(--color--text);
+    width: 100vh;
     height: 10rem;
     border-radius: 20rem;
-
-}
-
-p{
-    font-size: 1.4rem;
-    color: var(--color--text);
+    font-size: 1.2rem;
 }
 
 .div-text-enhance-experience{
     display: flex;
     justify-content: center;
-    margin: 2rem 0rem;
+    margin: 2rem 0rem; 
 }
 
 .section-form{
@@ -182,10 +189,11 @@ p{
 .div-form{
     display: flex;
     width: 100%;
-    height: 85vh;
+    height: auto;
     background-color: var(--color--text);
     justify-content: center;
     align-items: center;
+    padding: 2rem 0rem;
 }
 
 .div-text-acquired{
@@ -269,7 +277,7 @@ footer{
 }
 
 
-@media screen and (max-width: 992px){
+@media screen and (max-width: 992px){  
     .section-column{
         display: block;
         margin: 3rem 0rem;
@@ -287,11 +295,13 @@ footer{
         display: block;
         justify-content: center;
         align-items: center;
-
+        
     }
     .div-description-row{
         display: flex;
-        margin: 3rem 0rem;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem 0;
     }
     .div-description-bubbles{
         width: 28rem;
@@ -305,7 +315,7 @@ footer{
         justify-content: center;
     }
     .div-text-acquired{
-        margin: 2rem 0rem;
+       margin: 2rem 0rem; 
     }
     .row{
         display: block;
@@ -313,12 +323,12 @@ footer{
         align-items: center;
     }
     .column{
-        margin: 30px;
+        margin: 30px;   
     }
     .div-text-acquired{
         justify-content: center;
         align-items: center;
-    }
+    }   
     .row_{
         display: flex;
         justify-content: center;

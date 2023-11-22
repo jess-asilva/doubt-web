@@ -98,6 +98,11 @@ li{
     margin-bottom: 4rem;
 }
 
+.button_:hover{
+    background-color: #604f3b;
+    transition-duration: 1s;
+}
+
 .button_{
     text-decoration: none;
     font-size: 1rem;
@@ -106,11 +111,6 @@ li{
     border-radius: 10rem;
     background-color: var(--color--logo);
     color: var(--color--text);
-}
-
-.button_:hover{
-    background-color: #604f3b;
-    transition-duration: 1s;
 }
 
 footer{
@@ -139,12 +139,3 @@ footer{
     transition-duration: 1s;
     cursor: pointer;
 }
-
-@media screen and (max-width: 992px){ 
-    .content{
-        display: block;
-        font-size: 1rem;
-        text-align: justify;
-        margin: 0;
-    }
- }

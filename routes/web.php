@@ -102,4 +102,10 @@ Route::post('/doubt', function () {
 //Rota que coleta as informações do formulário (Adquira o Doubt)
 Route::post('/doubts', [contactDoubtController::class, 'store'])->name('post.doubts');
 
+
+
 //Route::resource('/doubts', [contactDoubtController::class, 'store'])->name('post.doubts');
+
+Route::get('/privacyPolicy', function () {
+    return view('privacyPolicy');
+})->name('privacyPolicy');
