@@ -111,9 +111,13 @@ nav{
     justify-content: center;
 }
 
-.section-img{
-    width: 80vh;
-    height: auto;
+
+.iframe{
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem; 
+    width: 80%;
+    height: 100%;
 }
 
 img{

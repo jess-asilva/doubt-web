@@ -37,9 +37,7 @@
                     </div>
                 </div>
                 <div class="section-column-second">
-                    <img class="section-img" src="../img/Design sem nome(1).png
-                    " alt="">
-
+                    <iframe class="iframe" src="https://www.youtube.com/embed/w_vi-JX9euQ?si=Dqvlr8dOZyEWCJCd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
             </div>
         </section>
