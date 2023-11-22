@@ -33,7 +33,7 @@
                             encontra tudo isso!</p>
                     </div>
                     <div>
-                        <a class="button-knowmore" href="">SAIBA MAIS</a>
+                        <button class="button-knowmore" onclick="scrollDown()">SAIBA MAIS</button>
                     </div>
                 </div>
                 <div class="section-column-second">
@@ -79,8 +79,8 @@
                 <p class="div-text-">Aprimore a experiência estudantil de seus alunos!</p>
             </div>
         </div>
-        <section class="section-form">
-            <div class="div-form">
+        <section class="section-form" id="scrolling">
+            <div class="div-form" >
                 <div>
                     <form action="{{ route('post.doubts') }}" method="post">
                         @csrf
@@ -129,6 +129,15 @@
             </div>
         </nav>
     </footer>
+    <script>
+        function scrollDown() {
+            const scrolling = document.getElementById('scrolling');
+            const destinationPosition = scrolling.offsetTop;
+            window.scrollTo({
+                top: destinationPosition,
+                behavior: 'smooth'
+            });
+        }
+    </script>
 </body>
-
 </html>
