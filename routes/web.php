@@ -8,9 +8,6 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PublicationController;
 use App\Http\Controllers\formDoubtController;
 use App\Mail\formDoubtMail;
-//use GuzzleHttp\Psr7\Request;
-use Illuminate\Support\Facades\Mail;
-use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,11 +44,6 @@ Route::patch('user/changePassword', [UserController::class, 'updatePassword'])->
 
 Route::get('/logout', [AuthenticateController::class, 'logout'])->name('logout');
 
-//Página Inicial do usuário
-Route::get('/home', [HomeController::class, 'index'])->name('home');
-
-Route::post('/home', [PublicationController::class, 'store'])->name('post.publication')->middleware('auth');
-
 Route::get('/testeMenu', function () {
     return view('users.testeMenu');
 })->name('testeMenu');
@@ -61,7 +53,7 @@ Route::get('/registerMonitor', function () {
 })->name('get.registerMonitor');
 
 Route::get('/user/{id?}', function ($id_user = null) {
-    return view('users.home');
+    return view('home');
 })->name('users-home');
 
 Route::get('/internetForum', function () {
@@ -100,3 +92,8 @@ Route::get('/aboutUs', function () {
 Route::get('/privacyPolicy', function () {
     return view('privacyPolicy');
 })->name('privacyPolicy');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/home', [PublicationController::class, 'index'])->name('home');
+    Route::post('/publication', [PublicationController::class, 'store'])->name('post.publication');
+});

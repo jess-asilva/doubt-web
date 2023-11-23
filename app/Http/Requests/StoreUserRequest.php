@@ -24,7 +24,7 @@ class StoreUserRequest extends FormRequest
         return [
             'name' => 'required|min:5|max:255',
             'email' => 'required|email:rfc,dns|unique:users,email',
-            'ra/rm' => 'numeric|unique:users,ra/rm',
+            'ra-rm' => 'numeric|unique:users,ra-rm',
             'password' => 'required|between:3,15|confirmed',
             'password_confirmation' => 'required|min:6',
         ];
@@ -42,8 +42,8 @@ class StoreUserRequest extends FormRequest
             'name.min' => 'O nome deve ter ao menos 5 letras.',
             'email.required' => 'E-mail é obrigatório.',
             'email.unique' => 'E-mail já cadastrado',
-            'ra/rm.required' => 'RA/RM é obrigatório.',
-            'ra/rm.unique' => 'RA/RM já cadastrado',
+            'ra-rm.required' => 'RA/RM é obrigatório.',
+            'ra-rm.unique' => 'RA/RM já cadastrado',
             'password.required' => 'Digite sua senha.',
             'password.between' => 'A senha deve ter entre 3 e 15 caracteres.',
             'password.confirmed' => "As senhas devem ser iguais.",

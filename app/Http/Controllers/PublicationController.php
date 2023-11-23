@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Publication;
 use App\Http\Requests\StorePublicationRequest;
 use App\Http\Requests\UpdatePublicationRequest;
-
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
 class PublicationController extends Controller
@@ -15,7 +15,12 @@ class PublicationController extends Controller
      */
     public function index()
     {
-        //
+        $userId = Auth::id();
+
+        $loggedUser = User::find($userId);
+        $publications = Publication::whereBelongsTo($loggedUser)->orderByDesc('created_at')->get();
+
+        return view('home')->with('loggedUser', $loggedUser)->with('publications', $publications);
     }
 
     /**
@@ -31,11 +36,9 @@ class PublicationController extends Controller
      */
     public function store(StorePublicationRequest $request)
     {
-        dd('aaaaaaaaa');
         $publication = $request->validated();
-        $publication['id_user'] = Auth::id();
+        $publication['user_id'] = Auth::id();
 
-        dd($publication);
         Publication::create($publication);
 
         return redirect('home');

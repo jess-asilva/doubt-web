@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id');
             $table->string('title');
-            $table->longText('cantent');
+            $table->longText('content');
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users');

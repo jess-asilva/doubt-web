@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('ra-rm', 11);
             $table->timestamps();
 
-            $table->foreign('user_type_id')->references('id')->on('users_types');
+            $table->foreign('user_type_id')->references('id')->on('user_types');
         });
     }
 

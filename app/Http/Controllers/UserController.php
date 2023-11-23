@@ -34,7 +34,7 @@ class UserController extends Controller
      *    $user = User::create([
      *       'name' => $request->input('users'),
      *        'email' => $request->input('e-mail'),
-     *        'ra/rm' => $request->input('rm/ra'),
+     *        'ra-rm' => $request->input('rm-ra'),
      *    ]);
 
      *    return redirect('');
@@ -51,10 +51,9 @@ class UserController extends Controller
         $user = User::create([
             'name' => $userData['name'],
             'email' => $userData['email'],
-            'ra/rm' => $userData['ra/rm'],
-            'id_type_user' => 3,
+            'ra-rm' => $userData['ra-rm'],
             'password' => Hash::make($userData['password']),
-            'id_type_user' => 2,
+            'user_type_id' => 2,
         ]);
 
         $user->save();
@@ -94,7 +93,7 @@ class UserController extends Controller
             ]);
         }
 
-        $anotherUser = User::select('email')->where('email', $userData['email'])->where('id_user', "<>", Auth::id())->get();
+        $anotherUser = User::select('email')->where('email', $userData['email'])->where('id', "<>", Auth::id())->get();
 
         if ($anotherUser->isNotEmpty()) {
             return back()->withErrors([

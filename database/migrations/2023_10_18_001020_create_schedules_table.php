@@ -13,12 +13,12 @@ return new class extends Migration
     {
         Schema::create('schedules', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('class_id');
+            $table->foreignId('lesson_id');
             $table->foreignId('course_id');
             $table->string('name', 100);
             $table->timestamps();
 
-            $table->foreign('class_id')->references('id')->on('classes');
+            $table->foreign('lesson_id')->references('id')->on('lessons');
             $table->foreign('course_id')->references('id')->on('courses');
         });
     }

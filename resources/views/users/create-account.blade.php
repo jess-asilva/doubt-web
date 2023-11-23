@@ -26,8 +26,8 @@
         @error('email')
         <div class="alert alert-danger">{{ $message }}</div>
         @enderror
-        <input type="text" name="ra/rm" placeholder="RA/RM" required><br>
-        @error('ra/rm')
+        <input type="text" name="ra-rm" placeholder="RA/RM" required><br>
+        @error('ra-rm')
         <div class="alert alert-danger">{{ $message }}</div>
         @enderror
         <input type="password" id="password" name="password" class="form-control" placeholder="Senha" required class="@error('password') is-invalid @enderror"><br>

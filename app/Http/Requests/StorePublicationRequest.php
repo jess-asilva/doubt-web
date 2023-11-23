@@ -22,14 +22,18 @@ class StorePublicationRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'publication' => 'required|min:1|max:500',
+            'title' => 'required|between:1,100',
+            'content' => 'required|between:2,500',
         ];
     }
 
     public function messages(): array
     {
         return [
-            'publication.required' => 'A publicação é obrigatória',
+            'title.required' => 'Título da publicação é obrigatório',
+            'title.between' => 'Título deve ter entre 1 e 100 caracteres',
+            'content.required' => 'Conteúdo da publicação é obrigatório',
+            'content.between' => 'Conteúdo deve ter entre 1 e 100 caracteres',
         ];
     }
 }

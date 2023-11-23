@@ -66,14 +66,22 @@
     <main class="main">
 
         <div class="newPost">
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    @foreach ($errors->all() as $error)
+                        {{ $error }}
+                    @endforeach
+                </div>
+            @endif
             <div class="infoUser">
                 <div class="imgUser"></div>
-                <strong>Isabella Araujo</strong>
+                <strong>{{ $loggedUser->name }}</strong>
             </div>
 
             <form action="{{ route('post.publication') }}" method="POST" class="formPost" id="formPost">
                 @csrf
-                <textarea name="textarea" placeholder="Publicação..." id="textarea"></textarea>
+                <input type="text" name="title" id="textarea" placeholder="Título..." required="required">
+                <textarea name="content" placeholder="Publicação..." id="textarea" required="required"></textarea>
                 <div class="iconsAndButton">
                     <div class="icons">
                         <button class="btnFileForm">
@@ -97,9 +105,6 @@
                     <button type="submit" class="btnSubmitForm">Publicar</button>
                 </div>
             </form>
-
-
-
         </div>
 
         <ul class="posts" id="posts">
@@ -109,13 +114,12 @@
                     <div class="imgUserPost"></div>
 
                     <div class="nameAndHour">
-                        <strong>Isabella Araujo</strong>
-                        <p>${time}</p>
+                        <strong>{{ $publication->user->name }}</strong>
+                        <p>{{ \Carbon\Carbon::parse($publication->updated_at)->format('d/m/Y H:i:s') }}</p>
                     </div>
                 </div>
-                <p>
-                    {{ $publication->publication }}
-                </p>
+                <h2>{{ $publication->title }}</h2>
+                <p>{{ $publication->content }}</p>
 
                 <div class="actionBtnPost">
                     <button type="button" class="filesPost like"><img src="img/excl1.svg" alt="Curtir">Curtir</button>

@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 
 class User extends Authenticatable
@@ -21,9 +22,9 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
-        'ra/rm',
+        'ra-rm',
         'password',
-        'id_type_user',
+        'user_type_id',
     ];
 
     /**

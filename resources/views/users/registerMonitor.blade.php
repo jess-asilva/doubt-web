@@ -13,7 +13,7 @@
     <header>
         <img class="logo" src="/img/LOGO-DOUBT-TCC.png" alt="Logo">
     </header>
-    
+
     <form action="#" method="post">
         @csrf
         <legend>CADASTRO DE MONITOR</legend>
@@ -26,22 +26,22 @@
         @error('email')
         <div class="alert alert-danger">{{ $message }}</div>
         @enderror
-        <input type="text" name="ra/rm" placeholder="RA/RM"><br>
-        @error('ra/rm')
+        <input type="text" name="ra-rm" placeholder="RA/RM"><br>
+        @error('ra-rm')
         <div class="alert alert-danger">{{ $message }}</div>
         @enderror
-       
-        
-        <select name="Turma" id="Turma">  
+
+
+        <select name="Turma" id="Turma">
             <option value="" disabled selected>Selecione a turma</option>
-            <option value="3A">3ºA</option>  
-            <option value="3B">3ºB</option>  
-            <option value="3C">3ºC</option>  
+            <option value="3A">3ºA</option>
+            <option value="3B">3ºB</option>
+            <option value="3C">3ºC</option>
             <option value="3D">3ºD</option>
-        </select> 
+        </select>
 
         <p><input type="submit" value="CADASTRAR"></p>
-        
+
     </form>
 </body>
 

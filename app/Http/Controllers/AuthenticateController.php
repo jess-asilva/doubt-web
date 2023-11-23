@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
-use App\Http\Requests\AuthenticateRequest;
 
+use App\Http\Requests\AuthenticateRequest;
 use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
@@ -21,7 +20,7 @@ class AuthenticateController extends Controller
             return redirect('home');
         }
 
-        return view("users.login");
+        return view("login");
     }
 
     public function authenticate(AuthenticateRequest $request) //RedirectResponse
@@ -36,9 +35,7 @@ class AuthenticateController extends Controller
             // return view('users.teste');
         }
 
-        return back()->withErrors([
-            'ra/rm' => 'Usuário ou senha inválido',
-        ])->onlyInput('ra/rm');
+        return back()->withErrors(['ra-rm' => 'Usuário ou senha inválido'])->onlyInput('ra-rm');
     }
 
     /**

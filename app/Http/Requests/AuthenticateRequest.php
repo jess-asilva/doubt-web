@@ -22,7 +22,7 @@ class AuthenticateRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'ra/rm' => 'required',
+            'ra-rm' => 'required',
             'password' => 'required',
         ];
     }
@@ -35,7 +35,7 @@ class AuthenticateRequest extends FormRequest
     public function messages(): array
     {
         return [
-            'ra/rm.required' => 'RA/RM é obrigatório.',
+            'ra-rm.required' => 'RA/RM é obrigatório.',
             'password.required' => 'Digite sua senha.',
 
         ];

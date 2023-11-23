@@ -28,8 +28,8 @@
     <form class="sessao_form" action="{{ route('post.authenticate') }}" method="POST">
         @csrf
         <legend>LOGIN</legend>
-        <input type="text" class="normal-input" name="ra/rm" placeholder="RA/RM"><br>
-        @error('ra/rm')
+        <input type="text" class="normal-input" name="ra-rm" placeholder="RA/RM"><br>
+        @error('ra-rm')
         <div class="alert alert-danger">{{ $message }}</div>
         @enderror
         <input type="password" class="normal-input" name="password" placeholder="Senha"><br>
