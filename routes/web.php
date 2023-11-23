@@ -5,6 +5,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\AuthenticateController;
 use App\Http\Controllers\contactDoubtController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PublicationController;
 use App\Http\Controllers\formDoubtController;
 use App\Mail\formDoubtMail;
 //use GuzzleHttp\Psr7\Request;
@@ -30,7 +31,7 @@ Route::get('/create-account', [UserController::class, 'create'])->name('get.crea
 Route::post('/create-account', [UserController::class, 'store'])->name('post.createAccount');
 
 //Login - autenticação
-Route::get('/login', [AuthenticateController::class, 'index'])->name('get.login');
+Route::get('/login', [AuthenticateController::class, 'index'])->name('login');
 Route::post('/login', [AuthenticateController::class, 'authenticate'])->name('post.authenticate');
 
 Route::get('/forgotPassword', function () {
@@ -44,12 +45,12 @@ Route::get('/emailConfirmation', function () {
 Route::get('user/changePassword', [UserController::class, 'editPassword'])->name('get.changePassword');
 Route::patch('user/changePassword', [UserController::class, 'updatePassword'])->name('patch.changePassword');
 
-Route::get('/logout', function () {
-    return view('logout');
-})->name('get.logout');
+Route::get('/logout', [AuthenticateController::class, 'logout'])->name('logout');
 
 //Página Inicial do usuário
-Route::get('/home', [HomeController::class, 'index'])->name('home')->middleware('auth');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+Route::post('/home', [PublicationController::class, 'store'])->name('post.publication')->middleware('auth');
 
 Route::get('/testeMenu', function () {
     return view('users.testeMenu');
@@ -61,19 +62,7 @@ Route::get('/registerMonitor', function () {
 
 Route::get('/user/{id?}', function ($id_user = null) {
     return view('users.home');
-})->name('home');
-
-Route::get('/aboutUs', function () {
-    return view('aboutUs');
-})->name('get.aboutUs');
-
-//Route::get('/user/{id}', function ($id_user) {
-//    return view('users.home');
-//})->name('home');
-
-Route::get('/user/{id?}', function ($id_user = null) {
-    return view('users.home');
-})->name('home');
+})->name('users-home');
 
 Route::get('/internetForum', function () {
     return view('internetForum');
@@ -102,7 +91,9 @@ Route::post('/doubt', function () {
 //Rota que coleta as informações do formulário (Adquira o Doubt)
 Route::post('/doubts', [contactDoubtController::class, 'store'])->name('post.doubts');
 
-
+Route::get('/aboutUs', function () {
+    return view('aboutUs');
+})->name('get.aboutUs');
 
 //Route::resource('/doubts', [contactDoubtController::class, 'store'])->name('post.doubts');
 

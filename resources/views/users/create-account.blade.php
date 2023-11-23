@@ -40,7 +40,7 @@
         @enderror
 
         <input type="submit" value="CRIAR CONTA">
-        <p>ou ir para <a href="{{ route('get.login') }}" class="sublinhado">Login</a></p>
+        <p>ou ir para <a href="{{ route('login') }}" class="sublinhado">Login</a></p>
 
     </form>
 

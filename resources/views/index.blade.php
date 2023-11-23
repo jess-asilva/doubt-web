@@ -80,7 +80,7 @@
             </div>
         </div>
         <section class="section-form" id="scrolling">
-            <div class="div-form" >
+            <div class="div-form">
                 <div>
                     <form action="{{ route('post.doubts') }}" method="post">
                         @csrf
@@ -140,4 +140,5 @@
         }
     </script>
 </body>
+
 </html>

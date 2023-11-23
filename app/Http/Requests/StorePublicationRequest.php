@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class UpdateLoginRequest extends FormRequest
+class StorePublicationRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,7 +22,14 @@ class UpdateLoginRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'publication' => 'required|min:1|max:500',
+        ];
+    }
+
+    public function messages(): array
+    {
+        return [
+            'publication.required' => 'A publicação é obrigatória',
         ];
     }
 }

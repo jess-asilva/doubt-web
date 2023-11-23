@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('discipline_monitors', function (Blueprint $table) {
             $table->id('id_discipline_monitor');
-            $table->unsignedBigInteger('id_user');
-            $table->unsignedBigInteger('id_discipline');
-            $table->unsignedBigInteger('id_course');
+            $table->foreignId('id_user');
+            $table->foreignId('id_discipline');
+            $table->foreignId('id_course');
             $table->timestamps();
 
             $table->foreign('id_user')->references('id_user')->on('users');

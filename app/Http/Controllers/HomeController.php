@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Publication;
 
 
 class HomeController extends Controller
@@ -15,9 +16,9 @@ class HomeController extends Controller
     {
         $userId = Auth::id();
 
-        $publication = Publication::where('id_user', $userId)->orderByDesc('created_at')->get();
-
-        return view('home')->with('publication', $publication);
+        $publications = Publication::where('id_user', $userId)->orderByDesc('created_at')->get();
+        //dd($publications);
+        return view('users.home')->with('publications', $publications);
     }
 
     /**

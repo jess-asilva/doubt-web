@@ -54,11 +54,9 @@
                 </span>
             </button>
 
-
-
             <button onclick="redirecionar()">
                 <span>
-                    <span class="mobile-text"> <a href="{{ route('get.logout') }}">SAIR</a></span>
+                    <span class="mobile-text"> <a href="{{ route('logout') }}">SAIR</a></span>
                 </span>
             </button>
         </nav>
@@ -73,7 +71,8 @@
                 <strong>Isabella Araujo</strong>
             </div>
 
-            <form action="" class="formPost" id="formPost" enctype="multipart/form-data">
+            <form action="{{ route('post.publication') }}" method="POST" class="formPost" id="formPost">
+                @csrf
                 <textarea name="textarea" placeholder="Publicação..." id="textarea"></textarea>
                 <div class="iconsAndButton">
                     <div class="icons">
@@ -103,12 +102,37 @@
 
         </div>
 
-        <ul class="posts" id="posts"></ul>
+        <ul class="posts" id="posts">
+            @foreach($publications as $publication)
+            <li class="post">
+                <div class="infoUserPost">
+                    <div class="imgUserPost"></div>
+
+                    <div class="nameAndHour">
+                        <strong>Isabella Araujo</strong>
+                        <p>${time}</p>
+                    </div>
+                </div>
+                <p>
+                    {{ $publication->publication }}
+                </p>
+
+                <div class="actionBtnPost">
+                    <button type="button" class="filesPost like"><img src="img/excl1.svg" alt="Curtir">Curtir</button>
+                    <button type="button" class="filesPost comment"><img src="img/deslik1.svg"
+                            alt="Comentar">Comentar</button>
+                    <button type="button" class="filesPost report"><img src="img/report.svg"
+                            alt="Denunciar">Denunciar</button>
+                </div>
+            </li>
+            @endforeach
+        </ul>
+
     </main>
 
 
 
-    <script type="module" src="js/FormPost.js"></script>
+    <!-- <script type="module" src="js/FormPost.js"></script> -->
 
 
 </body>
