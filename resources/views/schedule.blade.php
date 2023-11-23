@@ -59,15 +59,18 @@
 
     <h2>ADICIONAR MONITORIA</h2>
     <form id="calendar-form">
-        <input type="text" id="title" placeholder="Nome do curso" required>
         <div class="image-upload">
-            <label for="image">Imagem</label>
-            <input type="file" id="image" accept=".jpg, .jpeg, .png, .gif" required>
+            <div class="testeIm">
+                <input type="text" id="title" placeholder="NOME DO CURSO" required>
+                <input type="file" id="image" accept=".jpg, .jpeg, .png, .gif" required>
+                <label for="image">
+                    <img src="img/icon.png" class="img-file"/>
+                </label>
+            </div>
             <img id="preview-image" src="#" alt="Preview" style="display:none; max-width: 100%;">
         </div>
-        <button type="submit">Enviar</button>
+        <button type="submit">ENVIAR</button>
     </form>
-
 
     <div class="container">
         <h2>MONITORIA SEMANAL</h2>
@@ -78,6 +81,7 @@
         <p>© 2023 DOUBT</p>
     </footer>
 
+</body>
     <script src="js/addCalendario.js"></script>
     <script>
     document.getElementById('image').addEventListener('change', function() {
@@ -99,6 +103,5 @@
         }
     });
     </script>
-</body>
 
 </html>
