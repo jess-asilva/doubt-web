@@ -34,8 +34,6 @@
             </span>
         </button>
 
-
-
         <button onclick="redirecionar()">
             <span>
                 <span class="mobile-text"> <a href="{{ route('logout') }}">SAIR</a></span>

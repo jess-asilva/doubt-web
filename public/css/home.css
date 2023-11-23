@@ -126,7 +126,7 @@ li {
 }
 
 .main {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -153,12 +153,12 @@ div.newPost div.infoUser {
 }
 
 
-div.newPost div.infoUser div.imgUser {
-    width: 35px;
-    height: 35px;
+/* div.newPost div.infoUser div.imgUser {
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     background: #391959;
-}
+} */
 
 
 div.newPost div.infoUser strong {
@@ -176,10 +176,26 @@ div.newPost form.formPost {
 
 
 div.newPost form.formPost textarea {
-    height: 100px;
+    height: 90px;
     background: #fbfbfb;
     margin: 10px 0;
-    padding: 25px;
+    padding: 7px;
+    border-radius: 10px;
+    resize: none;
+    outline: none;
+    border: 0;
+
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+
+}
+
+div.newPost form.formPost input {
+    height: 30px;
+    background: #fbfbfb;
+    margin: 3px 0;
+    padding: 7px;
     border-radius: 10px;
     resize: none;
     outline: none;
@@ -239,11 +255,11 @@ div.newPost form.formPost div.iconsAndButton button.btnSubmitForm:hover {
 }
 
 ul.posts li.post {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     width: 100%;
     background: #fff;
     border-radius: 50px;
-    padding: 25px;
+    padding: 20px;
     border: 2px solid #F29829;
 }
 
@@ -258,12 +274,12 @@ ul.posts li.post div.infoUserPost div.nameAndHour {
     margin-left: 10px;
 }
 
-ul.posts li.post div.infoUserPost div.imgUserPost {
-    width: 30px;
-    height: 30px;
+/* ul.posts li.post div.infoUserPost div.imgUserPost {
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     background: #391959;
-}
+} */
 
 
 ul.posts li.post div.infoUserPost div.nameAndHour>strong {

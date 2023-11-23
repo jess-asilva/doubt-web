@@ -44,13 +44,7 @@ Route::patch('user/changePassword', [UserController::class, 'updatePassword'])->
 
 Route::get('/logout', [AuthenticateController::class, 'logout'])->name('logout');
 
-Route::get('/testeMenu', function () {
-    return view('users.testeMenu');
-})->name('testeMenu');
-
-Route::get('/registerMonitor', function () {
-    return view('users.registerMonitor');
-})->name('get.registerMonitor');
+Route::post('/doubts', [ScheduleController::class, 'store'])->name('post.schedule');
 
 Route::get('/user/{id?}', function ($id_user = null) {
     return view('home');
@@ -73,10 +67,6 @@ Route::get('/schedule', function () {
 })->name('get.schedule');
 
 Route::get('/doubts', function () {
-    return view('doubts');
-})->name('get.doubts');
-
-Route::post('/doubt', function () {
     return view('doubts');
 })->name('get.doubts');
 

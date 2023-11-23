@@ -38,24 +38,24 @@
 </body>
 <script src="js/addCalendario.js"></script>
 <script>
-document.getElementById('image').addEventListener('change', function() {
-    var previewImage = document.getElementById('preview-image');
-    var fileInput = document.getElementById('image');
-    var file = fileInput.files[0];
+    document.getElementById('image').addEventListener('change', function() {
+        var previewImage = document.getElementById('preview-image');
+        var fileInput = document.getElementById('image');
+        var file = fileInput.files[0];
 
-    if (file) {
-        var reader = new FileReader();
+        if (file) {
+            var reader = new FileReader();
 
-        reader.onload = function(e) {
-            previewImage.src = e.target.result;
-            previewImage.style.display = 'block';
-        };
+            reader.onload = function(e) {
+                previewImage.src = e.target.result;
+                previewImage.style.display = 'block';
+            };
 
-        reader.readAsDataURL(file);
-    } else {
-        previewImage.style.display = 'none';
-    }
-});
+            reader.readAsDataURL(file);
+        } else {
+            previewImage.style.display = 'none';
+        }
+    });
 </script>
 
 </html>
