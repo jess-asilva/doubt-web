@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
 
+
 class AuthenticateController extends Controller
 {
     /**
@@ -16,22 +17,23 @@ class AuthenticateController extends Controller
      */
     public function index()
     {
-        return View('users.login');
+        if (Auth::check()) {
+            return redirect('home');
+        }
+
+        return view("users.login");
     }
 
     public function authenticate(AuthenticateRequest $request) //RedirectResponse
     {
-        $credentials = $request->validate([
-            'ra/rm' => ['required'],
-            'password' => ['required'],
-        ]);
+        $credentials = $request->validated();
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
             return redirect()->intended('home');
 
-           // return view('users.teste');
+            // return view('users.teste');
         }
 
         return back()->withErrors([
@@ -40,10 +42,15 @@ class AuthenticateController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Log the user out of the application.
      */
-    public function destroy()
+    public function logout(Request $request): RedirectResponse
     {
-        //
+        Auth::logout();
+
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect('/');
     }
 }

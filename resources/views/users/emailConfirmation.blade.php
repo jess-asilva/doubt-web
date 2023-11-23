@@ -12,7 +12,7 @@
         <img class="logo" src="img/LOGO-DOUBT-TCC.png" alt="Logo">
     </header>
     @csrf
-    <form action="{{ route('get.login') }}" method="get"><br>
+    <form action="{{ route('login') }}" method="get"><br>
         <legend>Confirme seu e-mail!</legend><br>
         <p>Acabamos de enviar um e-mail para você. Caso não encontre nosso e-mail na caixa de entrada, por favor
             verifique a caixa de spam ou <a href="{{ route('get.forgotPassword') }}" class="sublinhado">envie

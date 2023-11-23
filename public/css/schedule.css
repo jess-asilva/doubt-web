@@ -1,0 +1,272 @@
+body {
+  position: relative;
+  background-color: #f8f8f8;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #DDDDDD;
+  -webkit-font-smothing: antialiased !important;
+  
+}
+
+a {
+  text-decoration: none;
+  color: #F29829;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 200px;
+  height: 100%;
+  padding: 40px 10px 30px 30px;
+  border-right: 1px solid #F29820;
+  transition: all 0.35s;
+  background-color: #3A238C;
+
+}
+
+.sidebar-header {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.logo-img {
+  width: 120px;
+  min-width: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.30s;
+  margin-left: 5px;
+  align-items: center;
+  justify-items: center;
+}
+
+.logo-img:hover {
+  transform: scale(1.5);
+}
+
+.sidebar button {
+  height: 60px;
+  background: transparent;
+  border: 10px;
+  font-family: inherit;
+  font-weight: bold;
+  color: #391959;
+  cursor: pointer;
+  text-align: left;
+  padding: 0;
+}
+
+.sidebar button>span {
+  display: inline-flex;
+  align-items: center;
+  height: 40px;
+  width: 140px;
+  padding: 0 60px 0 12px;
+  border-radius: 10px;
+  line-height: 1;
+  transition: all 0.2s;
+}
+
+.sidebar button:hover>span {
+  background-color: rgba(242, 124, 56, 0.3);
+}
+
+.sidebar button span {
+  font-size: 16px;
+}
+
+.sidebar>nav {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.main {
+  padding: 0 0 15px 150px;
+  overflow: hidden;
+}
+
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 12%;
+  margin-right: 20px;
+  display: block;
+}
+
+.arrow-back {
+  width: 40px;
+  margin-right: 20px;
+}
+
+.container {
+  float: CENTER;
+  width: 30%;
+  max-width: 40%;
+  margin: 20px auto;
+  margin-top: 60px;
+  background-color: #e7e2e2;
+  padding: 50px;
+  box-shadow: 0 0 10px rgb(181, 20, 245);
+  border-radius: px;
+}
+
+h2,
+h3 {
+  text-align: center;
+  color: #000000;
+}
+
+h2 {
+  margin-top: 30px;
+  
+}
+
+form {
+  float: CENTER;
+  background-color: #4f01b4;
+  padding: 1em;
+  border-radius: 10px;
+  max-width: 80%;
+  width: 20%;
+  text-align: center;
+  padding: 1em;
+  margin: auto;
+}
+
+.img-file{
+  width: 100%;
+  height: 20px;
+}
+
+input[type="text"],
+textarea {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ffa600;
+  border-radius: 20px;
+  font-family: Arial, sans-serif;
+}
+
+textarea {
+  height: 100px;
+}
+
+.image-upload {
+  position: relative;
+}
+
+.image-upload input[type="file"] {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  border-radius: 8px;
+  width: 20%;
+}
+
+.image-upload label {
+  display: inline-block;
+  padding: 10px;
+  margin: 0 0 10px;
+  background-color: #ffa600;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.testeIm{ 
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  padding: 10px 40px;
+  background-color: #ffa600;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  font-size: 16px;
+}
+
+.calendar-item {
+  display: flex;
+  margin-bottom: 70px;
+  align-items: flex-start;
+}
+
+.calendar-item img {
+  width: 100%;
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+.calendar-details {
+  flex: 1;
+}
+
+.calendar-details h3 {
+  color: #4f01b4;
+  text-transform: uppercase;
+}
+
+.calendar-details p {
+  margin-bottom: 10px 10px 10px 5px;
+}
+
+.calendar-details button {
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 8px 15px;
+  background-color: #df231a;
+  color: #fff;
+}
+
+.calendar-details .delete-button {
+  float: right;
+}
+
+footer {
+  position: fixed;
+  margin-top: 20px;
+  bottom: 0;
+  width: 100%;
+  height: 2.5em;
+  background-color: #3A238C;
+  color: #ffffff;
+  padding: 10px;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+}

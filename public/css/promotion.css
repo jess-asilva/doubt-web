@@ -1,0 +1,338 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--font--);
+}
+
+:root{
+    --color--logo--background:#3a238c;
+    --color--text: #391959;
+    --color--logo: #F29829;
+    --font--: 'League Spartan', sans-serif;
+}
+
+header{
+    display: flex;
+    background-color: var(--color--logo--background);
+    align-items: center;
+    padding: 0.5% 1%;
+}
+
+nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.header-img{
+    width: auto;
+    height: 18vh;    
+}
+
+.header-button{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.header-button-{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color--text);
+    background-color: var(--color--logo);
+    padding: 1em;
+    border-radius: 2em;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.header-button-:hover{
+    background-color: #604f3b;
+    transition-duration: 1s;
+}
+
+
+.section-column{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.section-column-first{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.section-column-phrase{
+    display: flex;
+    padding: 0% 15%;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: var(--color--text);
+}
+
+.section-column-text{
+    text-align: justify;
+    font-size: 1.5rem;
+    padding: 0% 8%;
+    color: var(--color--text);
+}
+
+.button-knowmore{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.7em 3em 0.7em 3em;
+    border-radius: 2em;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: var(--color--logo);
+    color: var(--color--text);
+    cursor: pointer;
+}
+
+.button-knowmore:hover{
+    background-color: #604f3b;
+    transition-duration: 1s;
+}
+
+.section-column-second{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.iframe{
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem; 
+    width: 80%;
+    height: 100%;
+}
+
+img{
+    width: 9rem;
+    height: auto;
+}
+
+.div-text-advantages{
+    display: flex;
+    justify-content: center;
+    margin: 5rem 0rem 1.3rem 0rem;
+    
+}
+
+.div-text-{
+    font-size: 1.8rem;
+    color: var(--color--text);
+    font-weight: bold;
+}
+
+
+.div-description{
+    display: flex;
+    background-color: var(--color--logo--background);
+    padding: 1rem;
+    height: auto;
+    flex-wrap: wrap;
+}
+
+.div-description-{
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+    gap: 1rem;
+}
+
+.div-description-row{
+    display: flex;   
+    margin: 1rem 0;
+}
+    
+
+
+.div-description-bubbles{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    background-color: white;
+    color: var(--color--text);
+    width: 100vh;
+    height: 10rem;
+    border-radius: 20rem;
+    font-size: 1.2rem;
+}
+
+.div-text-enhance-experience{
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0rem; 
+}
+
+.section-form{
+    display: flex;
+    margin-bottom: 10em;
+}
+
+.div-form{
+    display: flex;
+    width: 100%;
+    height: auto;
+    background-color: var(--color--text);
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0rem;
+}
+
+.div-text-acquired{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8rem;
+    font-size: 2.5rem;
+    color: var(--color--logo);
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+    gap: 4em;
+}
+
+.column{
+    display: flex ;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+input{
+    padding: 1.3em 7em 1.3em 7em;
+    border-radius: 1em;
+}
+
+.cheackbox-text{
+    color: white;
+}
+
+textarea{
+    width: 100%;
+    resize: none;
+}
+
+.button-enviar{
+    background-color: var(--color--logo);
+    color: var(--color--text);
+    padding: 0.7em 6em 0.7em 6em;
+    border-radius: 2em;
+    font-size: 1em;
+    margin-top: 2em;
+    font-weight: bold;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.button-enviar:hover{
+    background-color: #604f3b;
+    transition-duration: 1s;
+}
+
+
+footer{
+    background-color: var(--color--logo--background);
+    width: 100%;
+}
+
+
+.footer-block{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 1rem;
+    margin-left: 1rem;
+}
+
+.footer-block-text{
+    color: var(--color--logo);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.footer-block-text:hover{
+    color: #604f3b;
+    transition-duration: 1s;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 992px){  
+    .section-column{
+        display: block;
+        margin: 3rem 0rem;
+    }
+    .div-text-{
+        font-size: 1.5rem;
+        font-weight: bold;
+        padding: 1rem;
+    }
+    .div-description{
+        display: flex;
+        height: auto;
+    }
+    .div-description-{
+        display: block;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .div-description-row{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem 0;
+    }
+    .div-description-bubbles{
+        width: 28rem;
+        height: 10rem;
+    }
+    .section-form{
+        display: flex;
+    }
+    .div-form{
+        align-items: center;
+        justify-content: center;
+    }
+    .div-text-acquired{
+       margin: 2rem 0rem; 
+    }
+    .row{
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+    .column{
+        margin: 30px;   
+    }
+    .div-text-acquired{
+        justify-content: center;
+        align-items: center;
+    }   
+    .row_{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2rem 0rem;
+    }
+}

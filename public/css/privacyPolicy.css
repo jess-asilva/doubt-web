@@ -1,0 +1,141 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--font--);
+    color: var(--color--text);
+}
+
+:root{
+    --color--logo--background:#3a238c;
+    --color--text: #391959;
+    --color--logo: #F29829;
+    --font--: 'League Spartan', sans-serif;
+}
+
+header{
+    display: flex;
+    background-color: var(--color--logo--background);
+    align-items: center;
+    padding: 0.5% 1%;
+}
+
+nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.header-img{
+    width: auto;
+    height: 18vh;    
+}
+
+.header-button{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.header-button-{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color--text);
+    background-color: var(--color--logo);
+    padding: 1em;
+    border-radius: 2em;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.header-button-:hover{
+    background-color: #604f3b;
+    transition-duration: 1s;
+}
+
+.container{
+    display: flex;
+    margin: 5rem;
+}
+
+.block{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.content{
+    display: block;
+    margin-left: 1rem;
+}
+
+h1{
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--color--text);
+}
+
+h2{
+    font-size: 1.5rem;
+}
+
+p{
+    font-size: 1.5rem;
+}
+
+li{
+    font-size: 1.3rem;
+    margin-left: 2rem;
+}
+
+.div-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.button_:hover{
+    background-color: #604f3b;
+    transition-duration: 1s;
+}
+
+.button_{
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 1rem;
+    border-radius: 10rem;
+    background-color: var(--color--logo);
+    color: var(--color--text);
+}
+
+footer{
+    background-color: var(--color--logo--background);
+    width: 100%;
+}
+
+
+.footer-block{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 1rem;
+    margin-left: 1rem;
+}
+
+.footer-block-text{
+    color: var(--color--logo);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.footer-block-text:hover{
+    color: #604f3b;
+    transition-duration: 1s;
+    cursor: pointer;
+}

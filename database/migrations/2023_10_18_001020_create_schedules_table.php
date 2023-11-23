@@ -12,14 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('schedules', function (Blueprint $table) {
-            $table->id('id_schedule');
-            $table->unsignedBigInteger('id_class');
-            $table->unsignedBigInteger('id_course');
-            $table->string('schedules_name', 100);
+            $table->id();
+            $table->foreignId('class_id');
+            $table->foreignId('course_id');
+            $table->string('name', 100);
             $table->timestamps();
 
-            $table->foreign('id_class')->references('id_class')->on('classes');
-            $table->foreign('id_course')->references('id_course')->on('courses');
+            $table->foreign('class_id')->references('id')->on('classes');
+            $table->foreign('course_id')->references('id')->on('courses');
         });
     }
 
