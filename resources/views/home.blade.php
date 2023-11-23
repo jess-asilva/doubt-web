@@ -17,61 +17,16 @@
 </head>
 
 <body>
-
-    <aside class="sidebar">
-        <header class="sidebar-header">
-            <img class="logo-img" src="img/LOGO-DOUBT-TCC.png" alt="" />
-        </header>
-
-        <nav>
-            <button onclick="">
-                <span>
-                    <span class="mobile-text" name="forum"> <a href="{{ route('internetForum') }}">INÍCIO</a></span>
-                </span>
-            </button>
-
-            <button onclick="">
-                <span>
-                    <span class="mobile-text"> <a href="{{ route('internetForum') }}">ENQUETES</a></span>
-                </span>
-            </button>
-
-            <button onclick="">
-                <span>
-                    <span class="mobile-text"> <a href="{{ route('get.students') }}">ALUNOS</a></span>
-                </span>
-            </button>
-
-            <button onclick="">
-                <span>
-                    <span> <a href="{{ route('get.monitors') }}">MONITORES</a></span>
-                </span>
-            </button>
-
-            <button onclick="redirecionarCalendario()">
-                <span>
-                    <span class="mobile-text"> <a href="{{ route('get.schedule') }}">CALENDÁRIOS</a></span>
-                </span>
-            </button>
-
-            <button onclick="redirecionar()">
-                <span>
-                    <span class="mobile-text"> <a href="{{ route('logout') }}">SAIR</a></span>
-                </span>
-            </button>
-        </nav>
-
-    </aside>
-
+    <x-menu />
     <main class="main">
 
         <div class="newPost">
             @if ($errors->any())
-                <div class="alert alert-danger">
-                    @foreach ($errors->all() as $error)
-                        {{ $error }}
-                    @endforeach
-                </div>
+            <div class="alert alert-danger">
+                @foreach ($errors->all() as $error)
+                {{ $error }}
+                @endforeach
+            </div>
             @endif
             <div class="infoUser">
                 <div class="imgUser"></div>
