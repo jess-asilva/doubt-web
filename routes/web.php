@@ -82,6 +82,11 @@ Route::get('/privacyPolicy', function () {
     return view('privacyPolicy');
 })->name('privacyPolicy');
 
+Route::get('/forumPosts', function () {
+    return view('forumPosts');
+})->name('forumPosts');
+
+
 Route::middleware('auth')->group(function () {
     Route::get('/home', [PublicationController::class, 'index'])->name('home');
     Route::post('/publication', [PublicationController::class, 'store'])->name('post.publication');
@@ -90,3 +95,4 @@ Route::middleware('auth')->group(function () {
     Route::post('/schedule', [ScheduleController::class, 'store'])->name('post.schedule');
     Route::delete('/schedule/{scheduleId}', [ScheduleController::class, 'destroy'])->name('delete.schedule');
 });
+
