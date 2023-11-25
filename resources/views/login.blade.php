@@ -23,7 +23,7 @@
     <header class="purple-overlay">
         <img class="logo" src="/img/LOGO-DOUBT-TCC.png" alt="Logo">
 
-        <h2>BEM-VINDO DE VOLTA!</h2>
+        <h2>SEJA BEM-VINDO!</h2>
     </header>
     <form class="sessao_form" action="{{ route('post.authenticate') }}" method="POST">
         @csrf
