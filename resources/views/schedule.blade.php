@@ -11,23 +11,24 @@
 <body>
     <x-menu />
 
-    <h2>ADICIONAR MONITORIA</h2>
+    <h2>ADICIONAR CALENDÁRIO</h2>
     <form id="calendar-form">
         <div class="image-upload">
             <div class="testeIm">
-                <input type="text" id="title" placeholder="NOME DO CURSO" required>
                 <input type="file" id="image" accept=".jpg, .jpeg, .png, .gif" required>
                 <label for="image">
                     <img src="img/icon.png" class="img-file" />
                 </label>
+                <input type="text" id="title" placeholder="TÍTULO" required>
+                <button type="submit">ENVIAR</button>
             </div>
             <img id="preview-image" src="#" alt="Preview" style="display:none; max-width: 100%;">
         </div>
-        <button type="submit">ENVIAR</button>
+
     </form>
 
     <div class="container">
-        <h2>MONITORIA SEMANAL</h2>
+
         <ul id="calendar-list"></ul>
     </div>
 
