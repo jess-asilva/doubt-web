@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('schedules', function (Blueprint $table) {
             $table->id();
-            $table->string('content');
+            $table->string('title');
             $table->string('image_url');
             $table->timestamps();
         });

@@ -13,11 +13,11 @@
 
     <h2>ADICIONAR MONITORIA</h2>
     @if ($errors->any())
-        <div class="alert alert-danger">
-            @foreach ($errors->all() as $error)
-                {{ $error }}
-            @endforeach
-        </div>
+    <div class="alert alert-danger">
+        @foreach ($errors->all() as $error)
+        {{ $error }}
+        @endforeach
+    </div>
     @endif
     <form id="calendar-form" action="{{ route('post.schedule') }}" method="POST" enctype="multipart/form-data">
         @csrf
@@ -39,22 +39,22 @@
         <h2>MONITORIA SEMANAL</h2>
         <ul id="calendar-list">
             @foreach($schedules as $schedule)
-                <li>
-                    <div>
-                        <div class="nameAndHour">
-                            <h2>{{ $schedule->content }}</h2>
-                            <p>{{ \Carbon\Carbon::parse($schedule->updated_at)->format('d/m/Y H:i:s') }}</p>
-                            <img src="{{ $schedule->image_url }}" alt="">
-                        </div>
+            <li>
+                <div>
+                    <div class="nameAndHour">
+                        <h2>{{ $schedule->title }}</h2>
+                        <p>{{ \Carbon\Carbon::parse($schedule->updated_at)->format('d/m/Y H:i:s') }}</p>
+                        <img src="{{ $schedule->image_url }}" alt="">
                     </div>
-                    <div>
-                        <form action="{{ route('delete.schedule', $schedule->id) }}" method="POST" class="d-inline-flex">
-                            @method('DELETE')
-                            @csrf
-                            <input type="submit" value="Excluir">
-                        </form>
-                    </div>
-                </li>
+                </div>
+                <div>
+                    <form action="{{ route('delete.schedule', $schedule->id) }}" method="POST" class="d-inline-flex">
+                        @method('DELETE')
+                        @csrf
+                        <input type="submit" value="Excluir">
+                    </form>
+                </div>
+            </li>
             @endforeach
         </ul>
     </div>
@@ -62,7 +62,6 @@
     <x-footer />
 
 </body>
-{{--<script src="js/addCalendario.js"></script>--}}
 <script>
     document.getElementById('image').addEventListener('change', function() {
         var previewImage = document.getElementById('preview-image');

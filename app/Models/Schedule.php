@@ -15,7 +15,7 @@ class Schedule extends Model
      * @var array<int, string>
      */
     protected $fillable = [
-        'content',
+        'title',
         'image_url',
     ];
 }

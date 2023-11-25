@@ -18,7 +18,7 @@ class PublicationController extends Controller
         $userId = Auth::id();
 
         $loggedUser = User::find($userId);
-        $publications = Publication::whereBelongsTo($loggedUser)->orderByDesc('created_at')->get();
+        $publications = Publication::orderByDesc('created_at')->get();
 
         return view('home')->with('loggedUser', $loggedUser)->with('publications', $publications);
     }

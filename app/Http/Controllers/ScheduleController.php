@@ -36,38 +36,13 @@ class ScheduleController extends Controller
 
         $schedule = new Schedule();
 
-        $filename = date('YmdHi').$scheduleData['image']->getClientOriginalName();
         Storage::disk('local')->put("public/schedules", $scheduleData['image']);
-        $schedule->content = $scheduleData['title'];
+        $schedule->title = $scheduleData['title'];
         $schedule->image_url = Storage::url("public/schedules/" . $scheduleData['image']->hashName());
 
         $schedule->save();
 
         return redirect()->route('get.schedule');
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(Schedule $schedule)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Schedule $schedule)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(UpdateScheduleRequest $request, Schedule $schedule)
-    {
-        //
     }
 
     /**
