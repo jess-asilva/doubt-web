@@ -44,16 +44,16 @@
                     <div class="nameAndHour">
                         <h2>{{ $schedule->title }}</h2>
                         <img src="{{ $schedule->image_url }}" alt="">
-                        <p>{{ \Carbon\Carbon::parse($schedule->updated_at)->format('d/m/Y H:i:s') }}</p>
+                        <p>{{ \Carbon\Carbon::parse($schedule->updated_at)->format('d/m/Y - H:i:s') }}</p>
                     </div>
                 </div>
                 <div>
 
-                    <form action="{{ route('delete.schedule', $schedule->id) }}" method="POST" class="d-inline-flex">
+                    <form class = "form2" action="{{ route('delete.schedule', $schedule->id) }}" method="POST" class="d-inline-flex">
                         @method('DELETE')
                         @csrf
                         <input class="btnDelete" type="submit" value="Excluir">
-                    </form>
+                    </form2>
                 </div>
             </li>
             @endforeach

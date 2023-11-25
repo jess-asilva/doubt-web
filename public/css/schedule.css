@@ -1,6 +1,6 @@
 body {
   position: relative;
-  background-color: #f8f8f8;
+  background-color: #dfdfdff6;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -14,7 +14,7 @@ body {
 }
 
 body {
-  background-color: #DDDDDD;
+  background-color: #dfdfdff6;
   -webkit-font-smothing: antialiased !important;
 
 }
@@ -22,6 +22,9 @@ body {
 a {
   text-decoration: none;
   color: #F29829;
+}
+p {
+  text-align: center;
 }
 
 .alert {
@@ -137,9 +140,8 @@ a {
   max-width: 50%;
   margin: 20px auto;
   margin-top: 60px;
-  background-color: #f5f2f2;
+  background-color: #dfdfdff6;
   padding: auto;
-  /* box-shadow: 0 0 10px rgb(242, 152, 32); */
   border-radius: 50px;
   border: 3px solid #F29829;
 }
@@ -156,18 +158,26 @@ h2 {
 
 }
 
-form {
+ form {
   float: CENTER;
   background-color: #4f01b4;
   padding: 1em;
-  border-radius: 25px;
-  max-width: 30rem;
-  width: 20rem;
+  border-radius: 30px;
+ /* max-width: 30rem;*/
+  width: 25rem;
   text-align: center;
   padding: 1em;
-  margin: auto;
+  margin: 20px auto;
+  /*height: 20px auto;*/
 }
 
+.form2 {
+  float: CENTER;
+  text-align: center;
+  border-radius: 30px;
+  background-color: #dfdfdff6;
+
+}
 .img-file {
   width: 100%;
   height: 20px;
@@ -175,12 +185,13 @@ form {
 
 input[type="text"],
 textarea {
-  width: 40%;
-  padding: 10px;
-  margin-bottom: 10px;
+  width: 50%;
+  padding: 05px;
+  margin-bottom: 20px;
   border: 1px solid #ffa600;
-  border-radius: 20px;
+  border-radius: 30px;
   font-family: Arial, sans-serif;
+  margin: 09px auto;
 }
 
 textarea {
@@ -193,12 +204,11 @@ textarea {
 
 .image-upload input[type="file"] {
   opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   cursor: pointer;
   border-radius: 8px;
-  width: 20%;
+  width: 0%;
+  height: 50%; /* Reduz a altura para 50% do tamanho original */
 }
 
 .image-upload label {
@@ -211,6 +221,7 @@ textarea {
   cursor: pointer;
 }
 
+
 .testeIm {
   display: flex;
   justify-content: space-between;
@@ -218,24 +229,25 @@ textarea {
 
 
 button {
-  padding: 10px 30px;
+  padding: 10px 10px;
   background-color: #ffa600;
   color: #391959;
   font-weight: bold;
   border: none;
-  border-radius: 10px;
+  border-radius: 20px;
   cursor: pointer;
   height: 30%;
   cursor: pointer;
+  margin: 09px auto;
 }
 
 .btnDelete {
   padding: 10px 30px;
-  background-color: #df231a;
+  background-color: #ffa600;
   color: #efebf3;
   font-weight: bold;
   border: none;
-  border-radius: 10px;
+  border-radius: 20px;
   cursor: pointer;
   height: 30%;
   cursor: pointer;
@@ -264,7 +276,6 @@ ul {
 }
 
 .calendar-details h3 {
-  color: #4f01b4;
   text-transform: uppercase;
 }
 
