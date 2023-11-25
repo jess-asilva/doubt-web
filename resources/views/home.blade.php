@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
     <title>Home</title>
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
     </style>
 
 </head>
@@ -50,7 +51,8 @@
 
                         <button class="btnFileForm">
                             <img src="img/video.svg" alt="Adicionar um video">
-                            <input type="file" id="videoUpload" name="videoUpload" accept="video/*" style="display: none;">
+                            <input type="file" id="videoUpload" name="videoUpload" accept="video/*"
+                                style="display: none;">
                         </button>
                     </div>
 
@@ -75,8 +77,11 @@
 
                 <div class="actionBtnPost">
                     <button type="button" class="filesPost like"><img src="img/excl1.svg" alt="Curtir">Curtir</button>
-                    <button type="button" action="{{ route('forumPosts') }}" method="GET" class="filesPost comment"><img src="img/deslik1.svg" alt="Comentar">Comentar</a></button>
-                    <button type="button" class="filesPost report"><img src="img/report.svg" alt="Denunciar">Denunciar</button>
+                    <button type="button" class="filesPost comment"><a class="styleFont"
+                            href="{{ route('forumPosts') }}"><img src="img/deslik1.svg"
+                                alt="Comentar">Comentar</a></button>
+                    <button type="button" class="filesPost report"><img src="img/report.svg"
+                            alt="Denunciar">Denunciar</button>
                 </div>
             </li>
             @endforeach

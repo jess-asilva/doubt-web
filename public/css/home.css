@@ -305,6 +305,10 @@ ul.posts li.post div.actionBtnPost {
     align-items: center;
 }
 
+ul.posts li.post div.actionBtnPost a.styleFont {
+    color: #391959;
+}
+
 ul.posts li.post div.actionBtnPost button.filesPost {
     padding: 5px 20px;
     margin-right: 10px;
