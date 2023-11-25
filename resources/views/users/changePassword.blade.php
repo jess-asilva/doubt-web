@@ -22,13 +22,11 @@
         @error('password')
         <div class="alert alert-danger">{{ $message }}</div>
         @enderror
-        <input type="password" id="password" name="password" class="form-control" placeholder="NOVA SENHA" required
-            class="@error('password') is-invalid @enderror"><br>
+        <input type="password" id="password" name="password" class="form-control" placeholder="NOVA SENHA" required class="@error('password') is-invalid @enderror"><br>
         @error('password')
         <div class="alert alert-danger">{{ $message }}</div>
         @enderror
-        <input type="password" id="password_confirmation" name="password_confirmation" class="form-control"
-            placeholder="CONFIRMAR SENHA" required class="@error('password_confirmation') is-invalid @enderror"><br>
+        <input type="password" id="password_confirmation" name="password_confirmation" class="form-control" placeholder="CONFIRMAR SENHA" required class="@error('password_confirmation') is-invalid @enderror"><br>
         @error('password_confirmation')
         <div class="alert alert-danger">{{ $message }}</div>
         @enderror
@@ -37,6 +35,7 @@
         <a href="{{ route('home') }}" class="btn btn-warning btn-lg mt-3">Voltar</a>
 
     </form>
+    <x-footer />
 </body>
 
 </html>

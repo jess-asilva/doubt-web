@@ -11,6 +11,7 @@
 <body>
     <x-menu />
     <h2>Monitores Cadastrados</h2>
+    <x-footer />
 </body>
 
 </html>
