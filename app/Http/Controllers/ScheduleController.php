@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Schedule;
 use App\Http\Requests\StoreScheduleRequest;
 use App\Http\Requests\UpdateScheduleRequest;
+use Illuminate\Support\Facades\Storage;
 
 class ScheduleController extends Controller
 {
@@ -13,7 +14,9 @@ class ScheduleController extends Controller
      */
     public function index()
     {
-        //
+        $schedules = Schedule::all();
+
+        return view('schedule')->with('schedules', $schedules);
     }
 
     /**
@@ -31,9 +34,16 @@ class ScheduleController extends Controller
     {
         $scheduleData = $request->validated();
 
-        Schedule::create($scheduleData);
+        $schedule = new Schedule();
 
-        return redirect('schedule');
+        $filename = date('YmdHi').$scheduleData['image']->getClientOriginalName();
+        Storage::disk('local')->put("public/schedules", $scheduleData['image']);
+        $schedule->content = $scheduleData['title'];
+        $schedule->image_url = Storage::url("public/schedules/" . $scheduleData['image']->hashName());
+
+        $schedule->save();
+
+        return redirect()->route('get.schedule');
     }
 
     /**
@@ -63,8 +73,14 @@ class ScheduleController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Schedule $schedule)
+    public function destroy(int $scheduleId)
     {
-        //
+        $schedule = Schedule::findOrfail($scheduleId);
+        $path = explode("/", $schedule->image_url);
+
+        Storage::delete("public/schedules/" . $path[3]);
+        Schedule::destroy($schedule->id);
+
+        return redirect()->route('get.schedule');
     }
 }

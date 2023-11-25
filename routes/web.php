@@ -7,6 +7,7 @@ use App\Http\Controllers\contactDoubtController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PublicationController;
 use App\Http\Controllers\formDoubtController;
+use App\Http\Controllers\ScheduleController;
 use App\Mail\formDoubtMail;
 
 /*
@@ -62,9 +63,7 @@ Route::get('/students', function () {
     return view('students');
 })->name('get.students');
 
-Route::get('/schedule', function () {
-    return view('schedule');
-})->name('get.schedule');
+
 
 Route::get('/doubts', function () {
     return view('doubts');
@@ -86,4 +85,8 @@ Route::get('/privacyPolicy', function () {
 Route::middleware('auth')->group(function () {
     Route::get('/home', [PublicationController::class, 'index'])->name('home');
     Route::post('/publication', [PublicationController::class, 'store'])->name('post.publication');
+
+    Route::get('/schedule', [ScheduleController::class, 'index'])->name('get.schedule');
+    Route::post('/schedule', [ScheduleController::class, 'store'])->name('post.schedule');
+    Route::delete('/schedule/{scheduleId}', [ScheduleController::class, 'destroy'])->name('delete.schedule');
 });

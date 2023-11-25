@@ -83,12 +83,7 @@
         </ul>
 
     </main>
-
-
-
     <!-- <script type="module" src="js/FormPost.js"></script> -->
-
-
 </body>
 
 </html>
