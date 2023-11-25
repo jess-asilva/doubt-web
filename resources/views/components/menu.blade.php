@@ -1,5 +1,6 @@
 <aside class="sidebar">
     <header class="sidebar-header">
+        <link rel="stylesheet" href="css/home.css">
         <a href="{{ route('home') }}"><img class="logo-img" src="img/LOGO-DOUBT-TCC.png" alt="" /></a>
     </header>
 
