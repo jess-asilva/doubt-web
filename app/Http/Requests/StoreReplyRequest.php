@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StorePublicationRequest extends FormRequest
+class StoreReplyRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,8 +22,7 @@ class StorePublicationRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title' => 'required|between:1,100',
-            'content' => 'required|between:2,500',
+            'comment' => 'required|between:1,500',
         ];
     }
 
@@ -35,10 +34,8 @@ class StorePublicationRequest extends FormRequest
     public function messages(): array
     {
         return [
-            'title.required' => 'Título da publicação é obrigatório',
-            'title.between' => 'Título deve ter entre 1 e 100 caracteres',
-            'content.required' => 'Conteúdo da publicação é obrigatório',
-            'content.between' => 'Conteúdo deve ter entre 1 e 100 caracteres',
+            'comment.required' => 'Comentário é obrigatório.',
+            'comment.between' => 'O comentário dever ter entre 1 e 500 caracteres',
         ];
     }
 }
