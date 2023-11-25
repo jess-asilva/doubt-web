@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Tela de Login</title>
+    <title>Login</title>
     <link rel="stylesheet" href="{{ asset('css/login.css') }}">
 </head>
 
