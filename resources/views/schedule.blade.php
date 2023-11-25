@@ -32,9 +32,7 @@
         <ul id="calendar-list"></ul>
     </div>
 
-    <footer>
-        <p>© 2023 DOUBT</p>
-    </footer>
+    <x-footer />
 
 </body>
 <script src="js/addCalendario.js"></script>

@@ -215,7 +215,7 @@ div.newPost form.formPost div.iconsAndButton {
 
 
 div.newPost form.formPost div.iconsAndButton div.icons {
-    width: 100px;
+    width: 50px;
 
     display: flex;
     align-items: center;
