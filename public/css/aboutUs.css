@@ -20,6 +20,7 @@ header{
     padding: 0.5% 1%;
 }
 
+
 nav{
     display: flex;
     width: 100%;
@@ -73,13 +74,22 @@ nav{
 }
 
 h1{
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold;
     color: var(--color--text);
 }
 
 h2{
     font-size: 1.5rem;
+}
+
+h3{
+    position: absolute;
+    font-size: 24px; 
+    color: #f29829;
+    top: 10%;
+    left: 40%;
+    transform: translate(-30%, -30%);
 }
 
 p{
