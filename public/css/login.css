@@ -149,10 +149,10 @@ input[type="password"] {
 
 
 input[type="submit"]:hover {
-    background-color: #f20fb6;
+    background-color: #F27C38;
 }
 
 
 input[type="submit"]:active {
-    background-color: #f20fb6;
+    background-color: #F27C38;
 }

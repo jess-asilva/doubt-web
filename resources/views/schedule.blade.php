@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compartilhar imagem</title>
+    <title>Adicionar calendário</title>
     <link rel="stylesheet" href="css/schedule.css">
 </head>
 
@@ -12,13 +12,7 @@
     <x-menu />
 
     <h2>ADICIONAR MONITORIA</h2>
-    @if ($errors->any())
-    <div class="alert alert-danger">
-        @foreach ($errors->all() as $error)
-        {{ $error }}
-        @endforeach
-    </div>
-    @endif
+
     <form id="calendar-form" action="{{ route('post.schedule') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="image-upload">
@@ -31,27 +25,34 @@
                 <button type="submit">ENVIAR</button>
             </div>
             <img id="preview-image" src="#" alt="Preview" style="display:none; max-width: 100%;">
+            @if ($errors->any())
+            <div class="alert alert-danger">
+                @foreach ($errors->all() as $error)
+                {{ $error }}
+                @endforeach
+            </div>
+            @endif
         </div>
 
     </form>
 
     <div class="container">
-        <h2>MONITORIA SEMANAL</h2>
         <ul id="calendar-list">
             @foreach($schedules as $schedule)
             <li>
                 <div>
                     <div class="nameAndHour">
                         <h2>{{ $schedule->title }}</h2>
-                        <p>{{ \Carbon\Carbon::parse($schedule->updated_at)->format('d/m/Y H:i:s') }}</p>
                         <img src="{{ $schedule->image_url }}" alt="">
+                        <p>{{ \Carbon\Carbon::parse($schedule->updated_at)->format('d/m/Y H:i:s') }}</p>
                     </div>
                 </div>
                 <div>
+
                     <form action="{{ route('delete.schedule', $schedule->id) }}" method="POST" class="d-inline-flex">
                         @method('DELETE')
                         @csrf
-                        <input type="submit" value="Excluir">
+                        <input class="btnDelete" type="submit" value="Excluir">
                     </form>
                 </div>
             </li>
