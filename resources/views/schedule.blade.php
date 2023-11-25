@@ -27,7 +27,7 @@
                 <label for="image">
                     <img src="img/icon.png" class="img-file" />
                 </label>
-                <input type="text" id="title" placeholder="TÍTULO" required>
+                <input type="text" id="title" name="title" placeholder="TÍTULO" required>
                 <button type="submit">ENVIAR</button>
             </div>
             <img id="preview-image" src="#" alt="Preview" style="display:none; max-width: 100%;">

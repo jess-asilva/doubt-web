@@ -35,7 +35,7 @@ class StoreScheduleRequest extends FormRequest
     public function messages(): array
     {
         return [
-            'title.required' => 'Tpitulo é obrigatório.',
+            'title.required' => 'Título é obrigatório.',
             'image.required' => 'A imagem é obrigatória.',
             'image.image' => 'Deve ser uma imagem válida (jpg, jpeg, png, bmp, gif, svg, ou webp).',
         ];
