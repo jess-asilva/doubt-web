@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PROMOTION</title>
+    <title>DOUBT</title>
     <link rel="stylesheet" href="{{ asset('css/promotion.css') }}">
 </head>
 
@@ -63,13 +63,13 @@
                 <div class="div-description-row">
                     <a class="div-description-bubbles">
                         <img src="../img/2.png" alt="">
-                        <p>Fórum de duvidas 24 horas.</p>
+                        <p>Fórum de dúvidas 24 horas.</p>
                     </a>
                 </div>
                 <div class="div-description-row">
                     <a class="div-description-bubbles">
                         <img src="../img/4.png" alt="">
-                        <p>Organização e ambiente de reforço escolar</p>
+                        <p>Organização e ambiente de reforço escolar.</p>
                     </a>
                 </div>
             </div>
@@ -88,16 +88,16 @@
                         <div class="row">
                             <div class="column">
                                 <div class="input-group">
-                                    <input type="text" name="name" placeholder="Nome" required>
+                                    <input type="text" name="name" placeholder="Nome:" required>
                                 </div>
                                 <div class="input-group">
-                                    <input type="text" name="institution" placeholder="Institution" required>
+                                    <input type="text" name="institution" placeholder="Instituição:" required>
                                 </div>
                                 <div class="input-group">
-                                    <input type="tel" name="telPhone" placeholder="Número" required>
+                                    <input type="tel" name="telPhone" placeholder="Número:" required>
                                 </div>
                                 <div class="input-group">
-                                    <input type="email" name="email" placeholder="Email" required>
+                                    <input type="email" name="email" placeholder="E-mail:" required>
                                 </div>
                             </div>
                             <div class="column">
