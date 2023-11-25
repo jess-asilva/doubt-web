@@ -78,7 +78,7 @@
                 <div class="actionBtnPost">
                     <button type="button" class="filesPost like"><img src="img/excl1.svg" alt="Curtir">Curtir</button>
                     <button type="button" class="filesPost comment"><a class="styleFont"
-                            href="{{ route('forumPosts') }}"><img src="img/deslik1.svg"
+                            href="{{ route('get.publication', $publication->id) }}"><img src="img/deslik1.svg"
                                 alt="Comentar">Comentar</a></button>
                     <button type="button" class="filesPost report"><img src="img/report.svg"
                             alt="Denunciar">Denunciar</button>
