@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AuthenticateController;
+use App\Http\Controllers\ContactDoubtContoller;
 use App\Http\Controllers\ContactDoubtController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PublicationController;
@@ -71,7 +72,7 @@ Route::get('/doubts', function () {
 })->name('get.doubts');
 
 //Rota que coleta as informações do formulário (Adquira o Doubt)
-Route::post('/doubts', [contactDoubtController::class, 'store'])->name('post.doubts');
+Route::post('/doubts', [ContactDoubtContoller::class,'store'])->name('post.doubts');
 
 Route::get('/aboutUs', function () {
     return view('aboutUs');
