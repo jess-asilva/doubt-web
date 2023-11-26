@@ -26,7 +26,7 @@ RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cac
 
 RUN php artisan key:generate && php artisan config:cache
 
-#RUN php artisan migrate --seed --force
+RUN php artisan storage:link
 
 EXPOSE 80
 

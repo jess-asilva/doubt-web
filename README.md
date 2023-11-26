@@ -48,6 +48,9 @@ php artisan migrate --seed
 # Set the project secret key
 php artisan key:generate
 
+# Create the symbolic links to storage
+php artisan storage:link
+
 # Start application
 php artisan serve
 ```
