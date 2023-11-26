@@ -79,11 +79,11 @@
                     <button type="button" class="filesPost like">
                         @if(in_array($loggedUser->id, $publication->usersLike))
                             <a href="{{ route('unlike-publication', $publication->id) }}">
-                                <img src="img/excl1.svg" alt="Curtir">Descurtir
+                                ({{ count($publication->usersLike) }})<img src="img/excl1.svg" alt="Curtir">Descurtir
                             </a>
                         @else
                             <a href="{{ route('like-publication', $publication->id) }}">
-                                <img src="img/excl1.svg" alt="Curtir">Curtir
+                                ({{ count($publication->usersLike) }})<img src="img/excl1.svg" alt="Curtir">Curtir
                             </a>
                         @endif
                     </button>
