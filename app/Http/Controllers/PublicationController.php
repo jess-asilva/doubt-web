@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Publication;
+use App\Models\User;
 use App\Http\Requests\StorePublicationRequest;
 use App\Http\Requests\UpdatePublicationRequest;
-use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class PublicationController extends Controller
 {
@@ -19,6 +20,7 @@ class PublicationController extends Controller
 
         $loggedUser = User::find($userId);
         $publications = Publication::orderByDesc('created_at')->get();
+        $publications = Publication::appendUsersLike($publications);
 
         return view('home')->with('loggedUser', $loggedUser)->with('publications', $publications);
     }

@@ -76,10 +76,22 @@
                 <p>{{ $publication->content }}</p>
 
                 <div class="actionBtnPost">
-                    <button type="button" class="filesPost like"><img src="img/excl1.svg" alt="Curtir">Curtir</button>
-                    <button type="button" class="filesPost comment"><a class="styleFont"
-                            href="{{ route('get.publication', $publication->id) }}"><img src="img/deslik1.svg"
-                                alt="Comentar">Comentar</a></button>
+                    <button type="button" class="filesPost like">
+                        @if(in_array($loggedUser->id, $publication->usersLike))
+                            <a href="{{ route('unlike-publication', $publication->id) }}">
+                                ({{ count($publication->usersLike) }})<img src="img/excl1.svg" alt="Curtir">Descurtir
+                            </a>
+                        @else
+                            <a href="{{ route('like-publication', $publication->id) }}">
+                                ({{ count($publication->usersLike) }})<img src="img/excl1.svg" alt="Curtir">Curtir
+                            </a>
+                        @endif
+                    </button>
+                    <button type="button" class="filesPost comment">
+                        <a class="styleFont"  href="{{ route('get.publication', $publication->id) }}">
+                            <img src="img/deslik1.svg" alt="Comentar">Comentar
+                        </a>
+                    </button>
                     <button type="button" class="filesPost report"><img src="img/report.svg"
                             alt="Denunciar">Denunciar</button>
                 </div>

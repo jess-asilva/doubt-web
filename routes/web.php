@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\PublicationLike;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AuthenticateController;
@@ -9,6 +10,7 @@ use App\Http\Controllers\PublicationController;
 use App\Http\Controllers\FormDoubtController;
 use App\Http\Controllers\ScheduleController;
 use App\Http\Controllers\ReplyController;
+use App\Http\Controllers\PublicationLikeController;
 use App\Mail\formDoubtMail;
 
 /*
@@ -89,6 +91,8 @@ Route::middleware('auth')->group(function () {
     Route::post('/publication', [PublicationController::class, 'store'])->name('post.publication');
     Route::get('/publication/{publicationId}', [PublicationController::class, 'show'])->name('get.publication');
     Route::post('/publication/{publicationId}/reply', [ReplyController::class, 'store'])->name('post.reply');
+    Route::get('/publication/{publicationId}/like', [PublicationLikeController::class, 'store'])->name('like-publication');
+    Route::get('/publication/{publicationId}/unlike', [PublicationLikeController::class, 'destroy'])->name('unlike-publication');
 
     Route::get('/schedule', [ScheduleController::class, 'index'])->name('get.schedule');
     Route::post('/schedule', [ScheduleController::class, 'store'])->name('post.schedule');
