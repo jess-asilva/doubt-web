@@ -6,8 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
-use Illuminate\Database\Eloquent\Relations\HasOneThrough;
-use Illuminate\Database\Eloquent\Relations\HasManyThrough;
+use Illuminate\Support\Facades\DB;
 
 class Publication extends Model
 {
@@ -25,6 +24,31 @@ class Publication extends Model
     ];
 
     /**
+     * Append users Ids that likes the publication.
+     */
+    public static function appendUsersLike($publications)
+    {
+        $usersLike = [];
+        foreach ($publications as $i => $publication) {
+            $likes = DB::table('publication_likes')
+                ->select('user_id')
+                ->where('publication_id', $publication->id)
+                ->get()
+                ->toArray();
+
+            $usersLike = array_merge($usersLike, $likes);
+
+            $usersLike = array_map(function($item) {
+                return $item->user_id;
+            }, $usersLike);
+
+            $publications[$i]->usersLike = $usersLike;
+        }
+
+        return $publications;
+    }
+
+    /**
      * Get the user that owns the publication.
      */
     public function user(): BelongsTo
@@ -39,6 +63,7 @@ class Publication extends Model
     {
         $replies = $this->hasMany(Reply::class);
         $replies->getQuery()->join('users', 'replies.user_id', '=', 'users.id');
+
         return $replies;
     }
 }
