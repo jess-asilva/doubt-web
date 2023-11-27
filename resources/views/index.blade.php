@@ -102,7 +102,7 @@
                             </div>
                             <div class="column">
                                 <div class="input-group">
-                                    <textarea name="subject" id="" cols="30" rows="10" required></textarea>
+                                    <textarea name="subject" placeholder="Assunto:" id="" cols="30" rows="10" required></textarea>
                                 </div>
                                 <div>
                                     <input type="checkbox">
