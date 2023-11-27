@@ -71,12 +71,13 @@ class UserController extends Controller
 
     /**
      * Show the form for editing the specified resource.
+     * @return \Illuminate\Http\Response
      */
     public function edit(User $user)
     {
         $user = User::findOrFail(Auth::id());
 
-        return view('home')->with('user', $user);
+        return view('users.profile')->with('user', $user);
     }
 
     /**
@@ -142,7 +143,7 @@ class UserController extends Controller
 
         if (!Hash::check($passwords['password'], $user->password)) {
             return back()->withErrors([
-                'password' => 'Senha incorreta.',
+                'password' => 'A senha está incorreta.',
             ]);
         }
 
@@ -150,6 +151,6 @@ class UserController extends Controller
 
         $user->save();
 
-        return redirect('/home');
+        return redirect('/profile');
     }
 }

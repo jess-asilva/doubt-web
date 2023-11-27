@@ -6,7 +6,6 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\AuthenticateController;
 use App\Http\Controllers\ContactDoubtContoller;
 use App\Http\Controllers\ContactDoubtController;
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PublicationController;
 use App\Http\Controllers\FormDoubtController;
 use App\Http\Controllers\ScheduleController;
@@ -35,6 +34,7 @@ Route::post('/create-account', [UserController::class, 'store'])->name('post.cre
 //Login - autenticação
 Route::get('/login', [AuthenticateController::class, 'index'])->name('login');
 Route::post('/login', [AuthenticateController::class, 'authenticate'])->name('post.authenticate');
+Route::get('/logout', [AuthenticateController::class, 'logout'])->name('logout');
 
 Route::get('/forgotPassword', function () {
     return view('users.forgotPassword');
@@ -55,10 +55,6 @@ Route::get('/user/{id?}', function ($id_user = null) {
     return view('home');
 })->name('users-home');
 
-Route::get('/internetForum', function () {
-    return view('internetForum');
-})->name('internetForum');
-
 Route::get('/monitors', function () {
     return view('monitors');
 })->name('get.monitors');
@@ -67,27 +63,24 @@ Route::get('/students', function () {
     return view('students');
 })->name('get.students');
 
-
-
 Route::get('/doubts', function () {
     return view('doubts');
 })->name('get.doubts');
 
 //Rota que coleta as informações do formulário (Adquira o Doubt)
-Route::post('/doubts', [ContactDoubtContoller::class,'store'])->name('post.doubts');
+Route::post('/doubts', [ContactDoubtContoller::class, 'store'])->name('post.doubts');
+//Route::resource('/doubts', [contactDoubtController::class, 'store'])->name('post.doubts');
 
 Route::get('/aboutUs', function () {
     return view('aboutUs');
 })->name('get.aboutUs');
 
-//Route::resource('/doubts', [contactDoubtController::class, 'store'])->name('post.doubts');
-
 Route::get('/privacyPolicy', function () {
     return view('privacyPolicy');
 })->name('privacyPolicy');
 
-
 Route::middleware('auth')->group(function () {
+    Route::get('/profile', [UserController::class, 'edit'])->name('profile');
     Route::get('/home', [PublicationController::class, 'index'])->name('home');
     Route::post('/publication', [PublicationController::class, 'store'])->name('post.publication');
     Route::get('/publication/{publicationId}', [PublicationController::class, 'show'])->name('get.publication');
