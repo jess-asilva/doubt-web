@@ -100,7 +100,7 @@
                                     @enderror
                                 </div>
                                 <div class="input-group">
-                                    <input type="tel" name="telPhone" placeholder="Número:" required>
+                                    <input type="tel" name="telPhone" placeholder="Número:(xx)xxxxxxxxx" required>
                                     @error('telPhone')
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror

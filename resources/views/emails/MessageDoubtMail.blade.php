@@ -1,22 +1,23 @@
+<h1>Nova mensagem</h1>
+
+
 <x-mail::message>
-# NOVA MENSAGEM 
 
-Mensagem de  Usuário teste
+    Mensagem de  {{ $data['name'] }}
 
-    <p>Telefone: <strong>Aqui ficará o telefone do Usuário</strong></p> <br>
-    <p>Email: <strong>Aqui ficará o e-mail do Usuário</strong></p> <br>
-    <p>Instituição <strong>A instituição do usuário</strong></p> <br>
+    <p>Telefone: <strong>{{ $data['telPhone'] }}</strong></p> <br>
+    <p>Email: <strong>{{ $data['email'] }}</strong></p> <br>
+    <p>Instituição <strong>{{ $data['email'] }}</strong></p> <br>
     <p>
         Mensagem:<br>
-        
+        {{ $data['subject'] }}
     </p>
 
 
-
-<x-mail::button :url="'https://pt.stackoverflow.com/'">
-Acesse o site clicando aqui:
+<x-mail::button :url="'https://br.pinterest.com/'">
+    Acesse o site clicando aqui:
 </x-mail::button>
 
 Obrigado,<br>
 {{ config('app.name') }}
-</x-mail::message>
+</x-Mail::message>
