@@ -41,8 +41,8 @@ Route::get('/emailConfirmation', function () {
     return view('users.emailConfirmation');
 })->name('get.emailConfirmation');
 
-Route::get('user/changePassword', [UserController::class, 'editPassword'])->name('get.changePassword');
-Route::patch('user/changePassword', [UserController::class, 'updatePassword'])->name('patch.changePassword');
+Route::get('user/change-password', [UserController::class, 'changePassword'])->name('get.change-password');
+Route::patch('user/change-password', [UserController::class, 'updatePassword'])->name('patch.change-password');
 
 Route::get('/logout', [AuthenticateController::class, 'logout'])->name('logout');
 
@@ -94,4 +94,3 @@ Route::middleware('auth')->group(function () {
     Route::post('/schedule', [ScheduleController::class, 'store'])->name('post.schedule');
     Route::delete('/schedule/{scheduleId}', [ScheduleController::class, 'destroy'])->name('delete.schedule');
 });
-
