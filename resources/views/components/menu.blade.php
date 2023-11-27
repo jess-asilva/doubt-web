@@ -13,7 +13,7 @@
 
         <button onclick="">
             <span>
-                <span class="mobile-text"> <a href="{{ route('internetForum') }}">ENQUETES</a></span>
+                <span class="mobile-text"> <a href="{{ route('internetForum') }}">DÚVIDAS</a></span>
             </span>
         </button>
 
@@ -32,6 +32,12 @@
         <button onclick="redirecionarCalendario()">
             <span>
                 <span class="mobile-text"> <a href="{{ route('get.schedule') }}">CALENDÁRIOS</a></span>
+            </span>
+        </button>
+
+        <button onclick="redirecionarCalendario()">
+            <span>
+                <span class="mobile-text"> <a href="{{ route('get.change-password') }}">ALTERAR SENHA</a></span>
             </span>
         </button>
 
