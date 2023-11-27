@@ -89,20 +89,35 @@
                             <div class="column">
                                 <div class="input-group">
                                     <input type="text" name="name" placeholder="Nome:" required>
+                                    @error('name')
+                                        <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror 
                                 </div>
                                 <div class="input-group">
                                     <input type="text" name="institution" placeholder="Instituição:" required>
+                                    @error('institution')
+                                        <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
                                 <div class="input-group">
                                     <input type="tel" name="telPhone" placeholder="Número:" required>
+                                    @error('telPhone')
+                                        <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
                                 <div class="input-group">
                                     <input type="email" name="email" placeholder="E-mail:" required>
+                                    @error('email')
+                                        <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="column">
                                 <div class="input-group">
                                     <textarea name="subject" placeholder="Assunto:" id="" cols="30" rows="10" required></textarea>
+                                    @error('subject')
+                                        <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
                                 <div>
                                     <input type="checkbox">

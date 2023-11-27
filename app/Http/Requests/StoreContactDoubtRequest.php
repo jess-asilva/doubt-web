@@ -47,7 +47,7 @@ class StoreContactDoubtRequest extends FormRequest
             'email'=>'E-mail é preenchimento obrigatório',
             'email'=>'Necessário digitar e-mail corretamente , (examplo@ex.com)',
             'subject'=>'O campo assunto é obrigatório',
-            'subject.max'=>'Campo assunto deve ter ao menos 3 caracteres'
+            'subject.between'=>'Campo assunto deve ter ao menos 3 caracteres'
 
         ];
     }

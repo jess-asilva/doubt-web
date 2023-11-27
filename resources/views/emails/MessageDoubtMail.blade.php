@@ -3,9 +3,9 @@
 
 Mensagem de  Usuário teste
 
-    <p>Telefone: <strong>sjdkhjksdh</strong></p> <br>
-    <p>Email: <strong>hsajkhs</strong></p> <br>
-    <p>Instituição <strong>sdahkjhsdj</strong></p> <br>
+    <p>Telefone: <strong>Aqui ficará o telefone do Usuário</strong></p> <br>
+    <p>Email: <strong>Aqui ficará o e-mail do Usuário</strong></p> <br>
+    <p>Instituição <strong>A instituição do usuário</strong></p> <br>
     <p>
         Mensagem:<br>
         
