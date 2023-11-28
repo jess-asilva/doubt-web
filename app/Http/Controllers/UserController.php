@@ -152,4 +152,10 @@ class UserController extends Controller
 
         return redirect('/perfil');
     }
+
+    public function getStudents() {
+        $students = User::where('user_type_id', 3)->orderBy('name')->get();
+        //dd($students[0]->name);
+        return view('students')->with('students', $students);
+    }
 }
