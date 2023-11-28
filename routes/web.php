@@ -62,6 +62,10 @@ Route::get('/monitors', function () {
 Route::get('/students', function () {
     return view('students');
 })->name('get.students');
+Route::get('/internetForum', function () {
+    return view('internetForum');
+})->name('internetForum');
+
 
 Route::get('/doubts', function () {
     return view('doubts');
@@ -91,4 +95,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/schedule', [ScheduleController::class, 'index'])->name('get.schedule');
     Route::post('/schedule', [ScheduleController::class, 'store'])->name('post.schedule');
     Route::delete('/schedule/{scheduleId}', [ScheduleController::class, 'destroy'])->name('delete.schedule');
+
+    Route::get('/monitor', [UserController::class, 'getMonitors'])->name('get.monitors');
+
+    Route::get('/student', [UserController::class, 'getStudents'])->name('get.students');
+
+    Route::delete('student/{studentId}', [UserController::class, 'archive'])->name('delete.student');
 });
