@@ -26,8 +26,8 @@
         @error('email')
         <div class="alert alert-danger">{{ $message }}</div>
         @enderror
-        <input type="text" name="ra-rm" placeholder="RA/RM"><br>
-        @error('ra-rm')
+        <input type="text" name="rarm" placeholder="RA/RM"><br>
+        @error('rarm')
         <div class="alert alert-danger">{{ $message }}</div>
         @enderror
 

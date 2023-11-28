@@ -16,7 +16,7 @@ class UsersSeeder extends Seeder
             'name' => 'Admin',
             'email' => 'admin@gmail.com',
             'password' => bcrypt('123456'),
-            'ra-rm' => '20222930156',
+            'rarm' => '20222930156',
             'user_type_id' => 1,
         ]);
 
@@ -24,7 +24,7 @@ class UsersSeeder extends Seeder
             'name' => 'Monitor',
             'email' => 'monitor@gmail.com',
             'password' => bcrypt('654321'),
-            'ra-rm' => '20222930157',
+            'rarm' => '20222930157',
             'user_type_id' => 2,
         ]);
 
@@ -33,7 +33,7 @@ class UsersSeeder extends Seeder
             'name' => 'aluno',
             'email' => 'aluno@gmail.com',
             'password' => bcrypt('111222'),
-            'ra-rm' => '20222930158',
+            'rarm' => '20222930158',
             'user_type_id' => 3,
         ]);
     }

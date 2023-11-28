@@ -35,7 +35,7 @@ class AuthenticateController extends Controller
             // return view('users.teste');
         }
 
-        return back()->withErrors(['ra-rm' => 'Usuário ou senha inválido'])->onlyInput('ra-rm');
+        return back()->withErrors(['rarm' => 'Usuário ou senha inválido'])->onlyInput('rarm');
     }
 
     /**

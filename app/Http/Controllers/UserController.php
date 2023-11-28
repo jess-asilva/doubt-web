@@ -34,7 +34,7 @@ class UserController extends Controller
      *    $user = User::create([
      *       'name' => $request->input('users'),
      *        'email' => $request->input('e-mail'),
-     *        'ra-rm' => $request->input('rm-ra'),
+     *        'rarm' => $request->input('rm-ra'),
      *    ]);
 
      *    return redirect('');
@@ -51,7 +51,7 @@ class UserController extends Controller
         $user = User::create([
             'name' => $userData['name'],
             'email' => $userData['email'],
-            'ra-rm' => $userData['ra-rm'],
+            'rarm' => $userData['rarm'],
             'password' => Hash::make($userData['password']),
             'user_type_id' => 2,
         ]);

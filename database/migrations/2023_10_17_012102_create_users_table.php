@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->rememberToken();
-            $table->string('ra-rm', 11);
+            $table->string('rarm', 11);
             $table->timestamps();
 
             $table->foreign('user_type_id')->references('id')->on('user_types');
