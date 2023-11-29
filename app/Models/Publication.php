@@ -28,19 +28,19 @@ class Publication extends Model
      */
     public static function appendUsersLike($publications)
     {
-        $usersLike = [];
         foreach ($publications as $i => $publication) {
+            $usersLikeObj = [];
             $likes = DB::table('publication_likes')
                 ->select('user_id')
                 ->where('publication_id', $publication->id)
                 ->get()
                 ->toArray();
 
-            $usersLike = array_merge($usersLike, $likes);
+            $usersLikeObj = array_merge($usersLikeObj, $likes);
 
             $usersLike = array_map(function($item) {
                 return $item->user_id;
-            }, $usersLike);
+            }, $usersLikeObj);
 
             $publications[$i]->usersLike = $usersLike;
         }

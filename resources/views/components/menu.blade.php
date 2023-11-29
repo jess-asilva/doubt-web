@@ -17,6 +17,7 @@
             </span>
         </button>
 
+        @can('viewAny-user')
         <button onclick="">
             <span>
                 <span class="mobile-text"> <a href="{{ route('get.students') }}">ALUNOS</a></span>
@@ -28,6 +29,7 @@
                 <span> <a href="{{ route('get.monitors') }}">MONITORES</a></span>
             </span>
         </button>
+        @endcan
 
         <button onclick="redirecionarCalendario()">
             <span>

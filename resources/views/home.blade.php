@@ -20,7 +20,7 @@
 <body>
     <x-menu />
     <main class="main">
-
+        @can('create-publication')
         <div class="newPost">
             @if ($errors->any())
             <div class="alert alert-danger">
@@ -57,7 +57,7 @@
                 </div>
             </form>
         </div>
-
+        @endcan
         <ul class="posts" id="posts">
             @foreach($publications as $publication)
             <li class="post">
