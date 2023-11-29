@@ -219,7 +219,7 @@ img{
 
 input{
     padding: 1.3em 7em 1.3em 7em;
-    border-radius: 1em;
+    border-radius: 2em;
 }
 
 
@@ -230,6 +230,7 @@ input{
 textarea{
     width: 100%;
     resize: none;
+    border-radius: 2em;
 }
 
 .button-enviar{

@@ -12,7 +12,7 @@ body {
 
 a {
     text-decoration: none;
-    color: #F29829;
+    color: #000000;
 }
 
 .sidebar {
@@ -332,25 +332,41 @@ ul.posts li.post div.actionBtnPost button.filesPost img {
 }
 
 .like {
-    background: rgb(255, 255, 255);
+    background: #FF8C56;
+    color: black;
 }
 
 .like:hover {
-    background: palevioletred;
+    background: #FFC0A3;
+    color: black;
 }
 
 .comment {
     background: yellow;
+    color: black;
 }
 
 .comment:hover {
-    background: greenyellow;
+    background: #F5E325
+    
 }
 
 .report {
-    background: orange;
+    background: #CE534E;
+    color: black;
 }
 
 .report:hover {
     background: orangered;
 }
+
+
+.preview-image {
+    max-height: 200px; /* Ajuste a altura máxima conforme necessário */
+}
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+  }
+

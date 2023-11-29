@@ -8,6 +8,8 @@ use App\Http\Requests\StorePublicationRequest;
 use App\Http\Requests\UpdatePublicationRequest;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class PublicationController extends Controller
 {
@@ -78,5 +80,17 @@ class PublicationController extends Controller
     public function destroy(Publication $publication)
     {
         //
+    }
+
+    public function postPublication(Request $request)
+    {
+
+        if ($request->hasFile('imgUpload')) {
+        $file = $request->file('imgUpload');
+        $fileName = uniqid() . '.' . $file->getClientOriginalExtension();
+
+        $file->move(public_path('uploads'), $fileName);
+
+        }
     }
 }

@@ -11,7 +11,7 @@
 <body>
     <x-menu />
 
-    <h2>ADICIONAR MONITORIA</h2>
+    <h2>ADICIONAR CALENDÁRIO</h2>
 
     <form id="calendar-form" action="{{ route('post.schedule') }}" method="POST" enctype="multipart/form-data">
         @csrf
