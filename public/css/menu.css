@@ -1,16 +1,16 @@
+@import url("/css/vars.css");
+
 .sidebar {
     position: fixed;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     width: 200px;
     height: 100%;
-    padding: 40px 10px 30px 30px;
-    border-right: 1px solid #F29820;
+    border-right: 1px solid var(--color-primary);
     transition: all 0.35s;
-    background-color: #3A238C;
-
+    background-color: var(--color-secondary-background);
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    padding: 0 10px;
 }
 
 .sidebar-header {
@@ -18,89 +18,57 @@
     margin-bottom: 10px;
 }
 
-.logo-img {
-    width: 120px;
-    min-width: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    transition: transform 0.30s;
-    margin-left: 5px;
-    align-items: center;
-    justify-items: center;
-}
-
-.logo-img:hover {
-    transform: scale(1.5);
-}
-
-.sidebar button {
-    height: 60px;
-    background: transparent;
-    border: 10px;
-    font-family: inherit;
-    font-weight: bold;
-    color: #391959;
-    cursor: pointer;
-    text-align: left;
-    padding: 0;
-}
-
-.sidebar button>span {
-    display: inline-flex;
-    align-items: center;
-    height: 40px;
-    width: 140px;
-    padding: 0 60px 0 12px;
-    border-radius: 10px;
-    line-height: 1;
-    transition: all 0.2s;
-}
-
-.sidebar button:hover>span {
-    background-color: rgba(242, 124, 56, 0.3);
-}
-
-.sidebar button span {
-    font-size: 16px;
-}
-
-.sidebar>nav {
-    flex: 1 1 auto;
-    display: flex;
-    flex-direction: column;
+.sidebar a {
     width: 100%;
 }
 
-.main {
-    padding: 0 0 15px 150px;
-    overflow: hidden;
-}
-
-
-.logo-container {
+.logo-button {
     display: flex;
+    height: 150px;
     align-items: center;
+    justify-content: center;
 }
 
-.logo {
-    width: 12%;
-    margin-right: 20px;
-    display: block;
+.logo-button img {
+    width: 80px;
+    transition: 0.2s;
 }
 
-.arrow-back {
-    width: 40px;
-    margin-right: 20px;
+.logo-button:hover img {
+    width: 90px;
+    transition: 0.2s;
 }
 
-.container {
-    float: CENTER;
-    width: 30%;
-    max-width: 40%;
-    margin: 20px auto;
-    margin-top: 60px;
-    background-color: #e7e2e2;
-    padding: 50px;
-    box-shadow: 0 0 10px rgb(242, 152, 32);
-    border-radius: 20px;
+.menu-buttons {
+    width: 100%;
+    display: grid;
+    gap: 5px;
+    text-align: left;
+}
+
+.menu-buttons a {
+    border: 10px;
+    color: #391959;
+    cursor: pointer;
+    padding: 15px 20px;
+    border-radius: 10px;
+    background: transparent;
+    transition: 0.2s;
+    width: 100%;
+    text-decoration: none;
+}
+
+.menu-buttons a:hover {
+    background-color: rgba(242, 124, 56, 0.3);
+}
+
+.menu-buttons a>span {
+    color: var(--color-primary);
+    font-size: 16px;
+}
+
+.line {
+    border-top: 1px solid var(--color-primary-transparent);
+    width: 82%;
+    justify-self: center;
 }

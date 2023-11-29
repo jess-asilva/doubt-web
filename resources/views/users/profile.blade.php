@@ -5,7 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('css/profile.css') }}">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
     <title>Perfil</title>
+
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+    </style>
+
 </head>
 
 <body>
@@ -19,13 +27,15 @@
         <h1>PERFIL DO USUÁRIO</h1><br>
 
         <label for="name">NOME</label>
-        <input type="text" id="name" name="name" class="form-control" required autofocus class="@error('name') is-invalid @enderror" value="{{ $user->name }}"><br>
+        <input type="text" id="name" name="name" class="form-control" required autofocus
+            class="@error('name') is-invalid @enderror" value="{{ $user->name }}"><br>
         @error('name')
         <div class="alert alert-danger">{{ $message }}</div>
         @enderror
 
         <label for="email">E-MAIL</label>
-        <input type="email" id="email" name="email" class="form-control" required class="@error('email') is-invalid @enderror" value="{{ $user->email }}"><br>
+        <input type="email" id="email" name="email" class="form-control" required
+            class="@error('email') is-invalid @enderror" value="{{ $user->email }}"><br>
         @error('email')
         <div class="alert alert-danger">{{ $message }}</div>
         @enderror

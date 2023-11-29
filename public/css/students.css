@@ -1,33 +1,33 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: var(--font--);
 }
 
-:root{
-    --color--logo--background:#3a238c;
-    --color--fundo--:#dddddd;
+:root {
+    --color-secondary-background: #3a238c;
+    --color--fundo--: #dddddd;
     --color--text: #391959;
-    --color--logo: #F29829;
+    --color-primary: #F29829;
     --font--: 'League Spartan', sans-serif;
 }
 
-h2{
+h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--color--logo);
+    color: var(--color-primary);
 }
 
-.box-search{
+.box-search {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 2rem;
 }
 
-.box{
+.box {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,18 +38,18 @@ h2{
     align-items: center;
     justify-content: space-between;
     padding: 0 25px;
-    border: 2px solid var(--color--logo--background);
+    border: 2px solid var(--color-secondary-background);
 }
 
-input{
+input {
     width: 14rem;
     border: none;
     outline: none;
-    background:none;
+    background: none;
 }
 
 
-section{
+section {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -57,21 +57,21 @@ section{
 }
 
 
-.container{
+.container {
     width: 37rem;
     height: 12rem;
     background-color: var(--color--fundo--);
-    border: 0.3rem solid var(--color--logo);
+    border: 0.3rem solid var(--color-primary);
     border-radius: 4rem;
 }
 
-.row{
+.row {
     display: flex;
     justify-content: space-between;
     margin-top: 1.4rem;
 }
 
-a{
+.row a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -80,9 +80,9 @@ a{
     font-weight: bold;
 }
 
-.button{
+.button {
     display: flex;
-    background-color: var(--color--logo);
+    background-color: var(--color-primary);
     color: var(--color--text);
     padding: 0.5em 0.5em 0.5em 0.5em;
     border-radius: 2em;
@@ -91,17 +91,17 @@ a{
     border: none;
 }
 
-.row2{
+.row2 {
     display: flex;
     justify-content: end;
     padding: 0 3em 0 3em;
 }
 
-p{
+p {
     color: var(--color--text);
 }
 
-.row-text-cadastro{
+.row-text-cadastro {
     display: flex;
     padding-left: 3rem;
     margin-top: 3rem;

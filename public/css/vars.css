@@ -1,0 +1,7 @@
+:root {
+    --color-primary: #F29829;
+    --color-primary-transparent: #f298298a;
+    --color-secondary: #391959;
+    --color-secondary-background: hsl(253, 60%, 34%);
+    --font--: 'League Spartan', sans-serif;
+}
