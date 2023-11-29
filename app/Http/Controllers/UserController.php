@@ -124,9 +124,9 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function editPassword()
+    public function changePassword()
     {
-        return view('users.changePassword');
+        return view('users.change-password');
     }
 
     /**
@@ -150,6 +150,6 @@ class UserController extends Controller
 
         $user->save();
 
-        return redirect('/perfil');
+        return redirect('/home');
     }
 }
