@@ -28,8 +28,8 @@ class Publication extends Model
      */
     public static function appendUsersLike($publications)
     {
-        $usersLikeObj = [];
         foreach ($publications as $i => $publication) {
+            $usersLikeObj = [];
             $likes = DB::table('publication_likes')
                 ->select('user_id')
                 ->where('publication_id', $publication->id)
