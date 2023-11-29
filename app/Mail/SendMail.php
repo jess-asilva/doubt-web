@@ -15,29 +15,30 @@ class SendMail extends Mailable
 {
     use Queueable, SerializesModels;
 
-   # public $data;
+    /**
+     * @var array $data
+     */
+    public array $data;
 
     /**
      * Create a new message instance.
      */
-
-   ## public function __construct($data)
-   # {
-    #    $this->$data = $data;
-   # }
+    public function __construct(array $data)
+    {
+        $this->data = $data;
+    }
 
     /**
      * Build the message.
      */
-   
-   # public function build()
-    #{
-    #    return $this
-    #        ->from(config('mail.from.address'))
-    #        ->subject("Nova Mensagem Doubt")
-    #        ->view('users.message')
-    #        ->with('data', $this->data);
-   # }
+    public function build()
+    {
+        return $this
+            ->from(config('mail.from.address'))
+            ->subject("Nova Mensagem Doubt")
+            ->view('users.message')
+            ->with('data', $this->data);
+    }
 
     /**
      * Get the message envelope.
@@ -45,7 +46,7 @@ class SendMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Send Mail',
+            subject: 'Nova Mensagem Doubt',
         );
     }
 
@@ -56,7 +57,7 @@ class SendMail extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'view.name',
+            view: 'users.message',
         );
     }
 
