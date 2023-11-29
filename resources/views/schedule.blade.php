@@ -10,7 +10,7 @@
 
 <body>
     <x-menu />
-
+    @can('create-schedule')
     <h2>ADICIONAR CALENDÁRIO</h2>
 
     <form id="calendar-form" action="{{ route('post.schedule') }}" method="POST" enctype="multipart/form-data">
@@ -35,7 +35,7 @@
         </div>
 
     </form>
-
+    @endcan
     <div class="container">
         <ul id="calendar-list">
             @foreach($schedules as $schedule)
@@ -48,12 +48,13 @@
                     </div>
                 </div>
                 <div>
-
+                    @can('delete-schedule')
                     <form class = "form2" action="{{ route('delete.schedule', $schedule->id) }}" method="POST" class="d-inline-flex">
                         @method('DELETE')
                         @csrf
                         <input class="btnDelete" type="submit" value="Excluir">
-                    </form2>
+                    </form>
+                    @endcan
                 </div>
             </li>
             @endforeach

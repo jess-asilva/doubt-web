@@ -45,7 +45,7 @@ class PublicationController extends Controller
 
         Publication::create($publication);
 
-        return redirect('home');
+        return redirect()->route('home');
     }
 
     /**

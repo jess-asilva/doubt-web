@@ -31,8 +31,6 @@ class AuthenticateController extends Controller
             $request->session()->regenerate();
 
             return redirect()->intended('home');
-
-            // return view('users.teste');
         }
 
         return back()->withErrors(['rarm' => 'Usuário ou senha inválido'])->onlyInput('rarm');
