@@ -16,6 +16,7 @@
             <span>DÚVIDAS</span>
         </a>
 
+        @can('viewAny-user')
         <a href="{{ route('get.students') }}">
             <span>ALUNOS</span>
         </a>
@@ -23,6 +24,7 @@
         <a href="{{ route('get.monitors') }}">
             <span>MONITORES</span>
         </a>
+        @endcan
 
         <a href="{{ route('get.schedule') }}">
             <span>CALENDÁRIOS</span>

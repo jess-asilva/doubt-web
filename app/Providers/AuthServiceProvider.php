@@ -2,7 +2,13 @@
 
 namespace App\Providers;
 
-// use Illuminate\Support\Facades\Gate;
+use App\Models\Publication;
+use App\Models\Schedule;
+use App\Models\User;
+use App\Policies\PublicationPolicy;
+use App\Policies\SchedulePolicy;
+use App\Policies\UserPolicy;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 
 class AuthServiceProvider extends ServiceProvider
@@ -13,7 +19,9 @@ class AuthServiceProvider extends ServiceProvider
      * @var array<class-string, class-string>
      */
     protected $policies = [
-        //
+        Publication::class => PublicationPolicy::class,
+        User::class => UserPolicy::class,
+        Schedule::class => SchedulePolicy::class
     ];
 
     /**
@@ -21,6 +29,10 @@ class AuthServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //Gate::define(ab)
+        $this->registerPolicies();
+        Gate::define('create-publication', [PublicationPolicy::class, 'create']);
+        Gate::define('viewAny-user', [UserPolicy::class, 'viewAny']);
+        Gate::define('create-schedule', [SchedulePolicy::class, 'create']);
+        Gate::define('delete-schedule', [SchedulePolicy::class, 'delete']);
     }
 }
