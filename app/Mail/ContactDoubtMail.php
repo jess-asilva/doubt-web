@@ -16,12 +16,14 @@ class ContactDoubtMail extends Mailable
     /**
      * Create a new message instance.
      */
-    //public $data;
-                            //array $data
-    public function __construct()
+    public array $data;
+                            
+    public function __construct(array $data)
     {
-        //
-        // $this->$data = $data;
+        foreach ($data as $key => $value) {
+            $this->data[$key] = $value;
+        }
+        //$this->$data = $data;
     }
 
     /**

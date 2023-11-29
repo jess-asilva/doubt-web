@@ -25,10 +25,10 @@ class StoreContactDoubtRequest extends FormRequest
             //
             'name'=>'required',
             'institution'=>'required',
-            'telPhone'=>'required|max:11',
+            'telPhone'=>'required|max:11|regex:/^\d{11}$/',
             'email'=>'required|email',
             'subject'=>'required|between:2,255'
-        ];
+        ];  
         
     }
 
@@ -44,10 +44,11 @@ class StoreContactDoubtRequest extends FormRequest
             'institution'=>'Instituição é preenchimento obrigatório',
             'telPhone'=>'Telefone é preenchimento obrigatório',
             'telPhone.max'=>'Campo telefone tamanho máximo 11 caracteres',
+            'telPhone.regex'=>'Favor preencher o campo de forma correta (xx)xxxxxxxxx',
             'email'=>'E-mail é preenchimento obrigatório',
             'email'=>'Necessário digitar e-mail corretamente , (examplo@ex.com)',
             'subject'=>'O campo assunto é obrigatório',
-            'subject.max'=>'Campo assunto deve ter ao menos 3 caracteres'
+            'subject.between'=>'Campo assunto deve ter ao menos 3 caracteres'
 
         ];
     }

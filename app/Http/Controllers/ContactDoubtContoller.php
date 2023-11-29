@@ -6,8 +6,7 @@ use App\Models\ContactDoubt;
 use App\Http\Requests\StoreContactDoubtRequest;
 use App\Http\Requests\UpdateContactDoubtRequest;
 use App\Mail\ContactDoubtMail;
-use Illuminate\Support\Facades\Mail as FacadesMail;
-use Mail;
+use Illuminate\Support\Facades\Mail;
 
 class ContactDoubtContoller extends Controller
 {
@@ -34,18 +33,17 @@ class ContactDoubtContoller extends Controller
     {
         //
         $data = [
-            'name'=>$request->name,
-            'institution'=>$request->institution,
-            'telPhone'=>$request->telPhone,
-            'email'=>$request->email,
-            'subject'=>$request->subject
+            'name' => $request->name,
+            'institution' => $request->institution,
+            'telPhone' => $request->telPhone,
+            'email' => $request->email,
+            'subject' => $request->subject
         ];
 
         //return dd($data);
-         FacadesMail::to('donatojoaopaulo67@gmail.com')
-             ->send(new ContactDoubtMail($data));
+        Mail::to('donatojoaopaulo67@gmail.com')->send(new ContactDoubtMail($data));
 
-            return redirect('/');
+        return redirect('/');
     }
 
     /**
