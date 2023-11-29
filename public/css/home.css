@@ -10,107 +10,19 @@ body {
     /*melhora a qualidade da fonte*/
 }
 
-a {
-    text-decoration: none;
-    color: #000000;
-}
-
-.sidebar {
-    position: fixed;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 200px;
-    height: 100%;
-    padding: 40px 10px 30px 30px;
-    border-right: 1px solid #F29820;
-    transition: all 0.35s;
-    background-color: #3A238C;
-
-}
-
-.sidebar-header {
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-.logo-img {
-    width: 120px;
-    min-width: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    transition: transform 0.30s;
-    margin-left: 5px;
-    align-items: center;
-    justify-items: center;
-}
-
-.logo-img:hover {
-    transform: scale(1.5);
-}
-
-.sidebar button {
-    height: 60px;
-    background: transparent;
-    border: 10px;
-    font-family: inherit;
-    font-weight: bold;
-    color: #391959;
-    cursor: pointer;
-    text-align: left;
-    padding: 0;
-}
-
-.sidebar button>span {
-    display: inline-flex;
-    align-items: center;
-    height: 40px;
-    width: 140px;
-    padding: 0 60px 0 12px;
-    border-radius: 10px;
-    line-height: 1;
-    transition: all 0.2s;
-}
-
-.sidebar button:hover>span {
-    background-color: rgba(242, 124, 56, 0.3);
-}
-
-.sidebar button span {
-    font-size: 16px;
-}
-
-.sidebar>nav {
-    flex: 1 1 auto;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
 .main {
     padding: 0 0 15px 150px;
     overflow: hidden;
 }
 
 @media (width < 920px) {
-    .sidebar {
-        width: 115px;
-    }
-
     .main {
         transition: margin 0.2s;
         margin-left: 125px;
     }
 }
 
-
-
 @media (max-width: 480px) {
-    .sidebar {
-        display: none;
-    }
-
     .button-mobile {
         display: flex;
     }
@@ -130,7 +42,7 @@ li {
     margin: 0 auto;
 }
 
-div.newPost {
+div .newPost {
     width: 100%;
     height: 250px;
 
@@ -332,41 +244,25 @@ ul.posts li.post div.actionBtnPost button.filesPost img {
 }
 
 .like {
-    background: #FF8C56;
-    color: black;
+    background: rgb(255, 255, 255);
 }
 
 .like:hover {
-    background: #FFC0A3;
-    color: black;
+    background: palevioletred;
 }
 
 .comment {
     background: yellow;
-    color: black;
 }
 
 .comment:hover {
-    background: #F5E325
-    
+    background: greenyellow;
 }
 
 .report {
-    background: #CE534E;
-    color: black;
+    background: orange;
 }
 
 .report:hover {
     background: orangered;
 }
-
-
-.preview-image {
-    max-height: 200px; /* Ajuste a altura máxima conforme necessário */
-}
-
-.icons {
-    display: flex;
-    justify-content: space-between;
-  }
-

@@ -1,51 +1,41 @@
 <aside class="sidebar">
     <header class="sidebar-header">
-        <link rel="stylesheet" href="css/home.css">
-        <a href="{{ route('home') }}"><img class="logo-img" src="img/LOGO-DOUBT-TCC.png" alt="" /></a>
+        <link rel="stylesheet" href="{{ asset('css/menu.css') }}">
     </header>
 
-    <nav>
-        <button onclick="">
-            <span>
-                <span class="mobile-text" name="forum"> <a href="{{ route('home') }}">INÍCIO</a></span>
-            </span>
-        </button>
+    <a href="{{ route('home') }}" class="logo-button">
+        <img src="img/LOGO-DOUBT-TCC.png" alt="Logotipo Doubt" />
+    </a>
 
-        <button onclick="">
-            <span>
-                <span class="mobile-text"> <a href="{{ route('get.doubts') }}">DÚVIDAS</a></span>
-            </span>
-        </button>
+    <nav class="menu-buttons">
+        <a href="{{ route('home') }}">
+            <span>INÍCIO</span>
+        </a>
 
-        <button onclick="">
-            <span>
-                <span class="mobile-text"> <a href="{{ route('get.students') }}">ALUNOS</a></span>
-            </span>
-        </button>
+        <a href="{{ route('get.doubts') }}">
+            <span>DÚVIDAS</span>
+        </a>
 
-        <button onclick="">
-            <span>
-                <span> <a href="{{ route('get.monitors') }}">MONITORES</a></span>
-            </span>
-        </button>
+        <a href="{{ route('get.students') }}">
+            <span>ALUNOS</span>
+        </a>
 
-        <button onclick="redirecionarCalendario()">
-            <span>
-                <span class="mobile-text"> <a href="{{ route('get.schedule') }}">CALENDÁRIOS</a></span>
-            </span>
-        </button>
+        <a href="{{ route('get.monitors') }}">
+            <span>MONITORES</span>
+        </a>
 
-        <button onclick="redirecionarCalendario()">
-            <span>
-                <span class="mobile-text"> <a href="{{ route('profile') }}">PERFIL</a></span>
-            </span>
-        </button>
+        <a href="{{ route('get.schedule') }}">
+            <span>CALENDÁRIOS</span>
+        </a>
 
-        <button onclick="redirecionar()">
-            <span>
-                <span class="mobile-text"> <a href="{{ route('logout') }}">SAIR</a></span>
-            </span>
-        </button>
+        <a href="{{ route('profile') }}">
+            <span>PERFIL</span>
+        </a>
+
+        <div class="line"></div>
+
+        <a href="{{ route('logout') }}">
+            <span>SAIR</span>
+        </a>
     </nav>
-
 </aside>

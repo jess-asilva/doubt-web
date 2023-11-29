@@ -1,8 +1,8 @@
-:root{
-    --color--logo--background:#3a238c;
-    --color--fundo--:#dddddd;
+:root {
+    --color-secondary-background: #3a238c;
+    --color--fundo--: #dddddd;
     --color--text: #391959;
-    --color--logo: #F29829;
+    --color-primary: #F29829;
     --font--: 'League Spartan', sans-serif;
 }
 
@@ -13,7 +13,7 @@ body {
 #post-container {
     max-width: 600px;
     margin: 20px auto;
-    border: 1px solid var(--color--logo);
+    border: 1px solid var(--color-primary);
     background-color: var();
     padding: 20px;
     border-radius: 10px;
@@ -30,7 +30,7 @@ body {
 .comment {
     margin-bottom: 10px;
     padding: 10px;
-    border: 1px solid var(--color--logo);
+    border: 1px solid var(--color-primary);
     border-radius: 5px;
 }
 
@@ -43,15 +43,15 @@ body {
     width: 100%;
     box-sizing: border-box;
     margin-bottom: 10px;
-    border: 2px solid var(--color--logo);
+    border: 2px solid var(--color-primary);
     color: var(--color--text);
 }
 
-.btn-comment{
+.btn-comment {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--color--logo);
+    background-color: var(--color-primary);
     color: var(--color--text);
     padding: 0.4rem;
     border-radius: 2em;
@@ -61,7 +61,7 @@ body {
     margin: 0.3rem 0 1rem 0;
 }
 
-a{
+a {
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -69,6 +69,6 @@ a{
     font-weight: bold;
 }
 
-p{
+p {
     color: var(--color--text);
 }
