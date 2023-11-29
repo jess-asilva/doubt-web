@@ -62,6 +62,7 @@ Route::get('/monitors', function () {
 Route::get('/students', function () {
     return view('students');
 })->name('get.students');
+
 Route::get('/internetForum', function () {
     return view('internetForum');
 })->name('internetForum');
@@ -101,4 +102,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/student', [UserController::class, 'getStudents'])->name('get.students');
 
     Route::delete('student/{studentId}', [UserController::class, 'archive'])->name('delete.student');
+
+    Route::delete('monitor/{monitorId}', [UserController::class, 'archive'])->name('delete.monitor');
 });
