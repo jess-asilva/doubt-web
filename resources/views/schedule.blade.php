@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adicionar calendário</title>
-    <link rel="stylesheet" href="css/schedule.css">
+    <link rel="stylesheet" href="{{ asset('css/schedule.css') }}">
 </head>
 
 <body>
