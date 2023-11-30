@@ -6,10 +6,9 @@
 }
 
 :root {
-    --color-secondary-background: #3a238c;
-    --color--fundo--: #dddddd;
+    --color--logo--background: #3a238c;
     --color--text: #391959;
-    --color-primary: #F29829;
+    --color--logo: #F29829;
     --font--: 'League Spartan', sans-serif;
 }
 

@@ -1,13 +1,15 @@
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
+    font-family: var(--font--);
 }
 
-body {
-    background-color: #DDDDDD;
-    -webkit-font-smothing: antialiased !important;
-    /*melhora a qualidade da fonte*/
+:root {
+    --color--logo--background: #3a238c;
+    --color--text: #391959;
+    --color--logo: #F29829;
+    --font--: 'League Spartan', sans-serif;
 }
 
 .main {
