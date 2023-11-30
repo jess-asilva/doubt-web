@@ -20,6 +20,7 @@ return new class extends Migration
             $table->rememberToken();
             $table->string('rarm', 11);
             $table->timestamps();
+            $table->softDeletes();
 
             $table->foreign('user_type_id')->references('id')->on('user_types');
         });

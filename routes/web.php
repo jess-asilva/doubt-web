@@ -55,10 +55,6 @@ Route::get('/user/{id?}', function ($id_user = null) {
     return view('home');
 })->name('users-home');
 
-Route::get('/monitors', function () {
-    return view('monitors');
-})->name('get.monitors');
-
 Route::get('/students', function () {
     return view('students');
 })->name('get.students');
@@ -97,11 +93,11 @@ Route::middleware('auth')->group(function () {
     Route::post('/schedule', [ScheduleController::class, 'store'])->name('post.schedule');
     Route::delete('/schedule/{scheduleId}', [ScheduleController::class, 'destroy'])->name('delete.schedule');
 
-    Route::get('/monitor', [UserController::class, 'getMonitors'])->name('get.monitors');
+    Route::get('/user/{userId}/change-role/{role}', [UserController::class, 'changeRole'])->name('change-role');
+    //Route::get('/monitor/{monitorsId}/change-role', [UserController::class, 'changeRole'])->name('turnStudent');
 
     Route::get('/student', [UserController::class, 'getStudents'])->name('get.students');
+    Route::get('/monitors', [UserController::class, 'getMonitors'])->name('get.monitors');
 
-    Route::delete('student/{studentId}', [UserController::class, 'archive'])->name('delete.student');
-
-    Route::delete('monitor/{monitorId}', [UserController::class, 'archive'])->name('delete.monitor');
+    Route::delete('user/{userId}', [UserController::class, 'destroy'])->name('delete.user');
 });

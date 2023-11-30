@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-
+use App\Models\UserType;
+use Illuminate\Http\Request;
+use Illuminate\Database\Query\Builder;
+use Illuminate\Support\Facades\DB;
 use App\Http\Requests\StoreUserRequest;
 use App\Http\Requests\UpdatePasswordRequest;
 use App\Http\Requests\UpdateUserRequest;
@@ -27,19 +30,6 @@ class UserController extends Controller
     {
         return view('users.create-account');
     }
-
-    /**
-     * public function store(StoreUserRequest $request)
-     *{
-     *    $user = User::create([
-     *       'name' => $request->input('users'),
-     *        'email' => $request->input('e-mail'),
-     *        'rarm' => $request->input('rm-ra'),
-     *    ]);
-
-     *    return redirect('');
-     *}
-     */
 
     /**
      * Store a newly created resource in storage.
@@ -113,11 +103,11 @@ class UserController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(User $user)
+    public function destroy(int $userId)
     {
-        User::destroy(Auth::id());
+        User::destroy($userId);
 
-        return redirect('/logout');
+        return back();
     }
 
     /**
@@ -154,17 +144,40 @@ class UserController extends Controller
         return redirect('/profile');
     }
 
-    public function getStudents()
+    public function getStudents(Request $request)
     {
-        $students = User::where('user_type_id', 3)->orderBy('name')->get();
-        //dd($students[0]->name);
+        $search = $request->query('search');
+
+        $students = DB::table('users')->where('user_type_id', User::STUDENT)->when($search, function (Builder $query, string $search) {
+            $query->where('name', 'LIKE', '%' . $search . '%');
+        })->orderByDesc('name')->get();
+        
+        // $students = User::where('user_type_id', 3)->orderBy('name')->get();
+
         return view('students')->with('students', $students);
     }
 
-    public function getMonitors()
+    public function getMonitors(Request $request)
     {
-        $monitors = User::where('user_type_id', 2)->orderBy('name')->get();
-        //dd($students[0]->name);
+        $search = $request->query('search');
+
+        $monitors = DB::table('users')->where('user_type_id', User::MONITOR)->when($search, function (Builder $query, string $search) {
+            $query->where('name', 'LIKE', '%' . $search . '%');
+        })->orderByDesc('name')->get();
+
+        // $monitors = User::where('user_type_id', 2)->orderBy('name')->get();
+
         return view('monitors')->with('monitors', $monitors);
+    }
+
+    public function changeRole(int $userId, string $role) {
+        $role = UserType::where('role', $role)->first();
+        $user = User::findOrFail($userId);
+
+        $user->user_type_id = $role->id;
+
+        $user->save();
+
+        return back();
     }
 }

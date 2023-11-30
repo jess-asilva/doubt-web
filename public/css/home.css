@@ -112,7 +112,6 @@ div.newPost form.formPost input {
     resize: none;
     outline: none;
     border: 0;
-
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
     color: black;
@@ -156,7 +155,6 @@ div.newPost form.formPost div.iconsAndButton button.btnSubmitForm {
     font-weight: bold;
     outline: none;
     cursor: pointer;
-
     border: 0;
     border-radius: 10px;
     transition: background 0.2;
@@ -218,7 +216,7 @@ ul.posts li.post div.actionBtnPost {
 }
 
 ul.posts li.post div.actionBtnPost a.styleFont {
-    color: #391959;
+    color: #000000;
 }
 
 ul.posts li.post div.actionBtnPost button.filesPost {
@@ -229,12 +227,10 @@ ul.posts li.post div.actionBtnPost button.filesPost {
     justify-content: center;
     border: 0;
     outline: none;
-    color: #391959;
     font-size: 16px;
     font-weight: bold;
     border-radius: 10px;
     cursor: pointer;
-
     transition: background 0.2s;
 }
 
@@ -244,11 +240,12 @@ ul.posts li.post div.actionBtnPost button.filesPost img {
 }
 
 .like {
-    background: rgb(255, 255, 255);
+    background: #F5A44B;
+    color:#000000;
 }
 
 .like:hover {
-    background: palevioletred;
+    background: #F59342;
 }
 
 .comment {
@@ -256,13 +253,6 @@ ul.posts li.post div.actionBtnPost button.filesPost img {
 }
 
 .comment:hover {
-    background: greenyellow;
+    background: #F2D22E;
 }
 
-.report {
-    background: orange;
-}
-
-.report:hover {
-    background: orangered;
-}
