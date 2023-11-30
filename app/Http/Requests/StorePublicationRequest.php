@@ -24,6 +24,7 @@ class StorePublicationRequest extends FormRequest
         return [
             'title' => 'required|between:1,100',
             'content' => 'required|between:2,500',
+            'image' => 'image',
         ];
     }
 
@@ -39,6 +40,7 @@ class StorePublicationRequest extends FormRequest
             'title.between' => 'Título deve ter entre 1 e 100 caracteres',
             'content.required' => 'Conteúdo da publicação é obrigatório',
             'content.between' => 'Conteúdo deve ter entre 1 e 100 caracteres',
+            'image.image' => 'Deve ser uma imagem válida (jpg, jpeg, png, bmp, gif, svg, ou webp).',
         ];
     }
 }

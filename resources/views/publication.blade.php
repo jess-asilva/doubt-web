@@ -36,6 +36,7 @@
         <div>
             <h2>{{ $publication->title }}</h2>
             <p>{{ $publication->content }}</p>
+            <img src="{{ $publication->image_url }}" alt="">
         </div>
         @foreach($publication->replies as $reply)
         <div class="comment">

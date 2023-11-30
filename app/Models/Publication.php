@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class Publication extends Model
 {
@@ -22,6 +23,8 @@ class Publication extends Model
         'title',
         'content',
         'user_id',
+        'image_url',
+        'video_url',
     ];
 
     /**

@@ -16,6 +16,8 @@ return new class extends Migration
             $table->foreignId('user_id');
             $table->string('title');
             $table->longText('content');
+            $table->string('image_url')->nullable();
+            $table->string('video_url')->nullable();
             $table->timestamps();
             $table->softDeletes();
 
