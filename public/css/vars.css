@@ -3,5 +3,7 @@
     --color-primary-transparent: #f298298a;
     --color-secondary: #391959;
     --color-secondary-background: hsl(253, 60%, 34%);
-    --font--: 'League Spartan', sans-serif;
+    --color-secondary-shadow: rgba(128, 0, 128, 0.6);
+    --color-grey: #dfdfdff6;
+    --font: 'League Spartan', sans-serif;
 }

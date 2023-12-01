@@ -1,15 +1,10 @@
+@import url("/css/vars.css");
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: var(--font--);
-}
-
-:root {
-    --color-secondary-background: #3a238c;
-    --color--text: #391959;
-    --color-primary: #F29829;
-    --font--: 'League Spartan', sans-serif;
+    font-family: var(--font);
 }
 
 header {
@@ -41,7 +36,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--color--text);
+    color: var(--color-secondary);
     background-color: var(--color-primary);
     padding: 1em;
     border-radius: 2em;
@@ -76,14 +71,14 @@ nav {
     align-items: center;
     justify-content: center;
     font-size: 1.3rem;
-    color: var(--color--text);
+    color: var(--color-secondary);
 }
 
 .section-column-text {
     text-align: justify;
     font-size: 1.5rem;
     padding: 0% 8%;
-    color: var(--color--text);
+    color: var(--color-secondary);
 }
 
 .button-knowmore {
@@ -96,7 +91,7 @@ nav {
     font-weight: bold;
     text-decoration: none;
     background-color: var(--color-primary);
-    color: var(--color--text);
+    color: var(--color-secondary);
     cursor: pointer;
 }
 
@@ -134,7 +129,7 @@ img {
 
 .div-text- {
     font-size: 1.8rem;
-    color: var(--color--text);
+    color: var(--color-secondary);
     font-weight: bold;
 }
 
@@ -168,7 +163,7 @@ img {
     align-items: center;
     justify-content: left;
     background-color: white;
-    color: var(--color--text);
+    color: var(--color-secondary);
     width: 80vh;
     height: 10rem;
     border-radius: 10rem;
@@ -190,7 +185,7 @@ img {
     display: flex;
     width: 100%;
     height: auto;
-    background-color: var(--color--text);
+    background-color: var(--color-secondary);
     justify-content: center;
     align-items: center;
     padding: 2rem 0rem;
@@ -234,7 +229,7 @@ textarea {
 
 .button-enviar {
     background-color: var(--color-primary);
-    color: var(--color--text);
+    color: var(--color-secondary);
     padding: 0.7em 6em 0.7em 6em;
     border-radius: 2em;
     font-size: 1em;

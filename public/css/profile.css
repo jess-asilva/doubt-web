@@ -1,17 +1,11 @@
+@import url("/css/vars.css");
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: var(--font--);
+    font-family: var(--font);
 }
-
-:root {
-    --color--logo--background: #3a238c;
-    --color--text: #391959;
-    --color--logo: #F29829;
-    --font--: 'League Spartan', sans-serif;
-}
-
 
 .div-form-profile{
   display: flex;
@@ -25,7 +19,7 @@
   justify-content: center;
   width: 80vh;
   height: auto;
-  background-color: var(--color--logo--background);
+  background-color: var(--color-secondary-background);
   padding: 5rem 0rem;
   border-radius: 5rem;
 }
@@ -36,11 +30,11 @@
 
 h1{
   font-weight: bold;
-  color: var(--color--logo);
+  color: var(--color-primary);
 }
 
 label{
-  color: var(--color--logo);
+  color: var(--color-primary);
   font-weight: bold;
   margin-right: 0.3rem;
 }
@@ -63,8 +57,8 @@ a:hover {
 
 .button-alterar{
   padding: 1rem 3rem;
-  color: var(--color--logo--background);
-  background-color: var(--color--logo);
+  color: var(--color-secondary-background);
+  background-color: var(--color-primary);
   font-weight: bold;
 }
 

@@ -1,33 +1,12 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-
-    <title>Home</title>
-
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-    </style>
-
-</head>
-
-<body>
-    <x-menu />
-
-    <main class="main">
-        <br>
-        @can('create-publication')
+<x-base-page :title="'Home'" :stylePath="'home.css'">
+    @can('create-publication')
         <div class="newPost">
             @if ($errors->any())
-            <div class="alert alert-danger">
-                @foreach ($errors->all() as $error)
-                {{ $error }}
-                @endforeach
-            </div>
+                <div class="alert alert-danger">
+                    @foreach ($errors->all() as $error)
+                    {{ $error }}
+                    @endforeach
+                </div>
             @endif
 
             <div class="titleHome">
@@ -63,9 +42,10 @@
                 </div>
             </form>
         </div>
-        @endcan
-        <ul class="posts" id="posts">
-            @foreach($publications as $publication)
+    @endcan
+
+    <ul class="posts" id="posts">
+        @foreach($publications as $publication)
             <li class="post">
                 <div class="infoUserPost">
                     <div class="imgUserPost"></div>
@@ -99,10 +79,8 @@
                     </button>
                 </div>
             </li>
-            @endforeach
-        </ul>
-
-    </main>
+        @endforeach
+    </ul>
 
     <!-- Adicione esta seção no final do seu arquivo HTML -->
     <script>
@@ -153,16 +131,6 @@
                     reader.readAsDataURL(file);
                 }
             }
-
-
-
-
         });
     </script>
-
-
-    <!-- <script type="module" src="js/FormPost.js"></script> -->
-    <x-footer />
-</body>
-
-</html>
+</x-base-page>

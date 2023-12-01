@@ -8,13 +8,9 @@
 </head>
 
 <body>
-
     <x-header :rightText="'Seja bem vindo!'" />
 
-    <form class="sessao_form" action="{{ route('post.authenticate') }}" method="POST">
-        @csrf
-        <legend>LOGIN</legend>
-
+    <x-auth-card :title="'LOGIN'" :action="route('post.authenticate')">
         <input type="text" class="normal-input" name="rarm" placeholder="RA/RM"><br>
         @error('rarm')
         <div class="alert alert-danger">{{ $message }}</div>
@@ -31,8 +27,7 @@
 
         <input type="submit" value="ENTRAR">
         <p>ou <a href="{{ route('get.createAccount') }}" class="sublinhado">Cadastre-se</a></p>
-    </form>
-
+    </x-auth-card>
 </body>
 
 </html>

@@ -1,15 +1,10 @@
+@import url("/css/vars.css");
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: var(--font--);
-}
-
-:root {
-    --color--logo--background: #3a238c;
-    --color--text: #391959;
-    --color--logo: #F29829;
-    --font--: 'League Spartan', sans-serif;
+    font-family: var(--font);
 }
 
 .box-search {
@@ -70,14 +65,14 @@ h3 {
 }
 
 .div-monitoring-text h3{
-  color: var(--color--text);
+  color: var(--color-secondary);
 }
 
  form {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--color--logo--background);
+  background-color: var(--color-secondary-background);
   padding: 0.5rem 1rem;
   border-radius: 3rem;
   width: 30rem;
@@ -134,7 +129,7 @@ textarea {
   justify-content: center;
   align-items: center;
   padding: 0.8rem;
-  background-color: var(--color--logo);
+  background-color: var(--color-primary);
   color: #ffffff;
   border-radius: 2rem;
   cursor: pointer;
@@ -165,7 +160,7 @@ textarea {
 
 button {
   padding: 0.5rem 1.5rem;
-  background-color: var(--color--logo);
+  background-color: var(--color-primary);
   color: #391959;
   font-weight: bold;
   border: none;
@@ -177,7 +172,7 @@ button {
 
 .btnDelete {
   padding: 10px 30px;
-  background-color: var(--color--logo);
+  background-color: var(--color-primary);
   color: #efebf3;
   font-weight: bold;
   border: none;
@@ -198,7 +193,7 @@ ul {
   margin-bottom: 2rem;
   padding: 20px;
   border-radius: 20px;
-  border: 3px solid var(--color--logo);
+  border: 3px solid var(--color-primary);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin-left: 12rem;
 }
@@ -222,7 +217,7 @@ ul {
   display: flex;
   justify-content: baseline;
   margin-right: 1rem;
-  color: var(--color--text);
+  color: var(--color-secondary);
 }
 
 
@@ -246,7 +241,7 @@ ul {
 }
 
 .div-data p{
-  color: var(--color--text);
+  color: var(--color-secondary);
 }
 
 .image-container {

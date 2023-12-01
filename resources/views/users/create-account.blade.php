@@ -9,15 +9,9 @@
 </head>
 
 <body>
-    <header class="purple-overlay">
-        <img class="logo" src="img/LOGO-DOUBT-TCC.png" alt="Logo">
+    <x-header :rightText="'Junte-se à monitoria!'" />
 
-        <h2>JUNTE-SE A MONITORIA!</h2>
-    </header>
-    <form action="{{ route('post.createAccount') }}" method="post">
-        @csrf
-        <legend>CADASTRE-SE</legend>
-
+    <x-auth-card :title="'CADASTRE-SE'" action="{{ route('post.createAccount') }}">
         <input type="text" name="name" placeholder="Nome" required autofocus><br>
         @error('name')
         <div class="alert alert-danger">{{ $message }}</div>
@@ -38,12 +32,9 @@
         @error('password_confirmation')
         <div class="alert alert-danger">{{ $message }}</div>
         @enderror
-
+        
         <input type="submit" value="CRIAR CONTA">
         <p>ou ir para <a href="{{ route('login') }}" class="sublinhado">Login</a></p>
-
-    </form>
-
+    </x-auth-card>
 </body>
-
 </html>

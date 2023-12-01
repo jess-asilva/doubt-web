@@ -12,34 +12,12 @@ body {
     background-repeat: no-repeat;
 }
 
-form {
-    background-color: #f29829;
-    padding: 1em;
-    border-radius: 10px;
-    box-shadow: 10px 10px 20px rgba(128, 0, 128, 0.6);
-    max-width: 80%;
-    width: 20%;
-    text-align: center;
-    padding: 1em;
-    margin-top: 100px;
-}
-
-
 form input {
     display: block;
     margin: 0 0 15px 0;
     padding: 10px 25px;
     width: 100%;
 }
-
-
-legend {
-    color: #3a238c;
-    font-size: 1.6em;
-    font-weight: bold;
-    margin-bottom: 30px;
-}
-
 
 input {
     width: 90%;
@@ -59,7 +37,6 @@ input {
     font-weight: normal;
     text-decoration: none;
 }
-
 
 p {
     text-decoration: none;
@@ -85,9 +62,6 @@ p {
     color: black;
 }
 
-
-
-
 input[type="submit"] {
     width: 150px;
     height: 50px;
@@ -106,16 +80,12 @@ input[type="submit"] {
 }
 
 input[type="password"] {
-
     margin-bottom: -5px;
-
 }
-
 
 input[type="submit"]:hover {
     background-color: #F27C38;
 }
-
 
 input[type="submit"]:active {
     background-color: #F27C38;

@@ -23,3 +23,20 @@
     text-transform: uppercase;
     padding: 0 50px;
 }
+
+
+/* Responsiveness Section */
+
+@media (max-width: 660px) {
+    .default-header {
+        padding: 20px 0;
+        height: unset;
+        flex-direction: column;
+    }
+
+    .default-header h2 {
+        text-align: center;
+        padding: 15px 10px 0;
+        margin: 0;
+    }
+}

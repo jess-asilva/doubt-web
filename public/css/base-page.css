@@ -1,0 +1,21 @@
+@import url("/css/vars.css");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+}
+
+.base-page-body {
+    display: grid;
+    grid-template-columns: 250px auto;
+    height: 100vh;
+    background-color: var(--color-grey);
+    justify-items: center;
+}
+
+.base-page-main {
+    width: 100%;
+    padding: 0 20%;
+}

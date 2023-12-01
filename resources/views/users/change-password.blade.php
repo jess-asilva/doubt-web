@@ -19,7 +19,8 @@
                 <div class="column">
                     <div class="input-group">
                         <input type="password" id="old_password" name="password" placeholder="senha atual" required class="@error('password') is-invalid @enderror">
-                        @error('password') <div class="alert alert-danger">{{ $message }}</div>
+                        @error('password')
+                        <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
                     </div>
                     <div class="input-group">

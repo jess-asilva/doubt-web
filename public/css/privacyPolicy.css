@@ -1,16 +1,11 @@
+@import url("/css/vars.css");
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: var(--font--);
-    color: var(--color--text);
-}
-
-:root {
-    --color-secondary-background: #3a238c;
-    --color--text: #391959;
-    --color-primary: #F29829;
-    --font--: 'League Spartan', sans-serif;
+    font-family: var(--font);
+    color: var(--color-secondary);
 }
 
 header {
@@ -42,7 +37,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--color--text);
+    color: var(--color-secondary);
     background-color: var(--color-primary);
     padding: 1em;
     border-radius: 2em;
@@ -75,7 +70,7 @@ nav {
 h1 {
     font-size: 3rem;
     font-weight: bold;
-    color: var(--color--text);
+    color: var(--color-secondary);
 }
 
 h2 {
@@ -110,7 +105,7 @@ li {
     padding: 1rem;
     border-radius: 10rem;
     background-color: var(--color-primary);
-    color: var(--color--text);
+    color: var(--color-secondary);
 }
 
 footer {
