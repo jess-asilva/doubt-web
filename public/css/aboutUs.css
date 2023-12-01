@@ -4,8 +4,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: var(--font--);
-    color: var(--color--text);
+    font-family: var(--font);
+    color: var(--color-secondary);
 }
 
 header {
@@ -38,7 +38,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--color--text);
+    color: var(--color-secondary);
     background-color: var(--color-primary);
     padding: 1em;
     border-radius: 2em;
@@ -71,7 +71,7 @@ nav {
 h1 {
     font-size: 2rem;
     font-weight: bold;
-    color: var(--color--text);
+    color: var(--color-secondary);
 }
 
 h2 {
@@ -110,7 +110,7 @@ li {
     padding: 1rem;
     border-radius: 10rem;
     background-color: var(--color-primary);
-    color: var(--color--text);
+    color: var(--color-secondary);
 }
 
 .button_:hover {
