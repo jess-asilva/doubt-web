@@ -1,40 +1,12 @@
 @import url("/css/vars.css");
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: var(--font);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font);
 }
 
-.box-search {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 2rem 10% 2rem 0;
-}
-
-
-.box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var();
-  width: 20rem;
-  height: 50px;
-  border-radius: 50px;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 25px;
-  border: 2px solid var(--color-secondary-background);
-}
-
-.input-seach {
-  width: 14rem;
-  border: none;
-  outline: none;
-  background: none;
-}
 
 .container {
   display: flex;
@@ -50,25 +22,26 @@ h3 {
   color: #000000;
 }
 
-.allign-form{
+.allign-form {
   display: flex;
   justify-content: center;
   margin-bottom: 2rem;
 }
 
-.div-monitoring-text{
+.div-monitoring-text {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-right: 14%;
   margin-bottom: 0.5rem;
+  margin-top: 5rem;
 }
 
-.div-monitoring-text h3{
+.div-monitoring-text h3 {
   color: var(--color-secondary);
 }
 
- form {
+form {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -77,7 +50,7 @@ h3 {
   border-radius: 3rem;
   width: 30rem;
   text-align: center;
-  
+
   /*height: 20px auto;*/
 }
 
@@ -87,6 +60,7 @@ h3 {
   border-radius: 30px;
   background-color: transparent;
 }
+
 .img-file {
   width: 100%;
   height: 1rem;
@@ -97,14 +71,14 @@ textarea {
   width: 50%;
   border-radius: 30px;
   font-family: Arial, sans-serif;
-  
+
 }
 
 textarea {
   height: 100px;
 }
 
-.preview-image-{
+.preview-image- {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -121,7 +95,8 @@ textarea {
   cursor: pointer;
   border-radius: 8px;
   width: 0%;
-  height: 50%; /* Reduz a altura para 50% do tamanho original */
+  height: 50%;
+  /* Reduz a altura para 50% do tamanho original */
 }
 
 .image-upload label {
@@ -134,17 +109,18 @@ textarea {
   border-radius: 2rem;
   cursor: pointer;
 }
-#title{
+
+#title {
   padding: 0.5rem 2rem;
 }
 
-.image-upload-logo{
+.image-upload-logo {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.image-upload-titulo{
+.image-upload-titulo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -187,6 +163,7 @@ ul {
   padding: 0;
   font-size: 16px;
 }
+
 .publication-container {
   width: 100vh;
   background-color: #fff;
@@ -213,7 +190,7 @@ ul {
   margin-right: 1rem;
 }
 
-.nameAndHour-title h2{
+.nameAndHour-title h2 {
   display: flex;
   justify-content: baseline;
   margin-right: 1rem;
@@ -221,7 +198,7 @@ ul {
 }
 
 
-.div-image-sche{
+.div-image-sche {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -233,27 +210,32 @@ ul {
   justify-content: center;
 }
 
-.div-data{
+.div-data {
   display: flex;
   align-items: flex-end;
   justify-content: end;
   padding: 1rem 2rem;
 }
 
-.div-data p{
+.div-data p {
   color: var(--color-secondary);
 }
 
 .image-container {
-  width: 90%; /* Ajuste conforme necessário */
-  max-width: 100%; /* Ajuste conforme necessário */
-  overflow: hidden; /* Garante que a imagem não ultrapasse o contêiner */
+  width: 90%;
+  /* Ajuste conforme necessário */
+  max-width: 100%;
+  /* Ajuste conforme necessário */
+  overflow: hidden;
+  /* Garante que a imagem não ultrapasse o contêiner */
   border-radius: 10px;
 }
 
 .image-container img {
-  width: 100%; /* Garante que a imagem ocupe 100% da largura do contêiner */
-  object-fit: cover; /* Mantém a proporção da imagem e a corta se necessário */
+  width: 100%;
+  /* Garante que a imagem ocupe 100% da largura do contêiner */
+  object-fit: cover;
+  /* Mantém a proporção da imagem e a corta se necessário */
 }
 
 
@@ -277,7 +259,7 @@ ul {
   color: #391959;
 }
 
-.div-button-delete{
+.div-button-delete {
   display: flex;
   justify-content: center;
   align-items: center;
