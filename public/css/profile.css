@@ -1,12 +1,5 @@
 @import url("/css/vars.css");
 
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: var(--font);
-}
-
 .div-form-profile{
   display: flex;
   justify-content: center;
@@ -28,29 +21,29 @@
   margin-bottom: 30px;
 }
 
-h1{
+.div-form-profile h1{
   font-weight: bold;
   color: var(--color-primary);
 }
 
-label{
+.div-form-profile label{
   color: var(--color-primary);
   font-weight: bold;
   margin-right: 0.3rem;
 }
 
-input{
+.div-form-profile input{
   padding: 0.5em 1.5rem;
   border-radius: 3rem;
 }
 
-a{
+.div-form-profile a{
   text-decoration: none;
   color: white;
 }
 
 
-a:hover {
+.div-form-profile a:hover {
   background-color: #604f3b;
   transition-duration: 1s;
 }
