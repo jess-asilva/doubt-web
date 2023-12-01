@@ -82,6 +82,7 @@ Route::get('/privacyPolicy', function () {
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [UserController::class, 'edit'])->name('profile');
+    Route::patch('/profile', [UserController::class, 'update'])->name('patch.profile');
     Route::get('/home', [PublicationController::class, 'index'])->name('home');
     Route::post('/publication', [PublicationController::class, 'store'])->name('post.publication');
     Route::get('/publication/{publicationId}', [PublicationController::class, 'show'])->name('get.publication');

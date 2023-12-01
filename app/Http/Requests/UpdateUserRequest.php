@@ -22,7 +22,8 @@ class UpdateUserRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'name' => 'required|between:3,255',
+            'email' => 'required|email:rfc,dns',
         ];
     }
 }

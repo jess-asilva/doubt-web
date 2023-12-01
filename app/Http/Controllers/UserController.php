@@ -78,11 +78,11 @@ class UserController extends Controller
         $user = User::findOrFail(Auth::id());
         $userData = $request->validated();
 
-        if (!Hash::check($userData['password'], $user->password)) {
-            return back()->withErrors([
-                'password' => 'Senha incorreta.',
-            ]);
-        }
+        // if (!Hash::check($userData['password'], $user->password)) {
+        //     return back()->withErrors([
+        //         'password' => 'Senha incorreta.',
+        //     ]);
+        // }
 
         $anotherUser = User::select('email')->where('email', $userData['email'])->where('id', "<>", Auth::id())->get();
 
@@ -151,7 +151,7 @@ class UserController extends Controller
         $students = DB::table('users')->where('user_type_id', User::STUDENT)->when($search, function (Builder $query, string $search) {
             $query->where('name', 'LIKE', '%' . $search . '%');
         })->orderByDesc('name')->get();
-        
+
         // $students = User::where('user_type_id', 3)->orderBy('name')->get();
 
         return view('students')->with('students', $students);
@@ -170,7 +170,8 @@ class UserController extends Controller
         return view('monitors')->with('monitors', $monitors);
     }
 
-    public function changeRole(int $userId, string $role) {
+    public function changeRole(int $userId, string $role)
+    {
         $role = UserType::where('role', $role)->first();
         $user = User::findOrFail($userId);
 
