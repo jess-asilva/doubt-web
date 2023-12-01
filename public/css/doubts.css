@@ -1,0 +1,25 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--font--);
+}
+
+:root {
+    --color--logo--background: #3a238c;
+    --color--text: #391959;
+    --color--logo: #F29829;
+    --font--: 'League Spartan', sans-serif;
+}
+
+body {
+  position: relative;
+  background-color: #dfdfdff6;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #dfdfdff6;
+  -webkit-font-smothing: antialiased !important;
+
+}

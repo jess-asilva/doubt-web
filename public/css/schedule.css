@@ -1,149 +1,51 @@
-body {
-  position: relative;
-  background-color: #dfdfdff6;
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-}
-
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--font--);
 }
 
-body {
-  background-color: #dfdfdff6;
-  -webkit-font-smothing: antialiased !important;
-
+:root {
+    --color--logo--background: #3a238c;
+    --color--text: #391959;
+    --color--logo: #F29829;
+    --font--: 'League Spartan', sans-serif;
 }
 
-a {
-  text-decoration: none;
-  color: #F29829;
-}
-p {
-  text-align: center;
-}
-
-.alert {
-  font-family: Arial, sans-serif;
-  width: 100%;
-  margin: auto;
-  padding: 1em;
-  float: left;
-  display: block;
-  margin-bottom: 10px;
-  font-weight: 100;
-  font-size: 16px;
-}
-
-.sidebar {
-  position: fixed;
-  top: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 200px;
-  height: 100%;
-  padding: 40px 10px 30px 30px;
-  border-right: 1px solid #F29820;
-  transition: all 0.35s;
-  background-color: #3A238C;
-
-}
-
-.sidebar-header {
-  width: 100%;
-  margin-bottom: 10px;
-}
-
-.logo-img {
-  width: 120px;
-  min-width: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  transition: transform 0.30s;
-  margin-left: 5px;
-  align-items: center;
-  justify-items: center;
-}
-
-.logo-img:hover {
-  transform: scale(1.5);
-}
-
-.sidebar button {
-  height: 60px;
-  background: transparent;
-  border: 10px;
-  font-family: inherit;
-  font-weight: bold;
-  color: #391959;
-  cursor: pointer;
-  text-align: left;
-  padding: 0;
-}
-
-.sidebar button>span {
-  display: inline-flex;
-  align-items: center;
-  height: 40px;
-  width: 140px;
-  padding: 0 60px 0 12px;
-  border-radius: 10px;
-  line-height: 1;
-  transition: all 0.2s;
-}
-
-.sidebar button:hover>span {
-  background-color: rgba(242, 124, 56, 0.3);
-}
-
-.sidebar button span {
-  font-size: 16px;
-}
-
-.sidebar>nav {
-  flex: 1 1 auto;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.main {
-  padding: 0 0 15px 150px;
-  overflow: hidden;
-}
-
-
-.logo-container {
+.box-search {
   display: flex;
   align-items: center;
+  justify-content: center;
+  margin: 2rem 10% 2rem 0;
 }
 
-.logo {
-  width: 12%;
-  margin-right: 20px;
-  display: block;
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var();
+  width: 20rem;
+  height: 50px;
+  border-radius: 50px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25px;
+  border: 2px solid var(--color-secondary-background);
 }
 
-.arrow-back {
-  width: 40px;
-  margin-right: 20px;
+.input-seach {
+  width: 14rem;
+  border: none;
+  outline: none;
+  background: none;
 }
 
 .container {
-  float: CENTER;
-  width: auto;
-  max-width: 50%;
-  margin: 20px auto;
-  margin-top: 60px;
-  background-color: #dfdfdff6;
-  padding: auto;
-  border-radius: 50px;
-  border: 3px solid #F29829;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4rem;
 }
 
 h2,
@@ -153,21 +55,34 @@ h3 {
   color: #000000;
 }
 
-h2 {
-  margin-top: 30px;
+.allign-form{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
 
+.div-monitoring-text{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 14%;
+  margin-bottom: 0.5rem;
+}
+
+.div-monitoring-text h3{
+  color: var(--color--text);
 }
 
  form {
-  float: CENTER;
-  background-color: #4f01b4;
-  padding: 1em;
-  border-radius: 30px;
- /* max-width: 30rem;*/
-  width: 25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color--logo--background);
+  padding: 0.5rem 1rem;
+  border-radius: 3rem;
+  width: 30rem;
   text-align: center;
-  padding: 1em;
-  margin: 20px auto;
+  
   /*height: 20px auto;*/
 }
 
@@ -175,28 +90,31 @@ h2 {
   float: CENTER;
   text-align: center;
   border-radius: 30px;
-  background-color: #dfdfdff6;
-
+  background-color: transparent;
 }
 .img-file {
   width: 100%;
-  height: 20px;
+  height: 1rem;
 }
 
 input[type="text"],
 textarea {
   width: 50%;
-  padding: 05px;
-  margin-bottom: 20px;
-  border: 1px solid #ffa600;
   border-radius: 30px;
   font-family: Arial, sans-serif;
-  margin: 09px auto;
+  
 }
 
 textarea {
   height: 100px;
 }
+
+.preview-image-{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 .image-upload {
   position: relative;
@@ -212,38 +130,54 @@ textarea {
 }
 
 .image-upload label {
-  display: inline-block;
-  padding: 10px;
-  margin: 0 10px 10px;
-  background-color: #ffa600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem;
+  background-color: var(--color--logo);
   color: #ffffff;
-  border-radius: 4px;
+  border-radius: 2rem;
   cursor: pointer;
 }
+#title{
+  padding: 0.5rem 2rem;
+}
 
+.image-upload-logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-upload-titulo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .testeIm {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0.8rem;
 }
 
 
 button {
-  padding: 10px 10px;
-  background-color: #ffa600;
+  padding: 0.5rem 1.5rem;
+  background-color: var(--color--logo);
   color: #391959;
   font-weight: bold;
   border: none;
   border-radius: 20px;
   cursor: pointer;
-  height: 30%;
   cursor: pointer;
-  margin: 09px auto;
+  margin: 1rem auto;
 }
 
 .btnDelete {
   padding: 10px 30px;
-  background-color: #ffa600;
+  background-color: var(--color--logo);
   color: #efebf3;
   font-weight: bold;
   border: none;
@@ -258,39 +192,98 @@ ul {
   padding: 0;
   font-size: 16px;
 }
+.publication-container {
+  width: 100vh;
+  background-color: #fff;
+  margin-bottom: 2rem;
+  padding: 20px;
+  border-radius: 20px;
+  border: 3px solid var(--color--logo);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-left: 12rem;
+}
 
-.calendar-item {
+.nameAndHour {
   display: flex;
-  margin-bottom: 70px;
-  align-items: flex-start;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
 }
 
-.calendar-item img {
-  width: 100%;
-  margin-right: 20px;
-  object-fit: cover;
-}
-
-.calendar-details {
+.nameAndHour-title {
   flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 1rem;
 }
 
-.calendar-details h3 {
-  text-transform: uppercase;
+.nameAndHour-title h2{
+  display: flex;
+  justify-content: baseline;
+  margin-right: 1rem;
+  color: var(--color--text);
 }
 
-.calendar-details p {
-  margin-bottom: 10px 10px 10px 5px;
+
+.div-image-sche{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* .calendar-details button {
-  text-transform: uppercase;
-  font-weight: bold;
-  padding: 8px 15px;
-  background-color: #df231a;
+.div-image-sche {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.div-data{
+  display: flex;
+  align-items: flex-end;
+  justify-content: end;
+  padding: 1rem 2rem;
+}
+
+.div-data p{
+  color: var(--color--text);
+}
+
+.image-container {
+  width: 90%; /* Ajuste conforme necessário */
+  max-width: 100%; /* Ajuste conforme necessário */
+  overflow: hidden; /* Garante que a imagem não ultrapasse o contêiner */
+  border-radius: 10px;
+}
+
+.image-container img {
+  width: 100%; /* Garante que a imagem ocupe 100% da largura do contêiner */
+  object-fit: cover; /* Mantém a proporção da imagem e a corta se necessário */
+}
+
+
+.publication-details {
+  margin-top: 20px;
+}
+
+.btnDelete {
+  padding: 10px 20px;
+  background-color: #391959;
   color: #fff;
-} */
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
-.calendar-details {
-  float: right;
+.btnDelete:hover {
+  background-color: #ffa600;
+  color: #391959;
+}
+
+.div-button-delete{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

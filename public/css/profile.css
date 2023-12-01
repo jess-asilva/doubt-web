@@ -1,3 +1,81 @@
-.form {
-    text-align: center;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--font--);
 }
+
+:root {
+    --color--logo--background: #3a238c;
+    --color--text: #391959;
+    --color--logo: #F29829;
+    --font--: 'League Spartan', sans-serif;
+}
+
+
+.div-form-profile{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
+.div-form-profile-{
+  display: flex;
+  justify-content: center;
+  width: 80vh;
+  height: auto;
+  background-color: var(--color--logo--background);
+  padding: 5rem 0rem;
+  border-radius: 5rem;
+}
+
+.div-profile-input{
+  margin-bottom: 30px;
+}
+
+h1{
+  font-weight: bold;
+  color: var(--color--logo);
+}
+
+label{
+  color: var(--color--logo);
+  font-weight: bold;
+  margin-right: 0.3rem;
+}
+
+input{
+  padding: 0.5em 1.5rem;
+  border-radius: 3rem;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+
+a:hover {
+  background-color: #604f3b;
+  transition-duration: 1s;
+}
+
+.button-alterar{
+  padding: 1rem 3rem;
+  color: var(--color--logo--background);
+  background-color: var(--color--logo);
+  font-weight: bold;
+}
+
+.button-alterar:hover {
+  background-color: #604f3b;
+  transition-duration: 1s;
+}
+
+
+
+
+
+
+

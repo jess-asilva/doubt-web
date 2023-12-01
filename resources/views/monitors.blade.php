@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Monitores Cadastrados</title>
-    <link rel="stylesheet" href="css/monitors.css">
+    <link rel="stylesheet" href="{{ asset('css/monitors.css') }}">
 </head>
 
 <body>
