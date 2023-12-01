@@ -6,20 +6,26 @@
 
 .posts .user-name {
     font-size: var(--font-size-subtitle);
+    margin-left: 5px;
+
 }
+
+/* .posts .user-name strong {
+    font-size: 16px;
+    margin-top: 10px;
+    margin-left: 10px;
+    color: #391959;
+    margin: 10px 0 5px;
+} */
 
 .posts .title {
     font-size: var(--font-size-title);
     margin: 15px 0 5px;
 }
 
-.posts .content {
+.posts .content {}
 
-}
-
-.posts .image {
-
-}
+.posts .image {}
 
 .posts .post-footer {
     display: flex;
@@ -36,7 +42,7 @@
     gap: 5px;
 }
 
-.posts .post-footer .action-buttons a  {
+.posts .post-footer .action-buttons a {
     color: var(--color-secondary);
     display: flex;
     align-items: center;
@@ -46,13 +52,13 @@
     transition: 0.2s;
 }
 
-.posts .post-footer .action-buttons a:hover  {
+.posts .post-footer .action-buttons a:hover {
     background-color: var(--color-grey-background);
     transition: 0.2s;
     gap: 5px;
 }
 
-.posts .post-footer .action-buttons a span  {
+.posts .post-footer .action-buttons a span {
     font-size: var(--font-size-button-sm);
     text-transform: uppercase;
     font-weight: 600;
@@ -64,7 +70,7 @@
     transition: 0.2s;
 }
 
-.posts .post-footer .action-buttons a:hover span  {
+.posts .post-footer .action-buttons a:hover span {
     width: 70px;
     transition: 0.2s;
 }

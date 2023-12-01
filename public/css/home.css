@@ -25,6 +25,11 @@ div.newPost div.infoUser {
     width: 90%;
 }
 
+svg {
+    fill: #391959;
+    margin-top: 10px;
+}
+
 
 /* div.newPost div.infoUser div.imgUser {
     width: 20px;
@@ -42,6 +47,7 @@ div.newPost div.infoUser {
 
 div.newPost div.infoUser strong {
     font-size: 16px;
+    margin-top: 15px;
     margin-left: 10px;
     color: #391959;
 }
@@ -79,7 +85,7 @@ div.newPost form.formPost input {
     width: 90%;
     height: 30px;
     background: #fbfbfb;
-    margin: 5px 0;
+    margin: 10px 0;
     padding: 7px;
     border-radius: 10px;
     resize: none;
