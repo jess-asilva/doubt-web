@@ -17,7 +17,9 @@
 
 <body>
     <x-menu />
+
     <main class="main">
+        <br>
         @can('create-publication')
         <div class="newPost">
             @if ($errors->any())
@@ -27,12 +29,15 @@
                 @endforeach
             </div>
             @endif
-            <div class="infoUser">
-                <div class="imgUser"></div>
-                <strong>{{ $loggedUser->name }}</strong>
+
+            <div class="titleHome">
+                <h1> Postagens </h1>
             </div>
 
             <form action="{{ route('post.publication') }}" method="POST" class="formPost" id="formPost" enctype="multipart/form-data">
+                <div class="infoUser">
+                    <strong>{{ $loggedUser->name }}</strong>
+                </div>
                 @csrf
                 <input type="text" name="title" id="title" placeholder="Título..." required="required">
 
@@ -45,8 +50,13 @@
                             <input type="file" id="imgUpload" name="image" accept=".jpg, .jpeg, .png, .gif*" style="display: none;">
                         </button>
 
+<<<<<<< HEAD
                         <button type="button" class="btnFileForm">
                             <img src="img/video.svg" alt="Adicionar um video" />
+=======
+                        <button class="btnFileForm">
+                            <img src="img/video.svg" alt="Adicionar um vídeo">
+>>>>>>> 30c52aa (Pages' style)
                             <input type="file" id="videoUpload" name="videoUpload" accept="video/*" style="display: none;">
                         </button>
 
@@ -72,6 +82,9 @@
                 </div>
 
                 <h2>{{ $publication->title }}</h2>
+
+                <img id="imgPreview" src="" alt="imagem publicação" />
+
                 <p>{{ $publication->content }}</p>
                 <img src="{{ $publication->image_url }}" alt="">
                 <div class="actionBtnPost">
@@ -136,12 +149,21 @@
 
                     reader.onload = function(e) {
                         previewElement.src = e.target.result;
-                        previewElement.style.display = 'block';
-                    };
+                        previewElement.style.display = 'flex';
 
+                        const imgPost = document.getElementById('imgPreview');
+                        console.log(previewElement)
+                        imgPost.src = e.target
+                            .result; // Atribuir o valor de previewElement.src para imgPost.src
+
+                    };
                     reader.readAsDataURL(file);
                 }
             }
+
+
+
+
         });
     </script>
 
