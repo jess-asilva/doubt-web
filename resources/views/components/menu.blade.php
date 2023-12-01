@@ -9,7 +9,7 @@
 
     <nav class="menu-buttons">
         <a href="{{ route('home') }}">
-            <span>INÍCIO</span>
+            <span>POSTAGENS</span>
         </a>
 
         <a href="{{ route('get.doubts') }}">

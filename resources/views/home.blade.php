@@ -9,9 +9,7 @@
                 </div>
             @endif
 
-            <div class="titleHome">
-                <h1> Postagens </h1>
-            </div>
+            <h1 class="title-home">Postagens</h1>
 
             <form action="{{ route('post.publication') }}" method="POST" class="formPost" id="formPost" enctype="multipart/form-data">
                 <div class="infoUser">
@@ -44,43 +42,7 @@
         </div>
     @endcan
 
-    <ul class="posts" id="posts">
-        @foreach($publications as $publication)
-            <li class="post">
-                <div class="infoUserPost">
-                    <div class="imgUserPost"></div>
-
-                    <div class="nameAndHour">
-                        <strong>{{ $publication->user->name }}</strong>
-                        <p>{{ \Carbon\Carbon::parse($publication->updated_at)->format('d/m/Y H:i:s') }}</p>
-                    </div>
-                </div>
-
-                <h2>{{ $publication->title }}</h2>
-
-                <p>{{ $publication->content }}</p>
-                <img src="{{ $publication->image_url }}" alt="">
-                <div class="actionBtnPost">
-                    <button type="button" class="filesPost like">
-                        @if(in_array($loggedUser->id, $publication->usersLike))
-                        <a href="{{ route('unlike-publication', $publication->id) }}">
-                            <img src="img/excl1.svg" alt="Curtir">Descurtir
-                        </a>
-                        @else
-                        <a href="{{ route('like-publication', $publication->id) }}">
-                            <img src="img/excl1.svg" alt="Curtir">Curtir
-                        </a>
-                        @endif
-                    </button>
-                    <button type="button" class="filesPost comment">
-                        <a class="styleFont" href="{{ route('get.publication', $publication->id) }}">
-                            <img src="img/deslik1.svg" alt="Comentar">Comentar
-                        </a>
-                    </button>
-                </div>
-            </li>
-        @endforeach
-    </ul>
+    <x-posts-list :publications="$publications" :loggedUser="$loggedUser" />
 
     <!-- Adicione esta seção no final do seu arquivo HTML -->
     <script>
