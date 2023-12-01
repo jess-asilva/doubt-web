@@ -50,13 +50,8 @@
                             <input type="file" id="imgUpload" name="image" accept=".jpg, .jpeg, .png, .gif*" style="display: none;">
                         </button>
 
-<<<<<<< HEAD
                         <button type="button" class="btnFileForm">
                             <img src="img/video.svg" alt="Adicionar um video" />
-=======
-                        <button class="btnFileForm">
-                            <img src="img/video.svg" alt="Adicionar um vídeo">
->>>>>>> 30c52aa (Pages' style)
                             <input type="file" id="videoUpload" name="videoUpload" accept="video/*" style="display: none;">
                         </button>
 

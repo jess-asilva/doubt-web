@@ -12,35 +12,6 @@
     --font--: 'League Spartan', sans-serif;
 }
 
-.box-search {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 2rem 10% 2rem 0;
-}
-
-
-.box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var();
-  width: 20rem;
-  height: 50px;
-  border-radius: 50px;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 25px;
-  border: 2px solid var(--color-secondary-background);
-}
-
-.input-seach {
-  width: 14rem;
-  border: none;
-  outline: none;
-  background: none;
-}
-
 .container {
   display: flex;
   align-items: center;
@@ -67,6 +38,7 @@ h3 {
   justify-content: center;
   margin-right: 14%;
   margin-bottom: 0.5rem;
+  margin-top: 5rem;
 }
 
 .div-monitoring-text h3{

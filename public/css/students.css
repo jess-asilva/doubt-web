@@ -6,13 +6,18 @@
 }
 
 :root {
-    --color--logo--background: #3a238c;
+    --color-secondary-background: #3a238c;
+    --color--fundo--: #dddddd;
     --color--text: #391959;
-    --color--logo: #F29829;
+    --color-primary: #F29829;
     --font--: 'League Spartan', sans-serif;
 }
 
-h2 {
+.div-text-alunos{
+    margin-top: 2rem;
+}
+
+h1 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,53 +60,78 @@ section {
     margin-top: 3rem;
 }
 
-
-.container {
-    width: 37rem;
+.container{
+    width: 40rem;
     height: 12rem;
-    background-color: var(--color--fundo--);
-    border: 0.3rem solid var(--color-primary);
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    border: 7px solid var(--color-primary);
+    border-radius: 3.5rem;
+    padding: 1.5rem;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+a{
+    text-decoration: none;
+    gap: 0.5rem;
+    font-weight: 600;
+}
+
+.row-organized{
+    display: flex;
+    align-items: center;
+}
+
+.button{
+    background-color: var(--color-primary);
+    color: var(--color--text);
+    padding: 0.3rem 1rem;
     border-radius: 4rem;
 }
 
-.row {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 1.4rem;
+.button:hover {
+    background-color: var(--color-secondary-background);
+    transition: 1s;
 }
 
-.row a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    text-decoration: none;
-    font-weight: bold;
+.button:hover a{
+    color: var(--color-primary);
 }
 
-.button {
-    display: flex;
-    background-color: var(--color-primary);
-    color: var(--color--text);
-    padding: 0.5em 0.5em 0.5em 0.5em;
-    border-radius: 2em;
-    font-weight: bold;
-    cursor: pointer;
-    border: none;
-}
 
-.row2 {
+.row2{
     display: flex;
     justify-content: end;
-    padding: 0 3em 0 3em;
+    align-items: flex-end;
 }
 
-p {
-    color: var(--color--text);
+.button-arquive{
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: var(--color-primary);
+    border-radius: 2rem;
+    width: 2rem;
+    height: 2rem;
+    cursor:pointer;
 }
 
-.row-text-cadastro {
-    display: flex;
-    padding-left: 3rem;
-    margin-top: 3rem;
+.button-arquive:hover {
+    background-color: var(--color-secondary-background);
+    transition: 1s;
+}
+
+.button-arquive:hover path{
+    fill: var(--color-primary);
+}
+
+.row p{
+    margin-top: 2rem;
 }
