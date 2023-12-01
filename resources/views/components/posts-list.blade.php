@@ -26,13 +26,13 @@
 
             <div class="action-buttons">
                 @if(in_array($loggedUser->id, $publication->usersLike))
-                <a href="{{ route('unlike-publication', $publication->id) }}">
-                    <img src="{{ asset('img/icon-like-filled.png') }}" alt="Curtir">
+                <a href="#" class="unlike-btn" data-id="{{ $publication->id }}">
+                    <img class="like-icon" src="{{ asset('img/icon-like-filled.png') }}" alt="Descurtir">
                     <span>Descurtir</span>
                 </a>
                 @else
-                <a href="{{ route('like-publication', $publication->id) }}">
-                    <img src="{{ asset('img/icon-like.png') }}" alt="Curtir">
+                <a href="#" class="like-btn" data-id="{{ $publication->id }}">
+                    <img class="like-icon" src="{{ asset('img/icon-like.png') }}" alt="Curtir">
                     <span>Curtir</span>
                 </a>
                 @endif

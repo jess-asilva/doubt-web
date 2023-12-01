@@ -17,7 +17,8 @@ class PublicationLikeController extends Controller
 
         PublicationLike::create($like);
 
-        return redirect()->route('home');
+        return response("", 200)->header('Content-Type', 'application/json');
+        //return redirect()->route('home');
     }
 
     /**
@@ -27,6 +28,7 @@ class PublicationLikeController extends Controller
     {
         PublicationLike::where('publication_id', $publicationId)->where('user_id', Auth::id())->delete();
 
-        return redirect()->route('home');
+        return response("", 200)->header('Content-Type', 'application/json');
+        //return redirect()->route('home');
     }
 }

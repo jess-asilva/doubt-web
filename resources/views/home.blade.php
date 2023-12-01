@@ -101,6 +101,80 @@
                     reader.readAsDataURL(file);
                 }
             }
+
+            const likeButtons = document.querySelectorAll('.like-btn');
+            const unlikeButtons = document.querySelectorAll('.unlike-btn');
+            likeButtons.forEach(button => {
+                button.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    const publicationId = this.getAttribute('data-id');
+                    handleToggleLike(publicationId, this);
+                });
+            });
+
+            unlikeButtons.forEach(button => {
+                button.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    const publicationId = this.getAttribute('data-id');
+                    handleToggleLike(publicationId, this);
+                });
+            });
+
+            function handleToggleLike(publicationId, button) {
+                const likeIcon = button.querySelector('.like-icon');
+
+                if (button.classList.contains('like-btn')) {
+                    httpRequest(`/publication/${publicationId}/like`, 'GET')
+                        .then(() => {
+                            if (likeIcon) {
+                                likeIcon.src = "{{ asset('img/icon-like-filled.png') }}";
+                            }
+                            updateSpanText(button.querySelector('span'), 'Descurtir');
+                            button.classList.remove('like-btn');
+                            button.classList.add('unlike-btn');
+                        })
+                        .catch(error => {
+                            console.error('Erro na requisição: ' + error);
+                        });
+                } else if (button.classList.contains('unlike-btn')) {
+                    httpRequest(`/publication/${publicationId}/unlike`, 'GET')
+                        .then(() => {
+                            if (likeIcon) {
+                                likeIcon.src = "{{ asset('img/icon-like.png') }}";
+                            }
+                            updateSpanText(button.querySelector('span'), 'Curtir');
+                            button.classList.remove('unlike-btn');
+                            button.classList.add('like-btn');
+                        })
+                        .catch(error => {
+                            console.error('Erro na requisição: ' + error);
+                        });
+                }
+            }
+
+            function updateSpanText(span, text) {
+                span.textContent = text;
+            }
+
+            function httpRequest(url, method) {
+                return new Promise((resolve, reject) => {
+                    const xhr = new XMLHttpRequest();
+                    xhr.open(method, url, true);
+                    xhr.setRequestHeader('Content-Type', 'application/json');
+
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState === 4) {
+                            if (xhr.status === 200) {
+                                resolve();
+                            } else {
+                                reject(xhr.statusText);
+                            }
+                        }
+                    };
+
+                    xhr.send();
+                });
+            }
         });
     </script>
 </x-base-page>
