@@ -25,6 +25,7 @@ class StorePublicationRequest extends FormRequest
             'title' => 'required|between:1,100',
             'content' => 'required|between:2,500',
             'image' => 'image',
+            'video' => 'url',
         ];
     }
 
@@ -41,6 +42,7 @@ class StorePublicationRequest extends FormRequest
             'content.required' => 'Conteúdo da publicação é obrigatório',
             'content.between' => 'Conteúdo deve ter entre 1 e 100 caracteres',
             'image.image' => 'Deve ser uma imagem válida (jpg, jpeg, png, bmp, gif, svg, ou webp).',
+            'video.url' => 'Deve ser vídeo do Youtube.',
         ];
     }
 }
