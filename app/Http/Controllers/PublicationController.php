@@ -41,9 +41,17 @@ class PublicationController extends Controller
     public function store(StorePublicationRequest $request)
     {
         $publication = $request->validated();
-        $publication['user_id'] = Auth::id();
+        if(isset($publication['image'])) {
+            Storage::disk('local')->put("public/publications/images", $publication['image']);
+        }
 
-        Publication::create($publication);
+        Publication::create([
+            'user_id' => Auth::id(),
+            'title' => $publication['title'],
+            'content' => $publication['content'],
+            'image_url' => isset($publication['image']) ? Storage::url("public/publications/images/" . $publication['image']->hashName()) : null,
+            'video_url' => $publication['video_url'] ?? null,
+        ]);
 
         return redirect()->route('home');
     }
@@ -80,17 +88,5 @@ class PublicationController extends Controller
     public function destroy(Publication $publication)
     {
         //
-    }
-
-    public function postPublication(Request $request)
-    {
-
-        if ($request->hasFile('imgUpload')) {
-        $file = $request->file('imgUpload');
-        $fileName = uniqid() . '.' . $file->getClientOriginalExtension();
-
-        $file->move(public_path('uploads'), $fileName);
-
-        }
     }
 }

@@ -40,13 +40,13 @@
 
                 <div class="iconsAndButton">
                     <div class="icons">
-                        <button class="btnFileForm">
-                            <img src="img/img.svg" alt="Adicionar uma imagem">
-                            <input type="file" id="imgUpload" name="imgUpload" accept=".jpg, .jpeg, .png, .gif*" style="display: none;">
+                        <button type="button" class="btnFileForm">
+                            <img src="img/img.svg" alt="Adicionar uma imagem" />
+                            <input type="file" id="imgUpload" name="image" accept=".jpg, .jpeg, .png, .gif*" style="display: none;">
                         </button>
 
-                        <button class="btnFileForm">
-                            <img src="img/video.svg" alt="Adicionar um video">
+                        <button type="button" class="btnFileForm">
+                            <img src="img/video.svg" alt="Adicionar um video" />
                             <input type="file" id="videoUpload" name="videoUpload" accept="video/*" style="display: none;">
                         </button>
 
@@ -73,7 +73,7 @@
 
                 <h2>{{ $publication->title }}</h2>
                 <p>{{ $publication->content }}</p>
-
+                <img src="{{ $publication->image_url }}" alt="">
                 <div class="actionBtnPost">
                     <button type="button" class="filesPost like">
                         @if(in_array($loggedUser->id, $publication->usersLike))
@@ -90,6 +90,8 @@
                         <a class="styleFont" href="{{ route('get.publication', $publication->id) }}">
                             <img src="img/deslik1.svg" alt="Comentar">Comentar
                         </a>
+                    </button>
+                </div>
             </li>
             @endforeach
         </ul>
