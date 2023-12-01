@@ -15,14 +15,9 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id');
             $table->string('title');
-<<<<<<< HEAD
             $table->longText('content');
             $table->string('image_url')->nullable();
             $table->string('video_url')->nullable();
-=======
-            //$table->longText('content');
-            $table->string('content');
->>>>>>> 30c52aa (Pages' style)
             $table->timestamps();
             $table->softDeletes();
 
