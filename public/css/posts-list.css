@@ -37,6 +37,7 @@
 }
 
 .posts .post-footer .action-buttons a  {
+    color: var(--color-secondary);
     display: flex;
     align-items: center;
     text-decoration: none;
