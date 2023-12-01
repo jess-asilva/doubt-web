@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ asset('css/profile.css') }}">
-    <title>Perfil</title>
-</head>
-
-<body>
-    <x-menu />
-    <!-- <header class="purple-overlay">
-        <img class="logo" src="img/LOGO-DOUBT-TCC.png" alt="Logo">
-    </header> -->
+<x-base-page :title="'Perfil'" :stylePath="'profile.css'">
     <div class="div-form-profile">
         <div class="div-form-profile-">
             <form class="form" action="{{ route('profile') }}" method="POST">
@@ -56,7 +42,4 @@
             </form>
         </div>
     </div>
-    <x-footer />
-</body>
-
-</html>
+</x-base-page>

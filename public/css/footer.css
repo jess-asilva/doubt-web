@@ -1,4 +1,4 @@
-footer {
+.base-footer {
     position: fixed;
     margin-top: 20px;
     bottom: 0;
@@ -10,7 +10,7 @@ footer {
     text-align: center;
 }
 
-footer p {
+.base-footer p {
     margin: 0;
     font-size: 14px;
 }

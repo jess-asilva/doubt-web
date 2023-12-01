@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adicionar calendário</title>
-    <link rel="stylesheet" href="{{ asset('css/schedule.css') }}">
-</head>
-
-<body>
-    <x-menu />
+<x-base-page :title="'Adicionar calendário'" :stylePath="'schedule.css'">
     @can('create-schedule')
     <div class="box-search">
         <div class="box">
@@ -81,28 +70,24 @@
         </ul>
     </div>
 
-    <x-footer />
+    <script>
+        document.getElementById('image').addEventListener('change', function() {
+            var previewImage = document.getElementById('preview-image');
+            var fileInput = document.getElementById('image');
+            var file = fileInput.files[0];
 
-</body>
-<script>
-    document.getElementById('image').addEventListener('change', function() {
-        var previewImage = document.getElementById('preview-image');
-        var fileInput = document.getElementById('image');
-        var file = fileInput.files[0];
+            if (file) {
+                var reader = new FileReader();
 
-        if (file) {
-            var reader = new FileReader();
+                reader.onload = function(e) {
+                    previewImage.src = e.target.result;
+                    previewImage.style.display = 'block';
+                };
 
-            reader.onload = function(e) {
-                previewImage.src = e.target.result;
-                previewImage.style.display = 'block';
-            };
-
-            reader.readAsDataURL(file);
-        } else {
-            previewImage.style.display = 'none';
-        }
-    });
-</script>
-
-</html>
+                reader.readAsDataURL(file);
+            } else {
+                previewImage.style.display = 'none';
+            }
+        });
+    </script>
+</x-base-page>

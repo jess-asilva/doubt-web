@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alterar Senha</title>
-    <link rel="stylesheet" href="{{ asset('css/change-password.css') }}">
-</head>
-
-<body>
-    <x-menu />
+<x-base-page :title="'Alterar Senha'" :stylePath="'change-password.css'">
     <div class="div-purple">
         <div class="div-form">
             <form action="{{ route('patch.change-password') }}" method="POST">
@@ -43,7 +32,4 @@
             </form>
         </div>
     </div>
-    <x-footer />
-</body>
-
-</html>
+</x-base-page>

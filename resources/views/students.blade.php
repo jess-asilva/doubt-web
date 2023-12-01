@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alunos Cadastrados</title>
-    <link rel="stylesheet" href="{{ asset('css/students.css') }}">
-</head>
-
-<body>
-    <x-menu />
-
+<x-base-page :title="'Alunos Cadastrados'" :stylePath="'students.css'">
     <h2>ALUNOS CADASTRADOS</h2>
 
     <div class="box-search">
@@ -61,7 +49,4 @@
         </div>
     </section>
     @endforeach
-    <x-footer />
-</body>
-
-</html>
+</x-base-page>
