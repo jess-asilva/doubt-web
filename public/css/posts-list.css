@@ -4,19 +4,19 @@
     gap: 10px;
 }
 
-.posts .user-name {
-    font-size: var(--font-size-subtitle);
-    margin-left: 5px;
-
+.posts .user-info {
+    display: flex;
+    align-items: center;
 }
 
-/* .posts .user-name strong {
-    font-size: 16px;
-    margin-top: 10px;
-    margin-left: 10px;
-    color: #391959;
-    margin: 10px 0 5px;
-} */
+.posts .user-info img {
+    width: 25px;
+}
+
+.posts .user-info .user-name {
+    font-size: var(--font-size-subtitle);
+    margin-left: 5px;
+}
 
 .posts .title {
     font-size: var(--font-size-title);
