@@ -23,7 +23,7 @@ class StorePublicationRequest extends FormRequest
     {
         return [
             'title' => 'required|between:1,100',
-            'content' => 'required|between:2,500',
+            'content' => 'required',
             'image' => 'image',
             'video' => 'url',
         ];
@@ -40,7 +40,7 @@ class StorePublicationRequest extends FormRequest
             'title.required' => 'Título da publicação é obrigatório',
             'title.between' => 'Título deve ter entre 1 e 100 caracteres',
             'content.required' => 'Conteúdo da publicação é obrigatório',
-            'content.between' => 'Conteúdo deve ter entre 1 e 100 caracteres',
+            'content.between' => 'Conteúdo deve ter entre 1 e 500 caracteres',
             'image.image' => 'Deve ser uma imagem válida (jpg, jpeg, png, bmp, gif, svg, ou webp).',
             'video.url' => 'Deve ser vídeo do Youtube.',
         ];
