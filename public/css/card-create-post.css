@@ -1,0 +1,87 @@
+.create-post-form .post-info {
+    display: flex;
+    align-items: center;
+}
+
+.create-post-form .post-info img {
+    width: 25px;
+}
+
+.create-post-form .post-info .title {
+    font-size: var(--font-size-subtitle);
+    margin-left: 5px;
+}
+
+.create-post-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 0 0;
+    border-bottom: 1px solid var(--color-secondary);
+}
+
+.create-post-form .preview-uploaded-image {
+    max-height: 70px;
+    max-width: 100%;
+}
+
+.create-post-form .text-inputs {
+    display: grid;
+    gap: 10px;
+}
+
+.create-post-form .text-inputs textarea, .create-post-form .text-inputs input {
+    background: #fbfbfb;
+    padding: 10px 15px;
+    border-radius: 7px;
+    resize: none;
+    outline: none;
+    border: 0;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--color-black);
+}
+
+.create-post-form .text-inputs textarea {
+    height: 80px;
+}
+
+
+.create-post-form .text-inputs input {
+    height: 30px;
+}
+
+.create-post-form .card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+}
+
+.create-post-form .card-footer .icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.create-post-form .card-footer .icons button {
+    border: 0;
+    background: none;
+    cursor: pointer;
+}
+
+.create-post-form .card-footer .submit-btn {
+    background: var(--color-secondary);
+    padding: 10px 50px;
+    color: #fbfbfb;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    border: 0;
+    border-radius: 10px;
+    transition: background 0.2;
+}
+
+.create-post-form .card-footer .btnSubmitForm:hover {
+    background: var(--color-secondary-hover);
+}
