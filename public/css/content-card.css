@@ -5,4 +5,5 @@
     border-radius: 20px;
     padding: 20px 25px;
     border: 2px solid var(--color-primary);
+    list-style: none;
 }
