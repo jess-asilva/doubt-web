@@ -17,5 +17,9 @@
 
 .base-page-main {
     width: 100%;
-    padding: 0 20% 3.5em;
+    padding: 30px 20% 3.5em;
+}
+
+h1 {
+    font-size: var(--font-size-h1);
 }
