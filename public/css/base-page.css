@@ -42,3 +42,9 @@ h1 {
         margin-left: 60px;
     }
 }
+
+@media (max-width: 570px) {
+    .base-page-main {
+        padding: 30px 15px 3.5em;
+    }
+}

@@ -1,68 +1,69 @@
-@import url("/css/vars.css");
-
-.div-form-profile{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 1rem;
-}
-
-.div-form-profile-{
-  display: flex;
-  justify-content: center;
-  width: 80vh;
+.profile-form {
+  width: 100%;
   height: auto;
   background-color: var(--color-secondary-background);
-  padding: 5rem 0rem;
-  border-radius: 5rem;
+  padding: 20px 25px;
+  border-radius: 20px;
 }
 
-.div-profile-input{
+.profile-form h1 {
+  font-weight: bold;
+  color: var(--color-primary);
   margin-bottom: 30px;
 }
 
-.div-form-profile h1{
-  font-weight: bold;
-  color: var(--color-primary);
+.profile-form .user-data-input {
+  display: grid;
 }
 
-.div-form-profile label{
+.profile-form .user-data-input label{
   color: var(--color-primary);
   font-weight: bold;
-  margin-right: 0.3rem;
+  margin-bottom: 10px;
 }
 
-.div-form-profile input{
+.profile-form .user-data-input input{
   padding: 0.5em 1.5rem;
   border-radius: 3rem;
 }
 
-.div-form-profile a{
+.profile-form .user-data-input a{
   text-decoration: none;
   color: white;
 }
 
-
-.div-form-profile a:hover {
+.profile-form .user-data-input a:hover {
   background-color: #604f3b;
   transition-duration: 1s;
 }
 
-.button-alterar{
-  padding: 1rem 3rem;
-  color: var(--color-secondary-background);
+.profile-form .card-footer {
+  margin-top: 5px;
+  text-align: end;
+}
+
+.profile-form .card-footer .submit-btn {
   background-color: var(--color-primary);
+  color: var(--color-secondary);
+  padding: 10px 50px;
+  border-radius: 2em;
   font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: 0.2s;
 }
 
-.button-alterar:hover {
-  background-color: #604f3b;
-  transition-duration: 1s;
+.profile-form .card-footer .submit-btn:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  transition: 0.2s;
 }
 
 
+/* Responsiveness Section */
 
-
-
-
-
+@media (max-width: 570px) {
+  .profile-form {
+    padding: 15px 20px;
+  }
+}

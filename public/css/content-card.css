@@ -7,3 +7,9 @@
     border: 2px solid var(--color-primary);
     list-style: none;
 }
+
+@media (max-width: 570px) {
+    .content-card {
+        padding: 15px 20px;
+    }
+}
