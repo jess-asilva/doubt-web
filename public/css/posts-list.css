@@ -22,6 +22,7 @@
 .posts .user-info .user-name {
     font-size: var(--font-size-subtitle);
     margin-left: 5px;
+    padding-top: 3px;
 }
 
 .posts .title {
