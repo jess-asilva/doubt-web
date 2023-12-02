@@ -16,7 +16,7 @@
         <p>{{ $publication->content }}</p>
 
         @if (!empty($publication->image_url))
-        <img src="{{ $publication->image_url }}" alt="{{ $publication->title }}">
+        <img src="{{ $publication->image_url }}" alt="{{ $publication->title }}" class="image">
         @endif
 
         <div class="post-footer">

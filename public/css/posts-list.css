@@ -29,9 +29,9 @@
     margin: 15px 0 5px;
 }
 
-.posts .content {}
-
-.posts .image {}
+.posts .image {
+    margin-bottom: 10px;
+}
 
 .posts .post-footer {
     display: flex;

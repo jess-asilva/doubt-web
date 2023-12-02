@@ -15,7 +15,7 @@
     </div>
     @endcan
 
-    <x-posts-list :publications="$publications" :loggedUser="$loggedUser" />
+    <x-posts-list :$publications :$loggedUser />
 
     <!-- Adicione esta seção no final do seu arquivo HTML -->
     <script>

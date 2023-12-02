@@ -1,0 +1,79 @@
+.user-info, .user-info div {
+    display: flex;
+    align-items: center;
+}
+
+.user-info {
+    justify-content: space-between;
+}
+
+.user-info img {
+    width: 25px;
+}
+
+.user-info .user-name {
+    font-size: var(--font-size-subtitle);
+    margin-left: 5px;
+}
+
+.title {
+    font-size: var(--font-size-title);
+    margin: 15px 0 5px;
+}
+
+.content, .image {
+    margin-bottom: 15px;
+}
+
+.comment {
+    border-top: 1px solid var(--color-primary);
+}
+
+.comment div {
+    border-radius: 10px;
+    padding: 10px 15px;
+    border: 1px solid var(--color-primary);
+    margin-bottom: 5px;
+    display: grid;
+    gap: 5px;
+}
+
+.comment span {
+    text-align: end;
+}
+
+.comment-section {
+    text-align: end;
+}
+
+.comment-section textarea {
+    margin-top: 10px;
+    background: #fbfbfb;
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 7px;
+    resize: none;
+    outline: none;
+    border: 0;
+    font-weight: bold;
+    color: var(--color-black);
+    height: 80px;
+}
+
+.comment-section .comment-btn {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    padding: 10px 50px;
+    margin-top: 5px;
+    border-radius: 2em;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: 0.2s;
+}
+
+.comment-section .comment-btn:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    transition: 0.2s;
+}
