@@ -13,19 +13,18 @@ class UsersTypesSeeder extends Seeder
     public function run(): void
     {
         UserType::create([
-           'id' => 1,
-           'role' => 'Adm'
+            'id' => 1,
+            'role' => 'Adm'
         ]);
 
         UserType::create([
             'id' => 2,
             'role' => 'Monitor',
-         ]);
+        ]);
 
         UserType::create([
             'id' => 3,
             'role' => 'Aluno',
-         ]);
+        ]);
     }
 }
-
