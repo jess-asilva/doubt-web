@@ -1,3 +1,9 @@
+.posts-list-title {
+    color: var(--color-secondary);
+    font-size: var(--font-size-h1);
+    margin: 20px 25px;
+}
+
 .posts {
     color: var(--color-secondary);
     display: grid;

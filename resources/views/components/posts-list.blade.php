@@ -1,5 +1,8 @@
 <link rel="stylesheet" href="{{ asset('css/posts-list.css') }}">
 
+
+<h1 class="posts-list-title">Todas as Postagens</h1>
+
 <ul class="posts" id="posts">
     @foreach($publications as $publication)
     <x-content-card>
