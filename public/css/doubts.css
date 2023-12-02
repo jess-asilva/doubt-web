@@ -18,3 +18,104 @@ body {
   -webkit-font-smothing: antialiased !important;
 
 }
+
+.titleHome {
+  text-align: center;
+}
+
+li {
+  list-style: none;
+}
+
+
+div .newPost {
+  margin-top: 20px;
+  width: 100%;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 50px 0;
+  padding: 25px;
+  background: #DDDDDD;
+  border-radius: 50px;
+  border: 3px solid #F29829;
+}
+
+div.newPost div.infoUser {
+  display: flex;
+  width: 90%;
+}
+
+svg {
+  fill: #391959;
+  margin-top: 10px;
+}
+
+div.newPost div.infoUser strong {
+  font-size: 16px;
+  margin-top: 15px;
+  margin-left: 10px;
+  color: #391959;
+}
+
+
+div.newPost form.formPost {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #F29829;
+  border-radius: 30px;
+  margin-bottom: 2em;
+}
+
+
+div.newPost form.formPost textarea {
+  height: 80px;
+  width: 90%;
+  background: #fbfbfb;
+  margin: 10px 0;
+  padding: 7px;
+  border-radius: 10px;
+  resize: none;
+  outline: none;
+  border: 0;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+
+}
+
+div.newPost form.formPost input {
+  width: 90%;
+  height: 30px;
+  background: #fbfbfb;
+  margin: 10px 0;
+  padding: 7px;
+  border-radius: 10px;
+  resize: none;
+  outline: none;
+  border: 0;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+
+}
+
+div.newPost button.btnSubmitForm {
+  background: #391959;
+  padding: 10px 50px;
+  color: #fbfbfb;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  border: 0;
+  border-radius: 10px;
+  transition: background 0.2;
+}
+
+div.newPost button.btnSubmitForm:hover {
+  background: #3A238C;
+}
