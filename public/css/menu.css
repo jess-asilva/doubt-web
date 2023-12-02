@@ -23,6 +23,10 @@
     width: 100%;
 }
 
+.sidebar .menu-wrapper {
+    width: 100%;
+}
+
 .logo-button {
     display: flex;
     height: 150px;
@@ -72,4 +76,53 @@
     border-top: 1px solid var(--color-primary-transparent);
     width: 82%;
     justify-self: center;
+}
+
+
+/* Responsiveness Section */
+
+#sidemenu-btn {
+    width: 100%;
+    padding: 20px 0;
+    background-color: unset;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+#sidemenu-btn img {
+    width: 30px;
+}
+
+@media (max-width: 750px) {
+    #sidemenu-btn {
+        display: block;
+    }
+
+    .sidebar {
+        width: fit-content;
+        padding: 0 15px;
+    }
+
+    .sidebar .menu-wrapper {
+        width: 0;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .opened {
+        width: 100%;
+        padding: 0 15px;
+        overflow-y: auto;
+    }
+
+    .opened .menu-wrapper {
+        width: 100%;
+    }
+
+    .line {
+        border-top: 1px solid var(--color-primary-transparent);
+        width: 100%;
+        justify-self: center;
+    }
 }

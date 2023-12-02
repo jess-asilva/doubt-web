@@ -85,3 +85,18 @@
 .posts .post-footer .action-buttons img {
     width: 20px;
 }
+
+
+/* Responsiveness Section */
+
+@media (max-width: 750px) {
+    .posts .post-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: unset;
+    }
+
+    .posts .post-footer .action-buttons {
+        align-self: end;
+    }
+}

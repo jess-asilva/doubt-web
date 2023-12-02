@@ -28,3 +28,17 @@
 h1 {
     font-size: var(--font-size-h1);
 }
+
+/* Responsiveness Section */
+
+@media (max-width: 1100px) {
+    .base-page-main {
+        padding: 30px 30px 3.5em;
+    }
+}
+
+@media (max-width: 750px) {
+    .base-page-body {
+        margin-left: 60px;
+    }
+}
