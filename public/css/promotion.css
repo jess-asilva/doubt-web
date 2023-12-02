@@ -272,6 +272,15 @@ footer {
     cursor: pointer;
 }
 
+.alert.alert-danger {
+    color: white;
+
+}
+
+.alert.alert-danger a {
+    color: white;
+}
+
 
 @media screen and (max-width: 992px) {
     .section-column {

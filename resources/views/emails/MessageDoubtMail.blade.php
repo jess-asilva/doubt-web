@@ -1,23 +1,16 @@
-<h1>Nova mensagem</h1>
-
-
 <x-mail::message>
 
-    Mensagem de {{ $data['name'] }}
+   # Mensagem de {{ $data['name'] }}
 
-    <p>Telefone: <strong>{{ $data['telPhone'] }}</strong></p> <br>
-    <p>Email: <strong>{{ $data['email'] }}</strong></p> <br>
-    <p>Instituição <strong>{{ $data['institution'] }}</strong></p> <br>
-    <p>
-        Mensagem:<br>
-        {{ $data['subject'] }}
-    </p>
+   ## Telefone: {{ $data['telPhone'] }}<br> 
+   ## Email: {{ $data['email'] }}<br> 
+   ## Instituição: {{ $data['institution'] }} <br>
+   ## Mensagem: {{ $data['subject'] }} <br> 
+    
+<x-mail::button :url="'https://br.pinterest.com/'">
+    Acesse o site clicando aqui:
+</x-mail::button>
 
-
-    <x-mail::button :url="'https://br.pinterest.com/'">
-        Acesse o site clicando aqui:
-    </x-mail::button>
-
-    Obrigado,<br>
-    {{ config('app.name') }}
+## Obrigado,<br>
+## {{ config('app.name') }}
 </x-Mail::message>

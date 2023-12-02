@@ -90,7 +90,7 @@
                                 <div class="input-group">
                                     <input type="text" name="name" placeholder="Nome:" required>
                                     @error('name')
-                                        <div class="alert alert-danger">{{ $message }}</div>
+                                        <div class="alert alert-danger" >{{ $message }}</div>
                                     @enderror 
                                 </div>
                                 <div class="input-group">

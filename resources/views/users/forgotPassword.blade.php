@@ -11,7 +11,7 @@
     <x-header />
 
     @csrf
-    <form  method="post">
+    <form action="{{ route('post.doubts') }}" method="post">
         @csrf
         <legend>Esqueceu sua senha?</legend>
         <p>Para onde devemos enviar o link para redefinir sua senha?</p><br>
