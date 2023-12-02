@@ -2,11 +2,14 @@
     --color-primary: #F29829;
     --color-primary-transparent: #f298298a;
     --color-secondary: #391959;
-    --color-secondary-background: hsl(253, 60%, 34%);
-    --color-secondary-shadow: rgba(128, 0, 128, 0.6);
+    --color-secondary-hover: #3A238C;
+    --color-secondary-background: #3a248c;
+    --color-secondary-shadow: #80008099;
     --color-grey: #dfdfdff6;
-    --color-grey-background: rgba(183, 183, 183, 0.965);
+    --color-grey-background: #b7b7b7f6;
+    --color-black: #000000;
     --font: 'League Spartan', sans-serif;
+    --font-size-h1: 1.6em;
     --font-size-title: 1.4em;
     --font-size-subtitle: 1em;
     --font-size-button-sm: 0.7em;
