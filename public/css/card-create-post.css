@@ -8,6 +8,7 @@
 }
 
 .create-post-form .post-info .title {
+    color: var(--color-secondary);
     font-size: var(--font-size-subtitle);
     margin-left: 5px;
 }
