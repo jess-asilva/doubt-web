@@ -1,6 +1,5 @@
 <x-base-page :title="'Home'" :stylePath="'home.css'">
-    <h1 class="home-title">Postagens</h1>
-    <h2 class="home-subtitle">Aqui você encontrará postagens dos mais diversos assuntos feitas por professores e monitores!</h2>
+    <x-page-info :title="'Postagens'" :description="'Postagens dos mais diversos assuntos feitas por professores e monitores! Você também pode colaborar com comentários e curtidas.'" />
 
     @can('create-publication')
     <div class="newPost">

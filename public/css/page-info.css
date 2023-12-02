@@ -1,0 +1,17 @@
+
+.page-info h1, h2 {
+    color: var(--color-secondary);
+}
+
+.page-info h1 {
+    font-size: var(--font-size-h1);
+}
+
+.page-info h2 {
+    font-size: var(--font-size-title);
+    font-weight: 400;
+    margin: 10px 0 0;
+    padding-bottom: 20px;
+    line-height: 25px;
+    border-bottom: 1px solid var(--color-secondary);
+}
