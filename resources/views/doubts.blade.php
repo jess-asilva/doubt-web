@@ -10,7 +10,7 @@
 
         <h1 class="title-home">Dúvidas</h1><br>
 
-        <form action="{{ route('post.publication') }}" method="POST" class="formPost" id="formPost" enctype="multipart/form-data">
+        <!-- <form action="{{ route('post.publication') }}" method="POST" class="formPost" id="formPost" enctype="multipart/form-data">
             <div class="infoUser">
                 <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 512 512">
                     <style>
@@ -30,7 +30,9 @@
            
                 <button type="submit" class="btnSubmitForm">Publicar</button>
             </div>
-        </form>
+        </form> -->
+
+        <x-card-create-post />
     </div>
 
   

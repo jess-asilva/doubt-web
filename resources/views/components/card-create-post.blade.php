@@ -17,12 +17,12 @@
     <div class="card-footer">
         <div class="icons">
             <button type="button" class="btnFileForm">
-                <img src="img/img.svg" alt="Adicionar uma imagem" />
+                <img src="img/img.svg" alt="Ícone do botão para adicionar uma imagem" />
                 <input type="file" id="imgUpload" name="image" accept=".jpg, .jpeg, .png, .gif*" style="display: none;">
             </button>
 
             <button type="button" class="btnFileForm">
-                <img src="img/video.svg" alt="Adicionar um vídeo" />
+                <img src="img/video.svg" alt="Ícone do botão para adicionar um vídeo" />
                 <input type="file" id="videoUpload" name="videoUpload" accept="video/*" style="display: none;">
             </button>
 

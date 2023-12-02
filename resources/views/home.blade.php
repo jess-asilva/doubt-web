@@ -12,7 +12,7 @@
         </div>
         @endif
 
-        <x-card-create-post :loggedUser="$loggedUser" />
+        <x-card-create-post />
     </div>
     @endcan
 
