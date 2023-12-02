@@ -1,5 +1,5 @@
 <x-base-page :title="'Home'" :stylePath="'home.css'">
-    <x-page-info :title="'Postagens'" :description="'Postagens dos mais diversos assuntos feitas por professores e monitores! Você também pode colaborar com comentários e curtidas.'" />
+    <x-page-info :title="'Postagens'" :description="'Postagens dos mais diversos assuntos feitas por nós, para você! Participe comentando e curtindo :)'" />
 
     @can('create-publication')
     <div class="newPost">
@@ -70,7 +70,7 @@
             const likeButtons = document.querySelectorAll('.like-btn');
             const unlikeButtons = document.querySelectorAll('.unlike-btn');
             likeButtons.forEach(button => {
-                button.addEventListener('click', function (event) {
+                button.addEventListener('click', function(event) {
                     event.preventDefault();
                     const publicationId = this.getAttribute('data-id');
                     handleToggleLike(publicationId, this);
@@ -78,7 +78,7 @@
             });
 
             unlikeButtons.forEach(button => {
-                button.addEventListener('click', function (event) {
+                button.addEventListener('click', function(event) {
                     event.preventDefault();
                     const publicationId = this.getAttribute('data-id');
                     handleToggleLike(publicationId, this);
@@ -127,7 +127,7 @@
                     xhr.open(method, url, true);
                     xhr.setRequestHeader('Content-Type', 'application/json');
 
-                    xhr.onreadystatechange = function () {
+                    xhr.onreadystatechange = function() {
                         if (xhr.readyState === 4) {
                             if (xhr.status === 200) {
                                 resolve();
