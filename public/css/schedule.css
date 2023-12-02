@@ -1,12 +1,6 @@
-@import url("/css/vars.css");
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: var(--font);
+.allign-form {
+  margin-top: 20px;
 }
-
 
 .container {
   display: flex;

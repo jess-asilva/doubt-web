@@ -1,7 +1,6 @@
-<x-base-page :title="'Monitores Cadastrados'" :stylePath="'monitors.css'">
-    <div class="div-text-monitors">
-        <h1>MONITORES CADASTRADOS</h1>
-    </div>
+<x-base-page :title="'Monitores'" :stylePath="'monitors.css'">
+    <x-page-info :title="'Monitores'" :description="'Lista de todos os monitores cadastrados.'" />
+    
     <div class="box-search">
         <div class="box">
             <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
@@ -18,6 +17,7 @@
             </form>
         </div>
     </div>
+
     @foreach($monitors as $monitor)
     <section>
         <div class="container">
@@ -38,14 +38,20 @@
                     <button type="submit" class="button-arquive" id="submit"><svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512">
                             <!--!Font Awesome Free 6.5.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
                             <path fill="#391959" d="M32 32H480c17.7 0 32 14.3 32 32V96c0 17.7-14.3 32-32 32H32C14.3 128 0 113.7 0 96V64C0 46.3 14.3 32 32 32zm0 128H480V416c0 35.3-28.7 64-64 64H96c-35.3 0-64-28.7-64-64V160zm128 80c0 8.8 7.2 16 16 16H336c8.8 0 16-7.2 16-16s-7.2-16-16-16H176c-8.8 0-16 7.2-16 16z" />
-                        </svg></button>
+                        </svg>
+                    </button>
                 </form>
             </div>
             <div class="row2">
-                <button class="button" id="submit"><a href="{{ route('change-role', ['userId' => $monitor->id, 'role' => 'Aluno']) }}">TORNAR ALUNO</a></button>
+                <button class="button" id="submit">
+                    <a href="{{ route('change-role', ['userId' => $monitor->id, 'role' => 'Aluno']) }}">TORNAR ALUNO</a>
+                </button>
             </div>
             <div class="row-text-cadastro">
-                <p>{{ $monitor->created_at }}</p>
+                <p>
+                    Cadastro realizado em: 
+                    <strong>{{ \Carbon\Carbon::parse($monitor->created_at)->format('d/m/Y H:i:s') }}</strong>
+                </p>
             </div>
         </div>
     </section>

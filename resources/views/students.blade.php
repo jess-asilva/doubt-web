@@ -1,7 +1,6 @@
-<x-base-page :title="'Alunos Cadastrados'" :stylePath="'students.css'">
-    <div class="div-text-alunos">
-        <h1>ALUNOS CADASTRADOS</h1>
-    </div>
+<x-base-page :title="'Alunos'" :stylePath="'students.css'">
+    <x-page-info :title="'Alunos'" :description="'Lista de todos os alunos matriculados.'" />
+
     <div class="box-search">
         <div class="box">
             <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
@@ -42,11 +41,15 @@
                 </form>
             </div>
             <div class="row2">
-                <button class="button" id="submit"><a href="{{ route('change-role', ['userId' => $student->id, 'role' => 'Monitor']) }}">TORNAR
-                        MONITOR</a></button>
+                <button class="button" id="submit">
+                    <a href="{{ route('change-role', ['userId' => $student->id, 'role' => 'Monitor']) }}">TORNAR MONITOR</a>
+                </button>
             </div>
             <div class="row-text-cadastro">
-                <p>{{ $student->created_at }}</p>
+                <p>
+                    Cadastro realizado em: 
+                    <strong>{{ \Carbon\Carbon::parse($student->created_at)->format('d/m/Y H:i:s') }}</strong>
+                </p>
             </div>
         </div>
     </section>

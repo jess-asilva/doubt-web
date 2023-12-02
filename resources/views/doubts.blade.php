@@ -8,7 +8,7 @@
         </div>
         @endif
 
-        <h1 class="title-home">Dúvidas</h1><br>
+        <x-page-info :title="'Dúvidas'" :description="'Você pode detalhar sua dúvida e publicar para que outras pessoas te ajudem!'" />
 
         <!-- <form action="{{ route('post.publication') }}" method="POST" class="formPost" id="formPost" enctype="multipart/form-data">
             <div class="infoUser">

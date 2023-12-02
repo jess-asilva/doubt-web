@@ -1,9 +1,7 @@
-<x-base-page :title="'Adicionar calendário'" :stylePath="'schedule.css'">
+<x-base-page :title="'Calendários'" :stylePath="'schedule.css'">
     @can('create-schedule')
+    <x-page-info :title="'Monitoria Semanal'" :description="''" />
 
-    <div class="div-monitoring-text">
-        <h1>MONITORIA SEMANAL<h1>
-    </div><br>
     <div class="allign-form">
         <form id="calendar-form" action="{{ route('post.schedule') }}" method="POST" enctype="multipart/form-data">
             @csrf
